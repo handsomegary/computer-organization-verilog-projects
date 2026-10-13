@@ -19,6 +19,10 @@
 
 完整結論請看四份報告，其中列出原檔位置、定向反例、可確認的功能與未驗證範圍。編譯成功、模組名稱含 Hazard，或原 testbench 能動，都不能單獨證明所有指令符合。CI 驗證這些檢查的可重現性；CPU 的合格與否由各份報告判定。
 
+四組都發現至少一項必要功能缺陷，目前沒有可認定完整符合要求的版本：第一組缺 `slt`、memory bus 及 PC 目標有誤；第二組有 `addi` 記憶體副作用，管線版缺 `j`；第三組另有 hazard 的比較、轉傳與 memory 更新問題；第四組原頂層無法 elaboration。
+
+[Linux CI 首次實跑](https://github.com/handsomegary/computer-organization-verilog-projects/actions/runs/38482198455)使用 Icarus Verilog 12.0／Python 3.12.15，五個查核工作全部完成。CI 綠燈代表原始碼完整性及已記錄的正反案例可重現；各 CPU 的缺陷仍保留在原檔中。第三組 hazard 的嚴格編譯失敗，另使用明示的 `-gno-io-range-error` 相容選項執行功能探測，詳見其報告。
+
 ## 重現檢查
 
 需要 Python 3.12 和 Icarus Verilog（`iverilog`、`vvp`），Python 僅使用標準函式庫。

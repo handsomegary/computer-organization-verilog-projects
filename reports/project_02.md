@@ -2,7 +2,7 @@
 
 本報告只記錄匿名封存 HDL 的介面、架構與可重現問題，**沒有修正其功能，也不把查核腳本成功視為 CPU 正確性通過**。基準是提供的作業投影片；原始碼保留於 `projects/project_02`。
 
-目前本機已完成來源證據檢查與獨立 ISA 模型核對。Icarus 尚未在本機使用，以下 HDL 編譯／模擬觀察均列為**待 Linux CI 實跑確認**，不宣稱已執行成功。CI 的目的包括確認健康元件和再現已知缺陷；它會在封存行為與報告預期不同時失敗，而不是把錯誤 CPU 的功能偷偷修成正確。
+來源證據檢查與獨立 ISA 模型核對已完成，三版 HDL 編譯與定向模擬也已在 Linux CI 實跑成功。使用 Icarus 12.0、Python 3.12.15，single_cycle 4 組、pipeline 4 組、hazard 8 組檢查全部再現報告中的觀察；詳見 [首次 CI 執行](https://github.com/handsomegary/computer-organization-verilog-projects/actions/runs/38482198455)。CI 確認健康元件及已知缺陷能重現，封存行為與報告預期不同時會失敗；查核成功不代表 CPU 完整符合要求。
 
 ## 檢查基準與範圍
 
@@ -22,7 +22,7 @@ sw  $15,100($2)
 
 為避免地址範圍遮蔽相依問題，該定向測試令 r1=4、r3=44，得到 r2=−40，因此 store 的 byte address 是 60；另設 r5=3、r6=8、r15=55。期望 r2=FFFFFFD8、r12=00000000、r13=FFFFFFD8、r14=FFFFFFB0，記憶體 byte address 60 的資料為 55。封存陣列直接以 byte address 索引，故觀察標為「raw slot60」，與採 word index 的 array[15] 區分。
 
-本次不使用原作者檔名、身分、報告或評比；沒有新增作業說明文件。所有產物在暫存目錄刪除，不產生波形、VCD、圖片、長 log 或公開展開向量。
+含身分檔名已匿名，未公開個人身分、原作者報告或評比。模擬產物使用暫存目錄並於結束後刪除，不產生波形、VCD、圖片、長 log 或公開展開向量。
 
 ## 介面與架構
 
@@ -38,7 +38,7 @@ single_cycle 使用一般 MemToReg 方向：0 選 ALU、1 選 DM。pipeline/haza
 
 ## 已確認來源問題與信心
 
-「高」代表能由可辨識原碼直接確認該結構／控制設定，不表示本機已經完成 HDL 模擬。
+「高」代表能由可辨識原碼直接確認該結構／控制設定；定向動態 probe 的實跑結果另列於下表與證據狀態。
 
 | 編號 | 問題與影響 | 來源定位 | 信心 |
 |---|---|---|---|
@@ -47,7 +47,7 @@ single_cycle 使用一般 MemToReg 方向：0 選 ALU、1 選 DM。pipeline/haza
 | P02-03 | DM reset 迴圈是 i<63，只清 0..62；宣告的 word63 未清。這是 reset 邊界遺漏，不由 ISA 自動要求全部記憶體都需 reset。 | 三個 DM 的 22–24 行 | 高 |
 | P02-04 | pipeline／hazard Controller 無 jump opcode/control，頂層也沒有 jump target concat 或 jump mux。必要的 j 沒有實作；不能因 SingleCycle 另有 jump，就把該功能算到另兩版。 | [pipeline Controller:52–70](../projects/project_02/pipeline/rtl/CONTROLLER.v#L52)、[pipeline top:90–92](../projects/project_02/pipeline/rtl/CPU_PIPELINE.v#L90)、[hazard Controller:54–72](../projects/project_02/hazard/rtl/Controller.v#L54)、[hazard top:101–106](../projects/project_02/hazard/rtl/CPU_NoHazard.v#L101) | 高 |
 | P02-05 | hazard 的 ALU 第二暫存器輸入有 forwarding，但 EX/MEM 的 store-data 接的是未轉傳 READ_DATA_2_ID_EX。`add r2,r1,r3; sw r2,0(r4)` 可把舊 r2 寫入，與 ALU operand-B forwarding 正常並不矛盾。 | [hazard top:75–89](../projects/project_02/hazard/rtl/CPU_NoHazard.v#L75)，尤其 89 行；DM 接線在 94–95 行 | 高 |
-| P02-06 | pipeline／hazard 的 taken beq 直到 EX/MEM 才選 PC，沒有沖刷更年輕的指令。在本檢查的「不採分支延遲槽」模型下，後續錯誤路徑 addi 仍會提交。此約定需明列；不能暗把三個 delay slots 當成原題已允許。 | [pipeline top:76–92](../projects/project_02/pipeline/rtl/CPU_PIPELINE.v#L76)、[hazard top:86–106](../projects/project_02/hazard/rtl/CPU_NoHazard.v#L86) | 結構高；行為待 CI |
+| P02-06 | pipeline／hazard 的 taken beq 直到 EX/MEM 才選 PC，沒有沖刷更年輕的指令。在本檢查的「不採分支延遲槽」模型下，後續錯誤路徑 addi 仍會提交。此約定需明列；不能暗把三個 delay slots 當成原題已允許。 | [pipeline top:76–92](../projects/project_02/pipeline/rtl/CPU_PIPELINE.v#L76)、[hazard top:86–106](../projects/project_02/hazard/rtl/CPU_NoHazard.v#L86) | 結構高；定向行為已由 CI 再現 |
 | P02-07 | hazard ROM 只指定 0..8，清零迴圈從 12 起，9..11 留 X。它的內建程式也不是投影片 C 的五條原指令，不能用該 ROM 的波形宣稱原 C 範例已測。 | [hazard IM:27–39](../projects/project_02/hazard/rtl/InstructionMemory.v#L27) | 高 |
 | P02-08 | load-use 判斷把 IF/ID.rt 一律視作來源，缺 opcode/source-use 判斷。`lw r2,...; addi r2,r3,5` 中第二個 r2 是目的而非讀取，仍會多停一拍。這是性能／精確 stall 判定問題，不是已證明會算錯。 | [Hazard_detection_unit:12–22](../projects/project_02/hazard/rtl/Hazard_detection_unit.v#L12) | 高 |
 
@@ -79,21 +79,21 @@ python checks/check_project_02.py --static-only
 
 未使用的 IM 槽填入十指令集合內的 `or $31,$31,$31`，只把 r31 原值寫回自身；獨立模型使用同一填充指令，避免依賴未支援的零指令或 r0 寫入保護。
 
-| Probe | 對照的正確模型／預期封存觀察 | CI 的成功含義 |
+| Probe | 對照的正確模型／CI 已驗證的封存觀察 | CI 的成功含義 |
 |---|---|---|
-| ALU、decoder、符號延伸、負 branch 位移 | 五種必要 R-type、addi/lw/sw/beq、FFF8→FFFFFFF8、PC4+位移→FFFFFFE4 | 健康的局部操作仍可重現 |
+| ALU、decoder、符號延伸、負 branch 位移 | 五種必要 R-type、addi/lw/sw/beq、FFF8→FFFFFFF8、PC4+位移→FFFFFFE4 | 健康的局部操作已重現 |
 | addi MEMWRITE、DM word63、byte index／100／252／400 | 控制錯誤、reset 遺漏、索引布局與越界觀察旗標均為 1 | P02-01..03 的具體限制重現，**不是需求通過**，亦不把布局差異當成所有 load 數值錯 |
-| j 跳過錯誤路徑 addi | 正確 r4=0；single 預期 0，pipeline/hazard 預期 99；目標 r5=7 | 缺失 jump 可重現 |
-| taken beq 跳過錯誤路徑 addi | 無 delay-slot 模型 r4=0；single 0，兩管線 99；目標 r5=7 | 不沖刷的限制可重現 |
+| j 跳過錯誤路徑 addi | 正確 r4=0；single 實際 0，pipeline/hazard 實際 99；目標 r5=7 | 缺失 jump 已重現 |
+| taken beq 跳過錯誤路徑 addi | 無 delay-slot 模型 r4=0；single 0，兩管線 99；目標 r5=7 | 不沖刷的限制已重現 |
 | hazard forwarding/stall 單元 | EX/MEM 優先，MEM/WB 後選；load-use 控制三個 0，正常三個 1；rt-only 也停 | 健康 forwarding 與額外 stall 分開核對 |
-| `add→sw` 的相鄰 store 資料 | 正確 r2=12、memory[0]=12；封存預期 r2=12、memory[0]=0 | 缺 store-data forwarding 可重現 |
-| `lw→add` load-use | memory byte0=21，add r3=r2+r2=42，至少停一拍 | 這組特定 load-use 行為可重現 |
+| `add→sw` 的相鄰 store 資料 | 正確 r2=12、memory[0]=12；封存實際 r2=12、memory[0]=0 | 缺 store-data forwarding 已重現 |
+| `lw→add` load-use | memory byte0=21，add r3=r2+r2=42，至少停一拍 | 這組特定 load-use 行為已重現 |
 | 投影片 C 五指令 | 上述 r2/r12/r13/r14，並觀察 archive raw slot60=55 | 檢查這組 forwarding 程式的結果；有限位址範圍另列 |
 
 probe 內建有 `$fatal` 及有界停止；CI 只印短摘要，不保存完整模擬紀錄。任何預期封存行為不同、編譯失敗、模擬超時或沒有觀察值都會讓腳本失敗。成功摘要刻意寫 `ARCHIVE FINDINGS REPRODUCED`，不寫 CPU PASS。
 
 ## 實際證據狀態與限制
 
-本機已執行三版 `--static-only` 與獨立 ISA oracle，來源證據一致。HDL compile、局部 simulation 和 integration probe 均待有工具的 Linux CI；沒有用 Python 代替 RTL 測試結果。
+本機三版 `--static-only` 與獨立 ISA oracle 的來源證據一致。[Linux CI](https://github.com/handsomegary/computer-organization-verilog-projects/actions/runs/38482198455) 已使用 Icarus 12.0、Python 3.12.15 完成三版原 TB＋RTL 編譯及 13 組定向 runtime probe，共 16 組檢查：single_cycle 4、pipeline 4、hazard 8。全部結果與本報告及腳本預期一致；RTL 動態結果由 Icarus 執行，Python 模型另作數值對照。
 
 這是定向查核，不是完整 MIPS 符合性驗證：未窮舉所有 instruction/data combinations，未驗證 exception、所有記憶體邊界、所有控制相依或完整效能。未用原 TB 的顯示波形作為正確性證據；原 TB 只有時脈／reset 驅動，hazard 原 TB 沒有結束條件。若未來原始碼改變，應重新核對觀察基線，不要把新行為硬改成此報告的錯誤結果。

@@ -1,6 +1,6 @@
 # project_01 檢查報告
 
-證據狀態：來源結構已查核；本頁列出的動態觀察目前待 Linux Icarus CI 確認。
+證據狀態：[Linux CI 實跑完成](https://github.com/handsomegary/computer-organization-verilog-projects/actions/runs/38482198455)，使用 Icarus Verilog 12.0／Python 3.12.15，26 個觀察與 15 拍時脈均與本頁基線一致。
 
 **結論：未符合題目要求。** 套件包含可辨識的 IF／ID／EX／MEM／WB 連接，但不是已完成的單週期 CPU，也不能認定為正確的 pipeline 或 hazard detection 實作。缺少 `slt`，memory address 接線形成多重驅動，branch／jump 目標不符指令語意，原附 testbench 亦無法提供確定的初始寄存器值。
 

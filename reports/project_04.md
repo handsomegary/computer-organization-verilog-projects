@@ -1,6 +1,6 @@
 # project_04 檢查報告
 
-證據狀態：來源結構已查核；本頁列出的動態觀察目前待 Linux Icarus CI 確認。
+證據狀態：[Linux CI 實跑完成](https://github.com/handsomegary/computer-organization-verilog-projects/actions/runs/38482198455)，使用 Icarus Verilog 12.0／Python 3.12.15，頂層與原 TB 的編譯失敗，以及 EX／IF／ID／MEM 正常案例和反例均已再現。
 
 ## 結論
 
@@ -11,7 +11,7 @@
 - [Main.v:138](../projects/project_04/rtl/Main.v#L138) 使用 EX 的 `.Alu_result(...)`，而 [Execution.v:2](../projects/project_04/rtl/Execution.v#L2) 宣告的是 `result`。
 - [Main.v:152](../projects/project_04/rtl/Main.v#L152) 使用 MEM 的 `.result(...)`，而 [Memory_Access.v:2](../projects/project_04/rtl/Memory_Access.v#L2) 宣告的是 `Alu_result`。
 - Main 的 `Alu_result` 又沒有對應的 32-bit wire 宣告，容易形成單位元 implicit net；修改埠名時仍需核對資料線寬度。這份檢查沒有直接代改。
-- 原 `ha` 頂層與 `ha_tb` testbench 預期都無法 elaboration。單獨 EX、IF、ID、MEM 可進行定向模擬；單元結果不代表整合 CPU 可執行完整程式。
+- 原 `ha` 頂層與 `ha_tb` testbench 在 Icarus 12.0 都無法 elaboration。單獨 EX、IF、ID、MEM 已完成定向模擬；單元結果不代表整合 CPU 可執行完整程式。
 
 ## 指令與功能
 

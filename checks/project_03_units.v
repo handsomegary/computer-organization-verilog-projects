@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 // Same probes, compiled separately against each unmodified RTL directory.
 module probe;
-reg [5:0] opcode=0, fn=0;
+reg [5:0] opcode=6'h3f, fn=0;
 reg [31:0] a=0,b=0;
 wire rd,src,mtr,rw,mr,mw,branch;
 wire [1:0] aluop;
@@ -30,6 +30,7 @@ input [5:0] function_code;input [31:0] av,bv;
 begin opcode=0;fn=function_code;a=av;b=bv;#1;
 $display("OBS ALU_%0d_%08x_%08x %08x",function_code,av,bv,result);end endtask
 initial begin
+#1; // Ensure the legacy always @(OPCODE) observes a real transition to R-type.
 arithmetic(32,7,5);arithmetic(34,7,5);arithmetic(36,7,5);arithmetic(37,7,5);
 arithmetic(42,32'hffffffff,1);arithmetic(42,1,32'hffffffff);
 opcode=8;#1;$display("OBS ADDI_MEMWRITE %08x",{31'd0,mw});
