@@ -1,0 +1,930 @@
+{
+  "files": [
+    {
+      "group": 1,
+      "path": "projects/project_01/rtl/ALUcontrol.v",
+      "modules": [
+        "EX"
+      ],
+      "archived_sha256": "50240b3826006023e177c6a598e936bd2795a5e6cf92b67e1d8522362e379d9c"
+    },
+    {
+      "group": 1,
+      "path": "projects/project_01/rtl/DataMem.v",
+      "modules": [
+        "MEM"
+      ],
+      "archived_sha256": "74e41edcf8d252feb6025a543d413396499c9354bd3acdfa9869d20d40fe04f3"
+    },
+    {
+      "group": 1,
+      "path": "projects/project_01/rtl/EX.v",
+      "modules": [
+        "EX"
+      ],
+      "archived_sha256": "acc245bc016f8eca478e5efe0b9d3026d474c4446a58c41bd39b717339c182c5"
+    },
+    {
+      "group": 1,
+      "path": "projects/project_01/tb/finaltb.v",
+      "modules": [
+        "finaltb"
+      ],
+      "archived_sha256": "07af0ca880a57eb2a7a10f519d617c8582e8c4850aa1658d1e7de06456a41e13"
+    },
+    {
+      "group": 1,
+      "path": "projects/project_01/rtl/ID.v",
+      "modules": [
+        "ID"
+      ],
+      "archived_sha256": "0cf2c842940b8a54d5fd333dc5779ad51db99298eaf30a5feafc086b3d98f71d"
+    },
+    {
+      "group": 1,
+      "path": "projects/project_01/rtl/IF.v",
+      "modules": [
+        "IF"
+      ],
+      "archived_sha256": "dc581158bc3d4b3c6a56953aeaea542a4b19dcd972756c64f0afd6d7b6aaff54"
+    },
+    {
+      "group": 1,
+      "path": "projects/project_01/rtl/CPU_Alternate.v",
+      "modules": [
+        "CPU_Alternate"
+      ],
+      "archived_sha256": "efcc8b07d598db46e19201c0a6d88ad20645cbbc758f4f71c071661f1c7fd123"
+    },
+    {
+      "group": 1,
+      "path": "projects/project_01/rtl/CPU_Top.v",
+      "modules": [
+        "CPU_Top"
+      ],
+      "archived_sha256": "5907b92994f24075e511297b9f75feae15f0bd1963aec5664a390c1c93753809"
+    },
+    {
+      "group": 1,
+      "path": "projects/project_01/rtl/MEM.v",
+      "modules": [
+        "MEM"
+      ],
+      "archived_sha256": "ba449c08bd50e7a849a467ccc75c430e52241674337dacff556fceb4d8c7cb31"
+    },
+    {
+      "group": 1,
+      "path": "projects/project_01/rtl/WB.v",
+      "modules": [
+        "WB"
+      ],
+      "archived_sha256": "c7783a08985803bdf36ef0d0adada3bdbc7cb9d2f37abbddbefdfd6480837241"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/tb/CPU_NoHazard_tb.v",
+      "modules": [
+        "CPU_NoHazard_tb"
+      ],
+      "archived_sha256": "b1f335fbf34751e66d7453352abd2cbc488f3fc78c4a9012a60068004fe486f5"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/Add.v",
+      "modules": [
+        "Add"
+      ],
+      "archived_sha256": "3beb4abf02e62900eaf2332ff53e82cf6a1bdd42f87b6389e16988c32de80683"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/ALU.v",
+      "modules": [
+        "ALU"
+      ],
+      "archived_sha256": "63204f0c3a6251467eec5d70c7062a927ae83fb0a8f1db8702db880a84ece371"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/ALU_Controller.v",
+      "modules": [
+        "ALU_Controller"
+      ],
+      "archived_sha256": "9a45411b580e4aaf4dfd18afe469cc3074e377df4ffb16a406bbc1f1e984af93"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/Controller.v",
+      "modules": [
+        "Controller"
+      ],
+      "archived_sha256": "f38a2f1293704161aab1c5f388317d2a1b8d4a511b418f0b2dba2bf2fb592e8b"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/CPU_NoHazard.v",
+      "modules": [
+        "CPU_NoHazard"
+      ],
+      "archived_sha256": "103f1caa491c0a48e871ff643486a69b89200a87ef349fdd9e6a08bb4c301da9"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/DataMemory.v",
+      "modules": [
+        "DataMemory"
+      ],
+      "archived_sha256": "0dec94b9cad229802481d674f10314220f9a8a26e4027c2097ac8755e5c8d9a0"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/EX_MEM.v",
+      "modules": [
+        "EX_MEM"
+      ],
+      "archived_sha256": "fbea6f720c7f8e526119adfddbed183c8f1741e989606c71f93f47999f525d68"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/ForwardingUnit.v",
+      "modules": [
+        "ForwardingUnit"
+      ],
+      "archived_sha256": "29f48659d95583f25012f57968eb5a0b653bd10c82277999b34d73e1fb825dbb"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/Hazard_detection_unit.v",
+      "modules": [
+        "Hazard_detection_unit"
+      ],
+      "archived_sha256": "bd918593b331a74e0661508207dbe9fb7ec2d4f30fdc8eb46690f2502ad0e76f"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/ID_EX.v",
+      "modules": [
+        "ID_EX"
+      ],
+      "archived_sha256": "2fc47078fc44ee96f6b2c76de128026e6ed0cb9d4239c867aaa77b5a6f47bcc8"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/IF_ID.v",
+      "modules": [
+        "IF_ID"
+      ],
+      "archived_sha256": "eb6cac8f0f2be08abe4d350cb1a2bfed127784cf28f6ba120aee2d11d7462aa7"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/InstructionMemory.v",
+      "modules": [
+        "InstructionMemory"
+      ],
+      "archived_sha256": "2cce9071f6c72a791f916e1babc5b77f6ed7d41370039ff459515dded6cac8d5"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/MEM_WB.v",
+      "modules": [
+        "MEM_WB"
+      ],
+      "archived_sha256": "83c5c2603480bc7d7347e66d2e79771f30270e762304423dd77d29f7f378de0f"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/Mux_32Bits.v",
+      "modules": [
+        "Mux_32Bits"
+      ],
+      "archived_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/Mux_32Bits_3input.v",
+      "modules": [
+        "Mux_32Bits_3input"
+      ],
+      "archived_sha256": "f1fdfa6cdcb2eaaedb5a4b8947fe38f8ac6db0c6b44cda4c0916ead44f8ab37c"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/Mux_5Bits.v",
+      "modules": [
+        "Mux_5Bits"
+      ],
+      "archived_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/PC.v",
+      "modules": [
+        "PC"
+      ],
+      "archived_sha256": "42a2c22a6fe300ed5982c01b0177691851c45665d218b605f262ffc0ebd535a5"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/Register_file.v",
+      "modules": [
+        "Register_file"
+      ],
+      "archived_sha256": "1d3d0f97fa5fc8dbd8a2a683221dc991a0d39bae60e6c7e43bb887a98a2c6884"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "modules": [
+        "Shift_Left_2_26BitsTo28Bits"
+      ],
+      "archived_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "modules": [
+        "Shift_Left_2_32BitsTo32Bits"
+      ],
+      "archived_sha256": "85f49046a6143070bc6dcaf4bfaf2bba17f50237d16aa58f57fd7a2b6ede863e"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/hazard/rtl/Sign_Extend.v",
+      "modules": [
+        "Sign_Extend"
+      ],
+      "archived_sha256": "a72bc759678836da3dd158124cdc7586057cd2589d080add6c802faedc8689fd"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/tb/CPU_Pipeline_tb.v",
+      "modules": [
+        "CPU_Pipeline_tb"
+      ],
+      "archived_sha256": "76fd519d03113819b6f67a110e8aca97338cf302a0f4487c9a52748d338484f3"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/ADD.v",
+      "modules": [
+        "Add"
+      ],
+      "archived_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/ALU.v",
+      "modules": [
+        "ALU"
+      ],
+      "archived_sha256": "2a93ed2f072560dd6e9515bcc5e6c39c4eebe0f966f02512e3ab3831c8214b92"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/ALU_CONTROLLER.v",
+      "modules": [
+        "ALU_Controller"
+      ],
+      "archived_sha256": "9a45411b580e4aaf4dfd18afe469cc3074e377df4ffb16a406bbc1f1e984af93"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/CONTROLLER.v",
+      "modules": [
+        "Controller"
+      ],
+      "archived_sha256": "0c044e04d744b9cca668d953fa58e3c9b5924002f51a18a4e94edb6f4199ee92"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/CPU_PIPELINE.v",
+      "modules": [
+        "CPU_Pipeline"
+      ],
+      "archived_sha256": "3be550e0ec732312415820c893204f40964b545dd28291ebfd7236c89fb4e30c"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/DATAMEMORY.v",
+      "modules": [
+        "DataMemory"
+      ],
+      "archived_sha256": "0dec94b9cad229802481d674f10314220f9a8a26e4027c2097ac8755e5c8d9a0"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/EX_MEM.v",
+      "modules": [
+        "EX_MEM"
+      ],
+      "archived_sha256": "44c80fbb291badf367e02067e6b6b544acfa923ad65630df910c19997d813bd7"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/ID_EX.v",
+      "modules": [
+        "ID_EX"
+      ],
+      "archived_sha256": "ea77648f0e7e012da6ffa1e8396526b540ed90dc9104bddc32106670c8a7cac2"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/IF_ID.v",
+      "modules": [
+        "IF_ID"
+      ],
+      "archived_sha256": "530df6dae74b8fdb35cfe8f48d3b431137b91eec2489b1827b1e3993288424d4"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "modules": [
+        "InstructionMemory"
+      ],
+      "archived_sha256": "1c862aeebe8eb7a6a5c74e5e855cb2ad32f60600e6e756c0f592d095d9bf1944"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/MEM_WB.v",
+      "modules": [
+        "MEM_WB"
+      ],
+      "archived_sha256": "5621b5794e748e5e0b17bf32265fd7c7f33fe3ff420c1b069860e936006e4260"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/MUX_32BITS.v",
+      "modules": [
+        "Mux_32Bits"
+      ],
+      "archived_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/MUX_5BITS.v",
+      "modules": [
+        "Mux_5Bits"
+      ],
+      "archived_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/PC.v",
+      "modules": [
+        "PC"
+      ],
+      "archived_sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/REGISTER_FILE.v",
+      "modules": [
+        "Register_file"
+      ],
+      "archived_sha256": "d9615bfbbeccc3941177551cdf580fdf062aabc8cfa927c391d6e0be7c913c72"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "modules": [
+        "Shift_Left_2_26BitsTo28Bits"
+      ],
+      "archived_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "modules": [
+        "Shift_Left_2_32BitsTo32Bits"
+      ],
+      "archived_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/pipeline/rtl/SIGN_EXTEND.v",
+      "modules": [
+        "Sign_Extend"
+      ],
+      "archived_sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/tb/SINGLE_CYCLE_TB.v",
+      "modules": [
+        "CPU_SingleCycle_tb"
+      ],
+      "archived_sha256": "8c89f783cd68381361c84bf2d50d009fa4e891dbdbff449579c643952f5361b1"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/Add.v",
+      "modules": [
+        "Add"
+      ],
+      "archived_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/ALU.v",
+      "modules": [
+        "ALU"
+      ],
+      "archived_sha256": "2a93ed2f072560dd6e9515bcc5e6c39c4eebe0f966f02512e3ab3831c8214b92"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/ALU_Controller.v",
+      "modules": [
+        "ALU_Controller"
+      ],
+      "archived_sha256": "9a45411b580e4aaf4dfd18afe469cc3074e377df4ffb16a406bbc1f1e984af93"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/Controller.v",
+      "modules": [
+        "Controller"
+      ],
+      "archived_sha256": "7521596bc462260b2472db920a3b1d806975212f7182c05412b5bb48215ac052"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/CPU_SingleCycle.v",
+      "modules": [
+        "CPU_SingleCycle"
+      ],
+      "archived_sha256": "df0d5fe5dff8452278808919e790b67eff38672c7b3593013e9d165c9e60c159"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/DataMemory.v",
+      "modules": [
+        "DataMemory"
+      ],
+      "archived_sha256": "0dec94b9cad229802481d674f10314220f9a8a26e4027c2097ac8755e5c8d9a0"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/InstructionMemory.v",
+      "modules": [
+        "InstructionMemory"
+      ],
+      "archived_sha256": "f50c755c54ce3e53cdca90bd99a4a1a401bad9bd2e8b236e5167b6b55e0a95b7"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/Mux_32Bits.v",
+      "modules": [
+        "Mux_32Bits"
+      ],
+      "archived_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/Mux_5Bits.v",
+      "modules": [
+        "Mux_5Bits"
+      ],
+      "archived_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/PC.v",
+      "modules": [
+        "PC"
+      ],
+      "archived_sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/Register_File.v",
+      "modules": [
+        "Register_file"
+      ],
+      "archived_sha256": "aa99777c1598f5227208a11b70a09963be05b005b52d2aef8a2555d332503fa7"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "modules": [
+        "Shift_Left_2_26BitsTo28Bits"
+      ],
+      "archived_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "modules": [
+        "Shift_Left_2_32BitsTo32Bits"
+      ],
+      "archived_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b"
+    },
+    {
+      "group": 2,
+      "path": "projects/project_02/single_cycle/rtl/Sign_Extend.v",
+      "modules": [
+        "Sign_Extend"
+      ],
+      "archived_sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/tb/SINGLE_CYCLE_TB.v",
+      "modules": [
+        "CPU_SingleCycle_tb"
+      ],
+      "archived_sha256": "8c89f783cd68381361c84bf2d50d009fa4e891dbdbff449579c643952f5361b1"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/Add.v",
+      "modules": [
+        "Add"
+      ],
+      "archived_sha256": "61084657dfb7d7cf3a5fa7b219d5037cb1b8756242d44697c69939b6f125a7db"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/ALU.v",
+      "modules": [
+        "ALU"
+      ],
+      "archived_sha256": "b1c268e3d18f66e7e3aa1f51a49db4d32b6b7f51370e5a949c585525611f4fbf"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/ALU_Controller.v",
+      "modules": [
+        "ALU_Controller"
+      ],
+      "archived_sha256": "9a45411b580e4aaf4dfd18afe469cc3074e377df4ffb16a406bbc1f1e984af93"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/Controller.v",
+      "modules": [
+        "Controller"
+      ],
+      "archived_sha256": "a3adaaf70a95f0527b88200acb1f81038a5444e20381def31c6c5450e0b5015f"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/CPU_SingleCycle.v",
+      "modules": [
+        "CPU_SingleCycle"
+      ],
+      "archived_sha256": "7ee867de137a092838bdc71019f23d9fafa813ec17f8a4d355aa30ba6ea6d8c9"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/DataMemory.v",
+      "modules": [
+        "DataMemory"
+      ],
+      "archived_sha256": "239e81c8a126fb0c17c49d76d970937792aa06d12c347af7f4ae42d5de819199"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/InstructionMemory.v",
+      "modules": [
+        "InstructionMemory"
+      ],
+      "archived_sha256": "7ebefe36e67e9fdb0637dd4dcb0b0b6edacb05cd2b0fa6670c0dafdb24d879c3"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/Mux_32Bits.v",
+      "modules": [
+        "Mux_32Bits"
+      ],
+      "archived_sha256": "5946244149be5ac2160eedb71b303d51db000a26e69e879ddd233071f2e8b0c6"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/Mux_5Bits.v",
+      "modules": [
+        "Mux_5Bits"
+      ],
+      "archived_sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/PC.v",
+      "modules": [
+        "PC"
+      ],
+      "archived_sha256": "361601a30f2145d4d20cc8634b32dbb47b0eba2479520248377e8ac0c37cb292"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/Register_File.v",
+      "modules": [
+        "Register_file"
+      ],
+      "archived_sha256": "413948d82d9e4cfd46c05642ee2577cf1c82afcd6cb38bb2095318c3c853dcb3"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "modules": [
+        "Shift_Left_2_26BitsTo28Bits"
+      ],
+      "archived_sha256": "508370e9cc012819d063135857173b74327810802d825361fc35d893c3c0a4a8"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "modules": [
+        "Shift_Left_2_32BitsTo32Bits"
+      ],
+      "archived_sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/single_cycle/rtl/Sign_Extend.v",
+      "modules": [
+        "Sign_Extend"
+      ],
+      "archived_sha256": "97a832d56b07a70175af5713c0258e168ec6bc84b913a10013d414c52d41486e"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/tb/CPU_Pipeline_tb.v",
+      "modules": [
+        "CPU_Pipeline_tb"
+      ],
+      "archived_sha256": "76fd519d03113819b6f67a110e8aca97338cf302a0f4487c9a52748d338484f3"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/ADD.v",
+      "modules": [
+        "Add"
+      ],
+      "archived_sha256": "d8c04dc7d44fd04708b77e3f72ab7de33754bdbb8da27efdee29cd9241c3cb72"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/ALU.v",
+      "modules": [
+        "ALU"
+      ],
+      "archived_sha256": "0641b0c2466ba1f03dd7c59713fa79c143eaec064fa43f6b4764f23aecb0c268"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/ALU_CONTROLLER.v",
+      "modules": [
+        "ALU_Controller"
+      ],
+      "archived_sha256": "c7c44a856f09ebf1f44505b30c7abc1220e3f96d254613c3bfd8633725d8dffd"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/CONTROLLER.v",
+      "modules": [
+        "Controller"
+      ],
+      "archived_sha256": "0c044e04d744b9cca668d953fa58e3c9b5924002f51a18a4e94edb6f4199ee92"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/CPU_PIPELINE.v",
+      "modules": [
+        "CPU_Pipeline"
+      ],
+      "archived_sha256": "3be550e0ec732312415820c893204f40964b545dd28291ebfd7236c89fb4e30c"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/DATAMEMORY.v",
+      "modules": [
+        "DataMemory"
+      ],
+      "archived_sha256": "057cc47435fdd949ce4ee8e1948dd6293a38803e01f79949d2da063dca828446"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/EX_MEM.v",
+      "modules": [
+        "EX_MEM"
+      ],
+      "archived_sha256": "14dcaa01ba348b355a46373ac5ff29f4a7af08ffb9b9f5f19e27e49e2387a293"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/ID_EX.v",
+      "modules": [
+        "ID_EX"
+      ],
+      "archived_sha256": "52582e2467696b583868bc0ca92cfcf67c30675a629a5ca97a1b238541b17b59"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/IF_ID.v",
+      "modules": [
+        "IF_ID"
+      ],
+      "archived_sha256": "cdeee3a0d76bad0fc8814102dd8ae23f34d4596fd4693ba6b3509760e51400df"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "modules": [
+        "InstructionMemory"
+      ],
+      "archived_sha256": "255799cb5640c5b68b95054b531205b9580eb9c86dfffc1316692baf50b33cf0"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/MEM_WB.v",
+      "modules": [
+        "MEM_WB"
+      ],
+      "archived_sha256": "32ad7666422878a52e996a7d0135dda34b16bd6347a32634691bb1507a5285b5"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/MUX_32BITS.v",
+      "modules": [
+        "Mux_32Bits"
+      ],
+      "archived_sha256": "57c588a8fbc94b2f0c6151ad0ed5639e5c8f9819ac294b562e52a12887cc733e"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/MUX_5BITS.v",
+      "modules": [
+        "Mux_5Bits"
+      ],
+      "archived_sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/PC.v",
+      "modules": [
+        "PC"
+      ],
+      "archived_sha256": "96ec50a315182d063b77d8f900a212f7fc21864790414b2e141c3f7a42e2b22e"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/REGISTER_FILE.v",
+      "modules": [
+        "Register_file"
+      ],
+      "archived_sha256": "ff400458fd222d4092a949f589c81e861928e15e96615e2c050e79391af7de64"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "modules": [
+        "Shift_Left_2_26BitsTo28Bits"
+      ],
+      "archived_sha256": "8ceaa65aa9ddcb855b8b0e769617185d474ccfd53e39ba9b4f87f65fdc6f6ed4"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "modules": [
+        "Shift_Left_2_32BitsTo32Bits"
+      ],
+      "archived_sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/pipeline/rtl/SIGN_EXTEND.v",
+      "modules": [
+        "Sign_Extend"
+      ],
+      "archived_sha256": "b4cb5b6fe16c061c708c5862822aa6b60f13b07612b759b0c6930d89be85b59e"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/hazard/tb/TB.v",
+      "modules": [
+        "TB"
+      ],
+      "archived_sha256": "ab33f1b3fe195afb2d55776ad4d1098791604d5a711ad6f27f99e5c56d9b9a11"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/hazard/rtl/ALU.v",
+      "modules": [
+        "ALU"
+      ],
+      "archived_sha256": "15b7f36a4e2abf41525cc48aebc663a02a4e1e9b2e685bd73e208a1ecc902de6"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/hazard/rtl/CPU.v",
+      "modules": [
+        "CPU"
+      ],
+      "archived_sha256": "fbfc6a4c13d3ff26c6060e813fc99e72aa07768f2f044014456f3bc008c2e713"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/hazard/rtl/Dmemory.v",
+      "modules": [
+        "Dmemory"
+      ],
+      "archived_sha256": "2b6da14bee8b87e30583de55b7fa04da8198bfcd57d71ef85ee067f8fea66a32"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/hazard/rtl/EXandMEM.v",
+      "modules": [
+        "EXandMEM"
+      ],
+      "archived_sha256": "6b52407f3ec9ca18650538d2cea920297c97a13bc9ab05d9cdeb9e28de46cb51"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/hazard/rtl/MUX.v",
+      "modules": [
+        "MUX"
+      ],
+      "archived_sha256": "90a1544a7da6c0c93d0412b5f0fd3267d679cf76a31086643067bb3962eedd44"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/hazard/rtl/PC.v",
+      "modules": [
+        "PC"
+      ],
+      "archived_sha256": "299d1bf5468e079bffd6bd5db497765b270d048f5d5ea9a3aed52a954f080116"
+    },
+    {
+      "group": 3,
+      "path": "projects/project_03/hazard/rtl/Reg.v",
+      "modules": [
+        "Reg"
+      ],
+      "archived_sha256": "8631f87ffc160c1356c3b60aa1bbef9a14e2bc4e0112996c907554d4edf33704"
+    },
+    {
+      "group": 4,
+      "path": "projects/project_04/tb/final_tb.v",
+      "modules": [
+        "ha_tb"
+      ],
+      "archived_sha256": "d65f9ca39ac424b43fffebc29748e956c15f4166cda5a8847bf801e8cefd9a37"
+    },
+    {
+      "group": 4,
+      "path": "projects/project_04/rtl/Execution.v",
+      "modules": [
+        "EX"
+      ],
+      "archived_sha256": "610c1a8503da4ff788586ad3043aa1f65f13cbe518a619808dd3e215f0b526fe"
+    },
+    {
+      "group": 4,
+      "path": "projects/project_04/rtl/Instruction_Decoding.v",
+      "modules": [
+        "ID"
+      ],
+      "archived_sha256": "98738368070b7cb17a0c3a314d6b224f5d9183d88cd7c460ba60901179a1c76f"
+    },
+    {
+      "group": 4,
+      "path": "projects/project_04/rtl/Instruction_Fetching.v",
+      "modules": [
+        "IF"
+      ],
+      "archived_sha256": "2b290cabe8ff0b5caff731eb12c9ddec07a4cee45196487d4596c485f6e3be69"
+    },
+    {
+      "group": 4,
+      "path": "projects/project_04/rtl/Main.v",
+      "modules": [
+        "ha"
+      ],
+      "archived_sha256": "19c575f2b3cd7b68f4896b77a32c339d5c18a150b4e0598e989af831a6ca50cd"
+    },
+    {
+      "group": 4,
+      "path": "projects/project_04/rtl/Memory_Access.v",
+      "modules": [
+        "MEM"
+      ],
+      "archived_sha256": "bd75e4ec75a7bac8b77041079abf34bc8c9670ddb3a857b1f318eb632b4e64c9"
+    },
+    {
+      "group": 4,
+      "path": "projects/project_04/rtl/Write_Back.v",
+      "modules": [
+        "WB"
+      ],
+      "archived_sha256": "d6b4b833b7ea55ea654905f4c11df989872b4a32ae0e41b1b1fb95f194271cd0"
+    }
+  ],
+  "notes": [
+    "Only authored HDL and testbench files extracted",
+    "Exact ZIP duplicates deduplicated",
+    "Generated glbl.v excluded",
+    "Comments removed and personal module identifiers anonymized; functionality unchanged"
+  ]
+}
