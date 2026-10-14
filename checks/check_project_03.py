@@ -10,6 +10,34 @@ VARIANTS = {'single_cycle': ('CPU_SingleCycle', 'CPU_SingleCycle_tb'),
             'pipeline': ('CPU_Pipeline', 'CPU_Pipeline_tb'),
             'hazard': ('CPU', 'TB')}
 
+# Measured in CI run38482714485; healthy unit-ALU checks remain required.
+MEASURED_FAILURES = {
+    'single_cycle': {'ADDI_MEMWRITE': '00000001', 'RESET_LAST_WORD': 'deadc0de',
+                     'CPU_ADDI_MEMORY_UNCHANGED': 'deadc0de'},
+    'pipeline': {'ADDI_MEMWRITE': '00000001', 'RESET_LAST_WORD': 'deadc0de',
+                 'CPU_ADDI_MEMORY_UNCHANGED': 'deadc0de', 'BRANCH_SKIPPED_R5': '0000000c',
+                 'BRANCH_SKIPPED_R6': '00000007', 'BRANCH_SKIPPED_R7': '00000005',
+                 'JUMP_SKIPPED_R5': '0000000c'},
+    'hazard': {
+        'slt_true_is_one': 'ffffffff', 'slt_negative_lt_zero': '00000000',
+        'slt_zero_lt_negative': 'ffffffff', 'store_offset_with_rt_bypass': '00000020',
+        'decode_addi_alu_writeback': '00000000', 'decode_jump_disables_regwrite': '00000001',
+        'register_30_second_read': '000055aa', 'mixed_forward_rs_ex_rt_wb': '00000008',
+        'mixed_forward_rs_wb_rt_ex': '00000002', 'load_then_overwrite_false_stall': '00000000',
+        'memory_consecutive_sw': '00000000', 'memory_changed_store_data': '00000016',
+        'memory_consecutive_lw': '0000000b', 'memory_address_zero_retained': '00000000',
+        'store_bypass_isolated_data': '00000000', 'mixed_core_reg12': '00000000',
+        'addi_core_negative_result': '00000000',
+    },
+}
+
+
+def assert_measured_baseline(variant, rows):
+    actual = {name: row['actual'] for name, row in rows.items() if not row['passed']}
+    assert actual == MEASURED_FAILURES[variant], (
+        f'{variant}: measured failure set changed; review source/probe/report instead of silently passing. '
+        f'Expected {MEASURED_FAILURES[variant]}, observed {actual}')
+
 
 def signed32(value):
     value &= 0xffffffff
@@ -136,8 +164,12 @@ def hazard_probe(sources):
         if line.startswith('OBS '):
             _, name, exp, actual, status = line.split()
             assert name not in rows, 'Duplicate hazard observation ' + name
-            rows[name] = {'expected': exp.split('=')[1], 'actual': actual.split('=')[1],
-                          'passed': status == 'status=PASS',
+            expected_value = exp.split('=')[1].lower()
+            actual_value = actual.split('=')[1].lower()
+            passed = not any(c in actual_value for c in 'xz') and int(actual_value, 16) == int(expected_value, 16)
+            assert (status == 'status=PASS') == passed, 'Inconsistent bench status ' + name
+            rows[name] = {'expected': expected_value, 'actual': actual_value,
+                          'passed': passed,
                           'category': 'performance' if name == 'load_then_overwrite_false_stall' else 'directed-hazard/isa'}
     assert rows and 'AUDIT_SUMMARY' in result['stdout'], 'Hazard audit did not complete'
     registers, memory = program2_reference()
@@ -175,15 +207,20 @@ def main():
         original_tb = [relative(path) for path in sorted((BASE / variant / 'tb').glob('*.v'))]
         compiled = compile_and_run(rtl, top, run=False)
         archived = compile_and_run(rtl + original_tb, archive_tb_top, run=False)
+        strict_expected = variant != 'hazard'
+        assert compiled['compiled'] == strict_expected, 'Original top compile baseline changed: ' + variant
+        assert archived['compiled'] == strict_expected, 'Archive TB compile baseline changed: ' + variant
         rows = {}
         if variant == 'hazard':
             compatible = compile_and_run(rtl, top, run=False, extra_flags=('-gno-io-range-error',))
             compatible_tb = compile_and_run(rtl + original_tb, archive_tb_top, run=False,
                                              extra_flags=('-gno-io-range-error',))
+            assert 'Read_Data1_out' in compiled['diagnostics'] and 'Reg.v' in compiled['diagnostics'], compiled
+            assert compatible['compiled'] and compatible_tb['compiled'], 'Hazard compatibility elaboration failed'
             print('  hazard compatibility -gno-io-range-error: RTL compile='
                   + str(compatible['compiled']) + ', archive-TB compile=' + str(compatible_tb['compiled']))
-            if compatible['compiled']: rows = hazard_probe(rtl)
-        elif compiled['compiled']:
+            rows = hazard_probe(rtl)
+        else:
             prefix = '`define PIPE_CONTROLLER\n' if variant == 'pipeline' else ''
             bench = prefix + (ROOT / 'checks/project_03_units.v').read_text(encoding='utf-8')
             # Compile full RTL to preserve the same module implementations.
@@ -191,6 +228,7 @@ def main():
             prefix = '`define PIPE_CPU\n' if variant == 'pipeline' else ''
             bench = prefix + (ROOT / 'checks/project_03_cpu.v').read_text(encoding='utf-8')
             rows.update(probe(rtl, 'probe', bench, cpu_expectations(variant)))
+        assert_measured_baseline(variant, rows)
         summary(variant, compiled['compiled'], archived['compiled'], rows)
         if not compiled['compiled']: print('  compile diagnostic:', compiled['diagnostics'].strip().splitlines()[-1])
     after = {path: hashlib.sha256(path.read_bytes()).hexdigest() for path in before}

@@ -8,11 +8,11 @@
 
 | 版本 | 原 authored `.v` | 結構 | 嚴格 Icarus 編譯 | 功能判定 |
 |---|---:|---|---|---|
-| `single_cycle` | 15（14 RTL + 1 TB） | PC、control、GPR、ALU、instruction/data memory、branch/jump 路徑 | 待 Linux CI 實跑 | 部分 A；`addi` 的 memory side effect 是已確認缺陷 |
-| `pipeline` | 19（18 RTL + 1 TB） | IF/ID、ID/EX、EX/MEM、MEM/WB 五級路徑 | 待 Linux CI 實跑 | 部分 B；缺 `j`，且相同 `addi` 缺陷 |
-| `hazard` | 8（7 RTL + 1 TB） | forwarding、PC/IF-ID hold、control bubble | 舊式 output range 宣告預期會被 strict 模式拒絕，實際診斷待 CI | 部分 C；即使 Program 2 通過也不代表所有 hazard／ISA 完整 |
+| `single_cycle` | 15（14 RTL + 1 TB） | PC、control、GPR、ALU、instruction/data memory、branch/jump 路徑 | RTL／原 TB 都通過 | 部分 A；`addi` 的 memory side effect 是已實測缺陷 |
+| `pipeline` | 19（18 RTL + 1 TB） | IF/ID、ID/EX、EX/MEM、MEM/WB 五級路徑 | RTL／原 TB 都通過 | 部分 B；缺 `j`，且相同 `addi` 缺陷 |
+| `hazard` | 8（7 RTL + 1 TB） | forwarding、PC/IF-ID hold、control bubble | RTL／原 TB 都因舊式 output range 被拒絕；明示兼容模式都通過 | 部分 C；Program 2 通過，一般 hazard／ISA 仍有缺口 |
 
-已逐一閱讀 42 個原檔。`python checks/check_project_03.py --model-only` 的靜態／Python golden 檢查已通過；它沒有執行 Verilog，不把此結果寫成 HDL PASS。預設指令在 Linux 執行 compile-only、原 TB compile-only 及定向模擬：
+已逐一閱讀 42 個原檔。靜態／Python golden 檢查及 Linux Icarus 模擬均已執行；實測依據為 [CI run38482714485](https://github.com/handsomegary/computer-organization-verilog-projects/actions/runs/38482714485)，使用 Icarus12.0、Python3.12.15。`--model-only` 本身不執行 Verilog，預設指令才執行 compile-only、原 TB compile-only 及定向模擬：
 
 ```sh
 python checks/check_project_03.py --model-only
@@ -21,12 +21,20 @@ python checks/check_project_03.py
 
 所有模擬執行檔、注入的 TB 及 stdout 都在暫存處理；沒有 waveform、VCD、公開大 log 或展開向量檔。source SHA-256 於 audit 前後核對，防止測試改動原 RTL。CI 綠燈表示審核程序完成、報告觀察可重現，**不表示三個 CPU 全部符合 ISA**。
 
+| 實跑 probe | 觀察數 | 不符合 golden 的觀察 | 正向對照 |
+|---|---:|---:|---|
+| Single-cycle | 39 | 3：addi控制、addi破壞memory、最後一槽reset漏清 | 六個單元ALU與六個CPU ALU、負addi數值、合法memory slot、branch／jump均符合 |
+| Pipeline | 37 | 7：上述3個，加taken branch錯路徑3筆、jump錯路徑1筆 | 六個單元ALU與六個CPU ALU、合法memory slot、negative branch target等符合 |
+| Hazard（compatibility） | 45 | 17：16個數值／控制缺口、1個不必要stall的性能觀察 | Program 2全部6筆、basic load-use全部3筆及多個單元／forward selector對照符合 |
+
+這些數量是 probe observations，不是獨立 bug 的數量。腳本對嚴格／兼容編譯狀態與以上實測 failure set 作 snapshot assertions；新增或消失的缺陷、正常案例失敗、probe缺結果或不預期的編譯失敗都會令 audit 失敗，不能靠「沒跑就skip」取得綠燈。
+
 ## Single-cycle：可確認事項與缺陷
 
 | 項目 | 證據與影響 |
 |---|---|
 | Required R-type control／signed ALU 已實作 | [ALU_Controller.v](../projects/project_03/single_cycle/rtl/ALU_Controller.v#L15) 解碼 add/sub/and/or/slt；[ALU.v](../projects/project_03/single_cycle/rtl/ALU.v#L7) 的 operands 宣告 signed，slt 在 line17 寫 0／1。bench 同時測 `-1<1`、`1<-1`，避免只測非負值。 |
-| `addi` 額外寫 memory | [Controller.v:50](../projects/project_03/single_cycle/rtl/Controller.v#L50)：opcode001000 的 `MEMWRITE=1`、`MEMREAD=0`。由 [CPU_SingleCycle.v:30](../projects/project_03/single_cycle/rtl/CPU_SingleCycle.v#L30) 接到 DataMemory，實際 store 資料是舊的 rt 值。`addi $4,$1,-4`，`$1=7` 應只寫 `$4=3`；若 memory slot3 原為77，原程式會把它改成舊 `$4`，不是合法 addi side effect。 |
+| `addi` 額外寫 memory | [Controller.v:50](../projects/project_03/single_cycle/rtl/Controller.v#L50)：opcode001000 的 `MEMWRITE=1`、`MEMREAD=0`。由 [CPU_SingleCycle.v:30](../projects/project_03/single_cycle/rtl/CPU_SingleCycle.v#L30) 接到 DataMemory，實際 store 資料是舊的 rt 值。`addi $4,$1,-4`，`$1=7` 應只寫 `$4=3`；memory slot3 原為77，實跑改成舊 `$4=DEADC0DE`，不是合法 addi side effect。 |
 | PC4、signed branch target、jump 組線存在 | [CPU_SingleCycle.v:38](../projects/project_03/single_cycle/rtl/CPU_SingleCycle.v#L38) 計算 PC+4；line39–43 是 signext offset<<2 與 branch mux；line46–47 是 `{PC4[31:28], target<<2}`。probe 包含 negative branch 與 PC+4 跨高位 nibble 的 jump case。 |
 | 記憶體範圍／reset 限制 | [DataMemory.v:12](../projects/project_03/single_cycle/rtl/DataMemory.v#L12) 只有 array0..63；line14／29 用完整 ADDR 作 index。可以把這看作 byte-address 的稀疏 word slot：aligned 可用 address0..60。未做 `ADDR>>2` 不等於每次 lw/sw 都算錯；讀寫同一合法 address 是自洽的。常見 dense word-array 模型則可容納 byte addresses0..252，兩者容量不同。address100在這份實作越界，probe 只記容量限制；不因額外要求無限 memory 判錯。line22 的 reset 迴圈只清0..62，slot63保留舊值，是 reset 實作瑕疵，並非 MIPS ISA 本身規定必須清 RAM。 |
 | 原測試證据不足 | [SINGLE_CYCLE_TB.v](../projects/project_03/single_cycle/tb/SINGLE_CYCLE_TB.v) 只有 clock/reset、等待與 finish，沒有比對期望或 assertion。跑完該 TB 不代表數值正確。 |
@@ -43,7 +51,7 @@ python checks/check_project_03.py
 | RAW 未處理的範圍 | ALU直接使用 [CPU_PIPELINE.v:65](../projects/project_03/pipeline/rtl/CPU_PIPELINE.v#L65) 的 ID/EX operands，沒有 bypass 或 hold。B 是基本 pipeline，而 C 才另列 hazard detection，因此不單憑此點說「沒有做 B」；它確實不具 C 的一般 unscheduled RAW 能力。 |
 | Memory／原 TB 限制 | [DATAMEMORY.v](../projects/project_03/pipeline/rtl/DATAMEMORY.v) 與 single-cycle 同樣是0..63稀疏 slots、reset少清最後一槽。[CPU_Pipeline_tb.v](../projects/project_03/pipeline/tb/CPU_Pipeline_tb.v) 沒有 golden 比對。 |
 
-`MEM_WB.v` 的 `end` 層級經逐行核對是正確的，不列為語法缺陷；能否成功 elaboration 以真正 Icarus compile 為準。
+`MEM_WB.v` 的 `end` 層級正確，整組 pipeline 已通過 Icarus elaboration，沒有此處的語法缺陷。
 
 ## Hazard：Program 2 與一般邊界不能混為一談
 
@@ -57,7 +65,7 @@ python checks/check_project_03.py
 | `$14` | 24 |
 | store address／data | 112／CAFEBABE |
 
-這組刻意保留為正向對照，原 forwarding 可能足以通過它；全部結果仍待 CI 確認。它不涵蓋 mixed-stage 雙操作數或立即相依的 store data。原 [PC.v:27](../projects/project_03/hazard/rtl/PC.v#L27) ROM 是其他四條短指令，不是講義 Program 2；bench 只替換測試時的內部 instruction 值，原 PC、pipeline、stall、ALU、WB 仍執行，沒有改原 ROM 檔案。
+實跑 Program 2的六筆觀察全部通過。但它不涵蓋 mixed-stage 雙操作數或立即相依的 store data。原 [PC.v:27](../projects/project_03/hazard/rtl/PC.v#L27) ROM 是其他四條短指令，不是講義 Program 2；bench 只替換測試時的內部 instruction 值，原 PC、pipeline、stall、ALU、WB 仍執行，沒有改原 ROM 檔案。
 
 | 缺口 | source 行號與定向觸發 |
 |---|---|
@@ -73,11 +81,13 @@ python checks/check_project_03.py
 
 其基本 load-use detector **有實作**：[CPU.v:77](../projects/project_03/hazard/rtl/CPU.v#L77) 接到 PC_Write、IF_ID_Write 和 Control_Slt。audit 保留 `lw $2,...` 後 `add $12,$2,$5` 的一個 stall 正向案例，以及兩個來源都取同一 EX/MEM／MEM/WB 的正向對照。`lw` 後緊接覆寫同rt的addi會不必要stall，這是性能觀察，不能單獨等同數值ISA錯誤。
 
+實跑 basic load-use 得 `$2=21,$12=24`、恰一個stall，三筆全部通過。mixed-stage CPU案例的producer `$8=28,$2=12` 正確，consumer `$12` 卻為0，應為12；隔離store-data案例地址172正確、資料卻0，應為12；負addi應為16，實跑為0。這些分開的反例證明問題不是將整組 pipeline 誤初始化成未知值。
+
 hazard memory 只有六個帶 address tag 的 word slots，並非一般 array；容量及 miss沒有完整處理列為範圍限制。CPU沒有reset輸入，fixture先送5個NOP，再明確seed相關狀態；不宣稱替原CPU新增reset。Reg0可寫而forwarding排除dest0，是與其他variant不同的行為，未據此判FAIL。branch沒有flush的完整恢復功能也尚未由hazard CPU probe驗證。
 
 ## Strict／compatibility 編譯及重現邊界
 
-[Reg.v:12](../projects/project_03/hazard/rtl/Reg.v#L12) 的 output directions 沒宣告向量range，後面的同名reg卻有32／5／2-bit range。Icarus預設要求相符；`-gno-io-range-error` 對這一類舊式scalar-port/vector-reg宣告降為warning，**不修source，也不等同strict通過**。此行為依 [Icarus 官方手冊的 io-range-error 選項](https://github.com/steveicarus/iverilog/blob/master/driver/iverilog.man.in)；實際strict診斷及兼容結果由CI記錄。
+[Reg.v:12](../projects/project_03/hazard/rtl/Reg.v#L12) 的 output directions 沒宣告向量range，後面的同名reg卻有32／5／2-bit range。Icarus預設要求相符；`-gno-io-range-error` 對這一類舊式scalar-port/vector-reg宣告降為warning，**不修source，也不等同strict通過**。此行為依 [Icarus 官方手冊的 io-range-error 選項](https://github.com/steveicarus/iverilog/blob/master/driver/iverilog.man.in)；strict實跑為9個elaboration errors，明示兼容模式的原top／原TB都可編譯並完成定向probe。
 
 check script 首先對三個 original tops 及 original TBs 嚴格 compile-only。single／pipeline各有unit與whole-CPU probe；hazard另以明示 `-gno-io-range-error` compile及執行45個定向觀察。只有成功elaboration且probe正常完成才比較輸出；CPU的FAIL被列為診斷，missingtool、壞adapter、timeout或缺觀察則是audit失敗。
 
