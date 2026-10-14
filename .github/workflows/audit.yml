@@ -41,5 +41,9 @@ jobs:
           sudo apt-get install -y -qq iverilog
       - name: Check complete repaired package
         run: python checks/check_repaired_package.py
+      - name: Check original assignment specification
+        run: python checks/check_course_specification.py
+      - name: Check portable Vivado Tcl source selection and mocked command flow
+        run: python scripts/check_vivado_sim.py
       - name: Run repaired and authored CPU simulations
         run: python repaired/verification/check_all.py

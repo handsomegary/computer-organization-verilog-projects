@@ -1,0 +1,2153 @@
+{
+  "schema_version": 1,
+  "scope": "Additional original ZIP HDL variant and portable copies of all six provided Vivado projects. Existing archived HDL and repaired upstream package are unchanged.",
+  "portable_xpr_policy": "Original XML retained except the absolute Project Path and File Path references, plus the corresponding waveform-option path. Original paths and personal archive names are omitted. FileSets, tops, generics, FPGA part and Vivado version retained; no synthesis/simulation/cache artifacts copied.",
+  "zip_variant": {
+    "group": "project_03_zip_variant",
+    "container_type": "zip",
+    "source_container_sha256": "b6a72d616d6f7f148e04a54fed9becf8ed348e277fd628df0fa53a74fa44a77d",
+    "files": [
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/tb/SINGLE_CYCLE_TB.v",
+        "source_sha256": "c24e8c98201cb8092d65a4839519c9682bcf36c335112c46b38c256911cfb570",
+        "archived_sha256": "c24e8c98201cb8092d65a4839519c9682bcf36c335112c46b38c256911cfb570",
+        "source_bytes": 829,
+        "byte_exact": true,
+        "modules": [
+          "CPU_SingleCycle_tb"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/tb/SINGLE_CYCLE_TB.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/ALU.v",
+        "source_sha256": "40ad80dab1f5571fae22886a85375790fabcb29867ab806ce5eb41d11525e267",
+        "archived_sha256": "40ad80dab1f5571fae22886a85375790fabcb29867ab806ce5eb41d11525e267",
+        "source_bytes": 554,
+        "byte_exact": true,
+        "modules": [
+          "ALU"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/ALU.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/ALU_Controller.v",
+        "source_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+        "archived_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+        "source_bytes": 913,
+        "byte_exact": true,
+        "modules": [
+          "ALU_Controller"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/ALU_Controller.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/Add.v",
+        "source_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+        "archived_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+        "source_bytes": 133,
+        "byte_exact": true,
+        "modules": [
+          "Add"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/Add.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/CPU_SingleCycle.v",
+        "source_sha256": "39993b5c20aa01cda7c4bd9803baa75490e2dd2c09a3fa5c0d69d2ec547b21c1",
+        "archived_sha256": "39993b5c20aa01cda7c4bd9803baa75490e2dd2c09a3fa5c0d69d2ec547b21c1",
+        "source_bytes": 2583,
+        "byte_exact": true,
+        "modules": [
+          "CPU_SingleCycle"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/CPU_SingleCycle.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/Controller.v",
+        "source_sha256": "18b80d88728b9cf2ed9420c3dbb5bf4cb70a82710d1c4311fc244f98771952d4",
+        "archived_sha256": "18b80d88728b9cf2ed9420c3dbb5bf4cb70a82710d1c4311fc244f98771952d4",
+        "source_bytes": 2002,
+        "byte_exact": true,
+        "modules": [
+          "Controller"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/Controller.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/DataMemory.v",
+        "source_sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518",
+        "archived_sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518",
+        "source_bytes": 1607,
+        "byte_exact": true,
+        "modules": [
+          "DataMemory"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/DataMemory.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/InstructionMemory.v",
+        "source_sha256": "951e3a024b3eb947ff6676a4fd9c11c56ab2c9044e79f319872baed27fa8bf64",
+        "archived_sha256": "951e3a024b3eb947ff6676a4fd9c11c56ab2c9044e79f319872baed27fa8bf64",
+        "source_bytes": 1389,
+        "byte_exact": true,
+        "modules": [
+          "InstructionMemory"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/InstructionMemory.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": false
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/Mux_32Bits.v",
+        "source_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+        "archived_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+        "source_bytes": 166,
+        "byte_exact": true,
+        "modules": [
+          "Mux_32Bits"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/Mux_32Bits.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/Mux_5Bits.v",
+        "source_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+        "archived_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+        "source_bytes": 163,
+        "byte_exact": true,
+        "modules": [
+          "Mux_5Bits"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/Mux_5Bits.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/PC.v",
+        "source_sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48",
+        "archived_sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48",
+        "source_bytes": 223,
+        "byte_exact": true,
+        "modules": [
+          "PC"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/PC.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/Register_File.v",
+        "source_sha256": "aa99777c1598f5227208a11b70a09963be05b005b52d2aef8a2555d332503fa7",
+        "archived_sha256": "aa99777c1598f5227208a11b70a09963be05b005b52d2aef8a2555d332503fa7",
+        "source_bytes": 659,
+        "byte_exact": true,
+        "modules": [
+          "Register_file"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/Register_File.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+        "source_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+        "archived_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+        "source_bytes": 158,
+        "byte_exact": true,
+        "modules": [
+          "Shift_Left_2_26BitsTo28Bits"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+        "source_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+        "archived_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+        "source_bytes": 157,
+        "byte_exact": true,
+        "modules": [
+          "Shift_Left_2_32BitsTo32Bits"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/single_cycle/rtl/Sign_Extend.v",
+        "source_sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d",
+        "archived_sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d",
+        "source_bytes": 296,
+        "byte_exact": true,
+        "modules": [
+          "Sign_Extend"
+        ],
+        "project_02_same_name_path": "projects/project_02/single_cycle/rtl/Sign_Extend.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/tb/CPU_Pipeline_tb.v",
+        "source_sha256": "93fc4038d585b0e9cb7447e2ff69e3c2eea13831609c558aa693d5f1ff45ddea",
+        "archived_sha256": "93fc4038d585b0e9cb7447e2ff69e3c2eea13831609c558aa693d5f1ff45ddea",
+        "source_bytes": 969,
+        "byte_exact": true,
+        "modules": [
+          "CPU_Pipeline_tb"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/tb/CPU_Pipeline_tb.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/ADD.v",
+        "source_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+        "archived_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+        "source_bytes": 133,
+        "byte_exact": true,
+        "modules": [
+          "Add"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/ADD.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/ALU.v",
+        "source_sha256": "97d1ea2b414d7d791b3923d6d0915c32c5b189ed9cdd8abae003f34c9b35a790",
+        "archived_sha256": "97d1ea2b414d7d791b3923d6d0915c32c5b189ed9cdd8abae003f34c9b35a790",
+        "source_bytes": 579,
+        "byte_exact": true,
+        "modules": [
+          "ALU"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/ALU.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/ALU_CONTROLLER.v",
+        "source_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+        "archived_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+        "source_bytes": 913,
+        "byte_exact": true,
+        "modules": [
+          "ALU_Controller"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/ALU_CONTROLLER.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/CONTROLLER.v",
+        "source_sha256": "1aff8c91e01411dc4971f648ea5e9588b13b532316188b029bf30e48198962b6",
+        "archived_sha256": "1aff8c91e01411dc4971f648ea5e9588b13b532316188b029bf30e48198962b6",
+        "source_bytes": 1613,
+        "byte_exact": true,
+        "modules": [
+          "Controller"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/CONTROLLER.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/CPU_PIPELINE.v",
+        "source_sha256": "4dc8b4c5fcb49d87576ba438876c1dc74196f6448da9f345a0a4eecaa1489661",
+        "archived_sha256": "4dc8b4c5fcb49d87576ba438876c1dc74196f6448da9f345a0a4eecaa1489661",
+        "source_bytes": 5230,
+        "byte_exact": true,
+        "modules": [
+          "CPU_Pipeline"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/CPU_PIPELINE.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/DATAMEMORY.v",
+        "source_sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518",
+        "archived_sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518",
+        "source_bytes": 1607,
+        "byte_exact": true,
+        "modules": [
+          "DataMemory"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/DATAMEMORY.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/EX_MEM.v",
+        "source_sha256": "f09ffe37e29203a02e1fd7540c34dbe54b0d6e0522e81883cfc6ff56ba202490",
+        "archived_sha256": "f09ffe37e29203a02e1fd7540c34dbe54b0d6e0522e81883cfc6ff56ba202490",
+        "source_bytes": 1274,
+        "byte_exact": true,
+        "modules": [
+          "EX_MEM"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/EX_MEM.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/ID_EX.v",
+        "source_sha256": "1b7ca36543ad182afb78df9e1aa60a64f16510df9ddd69c76919a51f3ac251ec",
+        "archived_sha256": "1b7ca36543ad182afb78df9e1aa60a64f16510df9ddd69c76919a51f3ac251ec",
+        "source_bytes": 1507,
+        "byte_exact": true,
+        "modules": [
+          "ID_EX"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/ID_EX.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/IF_ID.v",
+        "source_sha256": "530df6dae74b8fdb35cfe8f48d3b431137b91eec2489b1827b1e3993288424d4",
+        "archived_sha256": "530df6dae74b8fdb35cfe8f48d3b431137b91eec2489b1827b1e3993288424d4",
+        "source_bytes": 298,
+        "byte_exact": true,
+        "modules": [
+          "IF_ID"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/IF_ID.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/INSTROCTIONMEMORY.v",
+        "source_sha256": "91ae7b89302e9863d208d6fa39494c08c30c7c794d99371b3a1ed283f04c86f2",
+        "archived_sha256": "91ae7b89302e9863d208d6fa39494c08c30c7c794d99371b3a1ed283f04c86f2",
+        "source_bytes": 1350,
+        "byte_exact": true,
+        "modules": [
+          "InstructionMemory"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/INSTROCTIONMEMORY.v",
+        "matches_archived_project_02_bytes": false,
+        "matches_project_02_original_bytes": false
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/MEM_WB.v",
+        "source_sha256": "5621b5794e748e5e0b17bf32265fd7c7f33fe3ff420c1b069860e936006e4260",
+        "archived_sha256": "5621b5794e748e5e0b17bf32265fd7c7f33fe3ff420c1b069860e936006e4260",
+        "source_bytes": 803,
+        "byte_exact": true,
+        "modules": [
+          "MEM_WB"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/MEM_WB.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/MUX_32BITS.v",
+        "source_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+        "archived_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+        "source_bytes": 166,
+        "byte_exact": true,
+        "modules": [
+          "Mux_32Bits"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/MUX_32BITS.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/MUX_5BITS.v",
+        "source_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+        "archived_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+        "source_bytes": 163,
+        "byte_exact": true,
+        "modules": [
+          "Mux_5Bits"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/MUX_5BITS.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/PC.v",
+        "source_sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48",
+        "archived_sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48",
+        "source_bytes": 223,
+        "byte_exact": true,
+        "modules": [
+          "PC"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/PC.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/REGISTER_FILE.v",
+        "source_sha256": "d9615bfbbeccc3941177551cdf580fdf062aabc8cfa927c391d6e0be7c913c72",
+        "archived_sha256": "d9615bfbbeccc3941177551cdf580fdf062aabc8cfa927c391d6e0be7c913c72",
+        "source_bytes": 659,
+        "byte_exact": true,
+        "modules": [
+          "Register_file"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/REGISTER_FILE.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+        "source_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+        "archived_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+        "source_bytes": 158,
+        "byte_exact": true,
+        "modules": [
+          "Shift_Left_2_26BitsTo28Bits"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+        "source_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+        "archived_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+        "source_bytes": 157,
+        "byte_exact": true,
+        "modules": [
+          "Shift_Left_2_32BitsTo32Bits"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      },
+      {
+        "path": "projects/project_03_zip_variant/pipeline/rtl/SIGN_EXTEND.v",
+        "source_sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d",
+        "archived_sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d",
+        "source_bytes": 296,
+        "byte_exact": true,
+        "modules": [
+          "Sign_Extend"
+        ],
+        "project_02_same_name_path": "projects/project_02/pipeline/rtl/SIGN_EXTEND.v",
+        "matches_archived_project_02_bytes": true,
+        "matches_project_02_original_bytes": true
+      }
+    ],
+    "comparison": {
+      "file_count": 34,
+      "byte_identical_to_same_name_project_02_files": 32,
+      "byte_identical_to_anonymized_archived_project_02_files": 18,
+      "different_rom_paths": [
+        "projects/project_03_zip_variant/single_cycle/rtl/InstructionMemory.v",
+        "projects/project_03_zip_variant/pipeline/rtl/INSTROCTIONMEMORY.v"
+      ],
+      "rar_variant_is_separate": "The previously retained 42-file project_03 RAR variant is not substituted for this ZIP variant."
+    }
+  },
+  "projects": [
+    {
+      "group": "project_04",
+      "variant": "main",
+      "path": "projects/project_04/original_project/main/project_04_main.xpr",
+      "source_xpr_sha256": "4f7921500db359975e816aef5eb5b6c9dda7f03b8e1d32a0868982f748e3086a",
+      "portable_xpr_sha256": "9fe302e4d45aee350b21490c5722f39a7f1e491a16faa91d11f822c533638a18",
+      "preserved_metadata_sha256": "9d04a7fb16f49e83b91389cdfd7974cdf34d3c71feeaf7a3706e2f979ebe46c7",
+      "original_xpr_byte_exact": false,
+      "vivado_version": "2019.2",
+      "part": "xc7a35tcsg324-1",
+      "xml_root_version": {
+        "Version": "7",
+        "Minor": "44"
+      },
+      "filesets": [
+        {
+          "name": "sources_1",
+          "type": "DesignSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "ha"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        },
+        {
+          "name": "constrs_1",
+          "type": "Constrs",
+          "options": [
+            {
+              "Name": "ConstrsType",
+              "Val": "XDC"
+            }
+          ]
+        },
+        {
+          "name": "sim_1",
+          "type": "SimulationSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "ha_tb"
+            },
+            {
+              "Name": "TopLib",
+              "Val": "xil_defaultlib"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            },
+            {
+              "Name": "TransportPathDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "TransportIntDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "SelectedSimModel",
+              "Val": "rtl"
+            },
+            {
+              "Name": "SrcSet",
+              "Val": "sources_1"
+            }
+          ]
+        },
+        {
+          "name": "utils_1",
+          "type": "Utils",
+          "options": [
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_04/rtl/Execution.v",
+          "xpr_reference": "$PPRDIR/../../rtl/Execution.v",
+          "sha256": "610c1a8503da4ff788586ad3043aa1f65f13cbe518a619808dd3e215f0b526fe"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_04/rtl/Instruction_Decoding.v",
+          "xpr_reference": "$PPRDIR/../../rtl/Instruction_Decoding.v",
+          "sha256": "98738368070b7cb17a0c3a314d6b224f5d9183d88cd7c460ba60901179a1c76f"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_04/rtl/Instruction_Fetching.v",
+          "xpr_reference": "$PPRDIR/../../rtl/Instruction_Fetching.v",
+          "sha256": "2b290cabe8ff0b5caff731eb12c9ddec07a4cee45196487d4596c485f6e3be69"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_04/rtl/Memory_Access.v",
+          "xpr_reference": "$PPRDIR/../../rtl/Memory_Access.v",
+          "sha256": "bd75e4ec75a7bac8b77041079abf34bc8c9670ddb3a857b1f318eb632b4e64c9"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_04/rtl/Write_Back.v",
+          "xpr_reference": "$PPRDIR/../../rtl/Write_Back.v",
+          "sha256": "d6b4b833b7ea55ea654905f4c11df989872b4a32ae0e41b1b1fb95f194271cd0"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_04/rtl/Main.v",
+          "xpr_reference": "$PPRDIR/../../rtl/Main.v",
+          "sha256": "19c575f2b3cd7b68f4896b77a32c339d5c18a150b4e0598e989af831a6ca50cd"
+        },
+        {
+          "fileset": "sim_1",
+          "type": "SimulationSrcs",
+          "path": "projects/project_04/tb/final_tb.v",
+          "xpr_reference": "$PPRDIR/../../tb/final_tb.v",
+          "sha256": "d65f9ca39ac424b43fffebc29748e956c15f4166cda5a8847bf801e8cefd9a37"
+        }
+      ],
+      "supplementary_files": [],
+      "allowed_edits": [
+        {
+          "field": "Project/@Path",
+          "change": "absolute original workstation path replaced with anonymous project basename"
+        },
+        {
+          "field": "FileSets/sources_1/File[Execution.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Instruction_Decoding.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Instruction_Fetching.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Memory_Access.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Write_Back.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Main.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sim_1/File[final_tb.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        }
+      ],
+      "source_selection": "corresponding previously archived original RTL"
+    },
+    {
+      "group": "project_02",
+      "variant": "hazard",
+      "path": "projects/project_02/original_project/hazard/project_02_hazard.xpr",
+      "source_xpr_sha256": "0ada824dec21ca7e929fc53da2046a96f97448f52987adfab45e915cac723dcf",
+      "portable_xpr_sha256": "199d6b4f22063bd475b0933020ef75602ec2f463a4e12acb84bd2b8f4dd7bcf3",
+      "preserved_metadata_sha256": "88f129bbba0cf16e535c6a0ca3654c0a77bb0ef5247cd4163ea2b252e751154b",
+      "original_xpr_byte_exact": false,
+      "vivado_version": "2018.3",
+      "part": "xc7a35tcsg324-1",
+      "xml_root_version": {
+        "Version": "7",
+        "Minor": "39"
+      },
+      "filesets": [
+        {
+          "name": "sources_1",
+          "type": "DesignSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "CPU_NoHazard"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        },
+        {
+          "name": "constrs_1",
+          "type": "Constrs",
+          "options": [
+            {
+              "Name": "ConstrsType",
+              "Val": "XDC"
+            }
+          ]
+        },
+        {
+          "name": "sim_1",
+          "type": "SimulationSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "CPU_NoHazard_tb"
+            },
+            {
+              "Name": "TopLib",
+              "Val": "xil_defaultlib"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            },
+            {
+              "Name": "TransportPathDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "TransportIntDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "SrcSet",
+              "Val": "sources_1"
+            }
+          ]
+        },
+        {
+          "name": "utils_1",
+          "type": "Utils",
+          "options": [
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/ALU.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/ALU.v",
+          "sha256": "63204f0c3a6251467eec5d70c7062a927ae83fb0a8f1db8702db880a84ece371"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/ALU_Controller.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/ALU_Controller.v",
+          "sha256": "9a45411b580e4aaf4dfd18afe469cc3074e377df4ffb16a406bbc1f1e984af93"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/Add.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/Add.v",
+          "sha256": "3beb4abf02e62900eaf2332ff53e82cf6a1bdd42f87b6389e16988c32de80683"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/Controller.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/Controller.v",
+          "sha256": "f38a2f1293704161aab1c5f388317d2a1b8d4a511b418f0b2dba2bf2fb592e8b"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/DataMemory.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/DataMemory.v",
+          "sha256": "0dec94b9cad229802481d674f10314220f9a8a26e4027c2097ac8755e5c8d9a0"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/EX_MEM.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/EX_MEM.v",
+          "sha256": "fbea6f720c7f8e526119adfddbed183c8f1741e989606c71f93f47999f525d68"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/ForwardingUnit.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/ForwardingUnit.v",
+          "sha256": "29f48659d95583f25012f57968eb5a0b653bd10c82277999b34d73e1fb825dbb"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/Hazard_detection_unit.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/Hazard_detection_unit.v",
+          "sha256": "bd918593b331a74e0661508207dbe9fb7ec2d4f30fdc8eb46690f2502ad0e76f"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/ID_EX.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/ID_EX.v",
+          "sha256": "2fc47078fc44ee96f6b2c76de128026e6ed0cb9d4239c867aaa77b5a6f47bcc8"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/IF_ID.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/IF_ID.v",
+          "sha256": "eb6cac8f0f2be08abe4d350cb1a2bfed127784cf28f6ba120aee2d11d7462aa7"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/InstructionMemory.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/InstructionMemory.v",
+          "sha256": "2cce9071f6c72a791f916e1babc5b77f6ed7d41370039ff459515dded6cac8d5"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/MEM_WB.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/MEM_WB.v",
+          "sha256": "83c5c2603480bc7d7347e66d2e79771f30270e762304423dd77d29f7f378de0f"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/Mux_32Bits.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/Mux_32Bits.v",
+          "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/Mux_32Bits_3input.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/Mux_32Bits_3input.v",
+          "sha256": "f1fdfa6cdcb2eaaedb5a4b8947fe38f8ac6db0c6b44cda4c0916ead44f8ab37c"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/Mux_5Bits.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/Mux_5Bits.v",
+          "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/PC.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/PC.v",
+          "sha256": "42a2c22a6fe300ed5982c01b0177691851c45665d218b605f262ffc0ebd535a5"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/Register_file.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/Register_file.v",
+          "sha256": "1d3d0f97fa5fc8dbd8a2a683221dc991a0d39bae60e6c7e43bb887a98a2c6884"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+          "sha256": "85f49046a6143070bc6dcaf4bfaf2bba17f50237d16aa58f57fd7a2b6ede863e"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/Sign_Extend.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/Sign_Extend.v",
+          "sha256": "a72bc759678836da3dd158124cdc7586057cd2589d080add6c802faedc8689fd"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/CPU_NoHazard.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/CPU_NoHazard.v",
+          "sha256": "103f1caa491c0a48e871ff643486a69b89200a87ef349fdd9e6a08bb4c301da9"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+          "xpr_reference": "$PPRDIR/../../hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+          "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+        },
+        {
+          "fileset": "sim_1",
+          "type": "SimulationSrcs",
+          "path": "projects/project_02/hazard/tb/CPU_NoHazard_tb.v",
+          "xpr_reference": "$PPRDIR/../../hazard/tb/CPU_NoHazard_tb.v",
+          "sha256": "b1f335fbf34751e66d7453352abd2cbc488f3fc78c4a9012a60068004fe486f5"
+        },
+        {
+          "fileset": "sim_1",
+          "type": "SimulationSrcs",
+          "path": "projects/project_02/original_project/hazard/waveform.wcfg",
+          "xpr_reference": "$PPRDIR/waveform.wcfg",
+          "sha256": "985aaf2574dcccfec131cd12fd1c0fec1cce899f73b12df2990e96fa6c4cf588"
+        }
+      ],
+      "supplementary_files": [
+        {
+          "path": "projects/project_02/original_project/hazard/waveform.wcfg",
+          "source_sha256": "985aaf2574dcccfec131cd12fd1c0fec1cce899f73b12df2990e96fa6c4cf588",
+          "archived_sha256": "985aaf2574dcccfec131cd12fd1c0fec1cce899f73b12df2990e96fa6c4cf588",
+          "byte_exact": true
+        }
+      ],
+      "allowed_edits": [
+        {
+          "field": "Project/@Path",
+          "change": "absolute original workstation path replaced with anonymous project basename"
+        },
+        {
+          "field": "FileSets/sources_1/File[ALU.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ALU_Controller.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Add.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Controller.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[DataMemory.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[EX_MEM.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ForwardingUnit.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Hazard_detection_unit.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ID_EX.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[IF_ID.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[InstructionMemory.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[MEM_WB.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Mux_32Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Mux_32Bits_3input.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Mux_5Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[PC.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Register_file.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Shift_Left_2_32BitsTo32Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Sign_Extend.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[CPU_NoHazard.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Shift_Left_2_26BitsTo28Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sim_1/File[CPU_NoHazard_tb.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sim_1/File[CPU_NoHazard_tb_behav.wcfg]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sim_1/Config/XSimWcfgFile",
+          "change": "waveform option follows the relocated waveform config"
+        }
+      ],
+      "source_selection": "corresponding previously archived original RTL"
+    },
+    {
+      "group": "project_02",
+      "variant": "pipeline",
+      "path": "projects/project_02/original_project/pipeline/project_02_pipeline.xpr",
+      "source_xpr_sha256": "12aaa2c6d830b5423e5fdfd03a26bd1dea5aa8dbdb38a39bb6f1154bca2aab38",
+      "portable_xpr_sha256": "97f8c01330d3a80a1181bb9d8151ca10c9b42842b1d5c7edcf26f887a11820e0",
+      "preserved_metadata_sha256": "c5c4ef200e08ab8de75f8db1896f06e3bd1a68a0765fb62112409cac591c3c61",
+      "original_xpr_byte_exact": false,
+      "vivado_version": "2018.3",
+      "part": "xc7a35tcsg324-1",
+      "xml_root_version": {
+        "Version": "7",
+        "Minor": "39"
+      },
+      "filesets": [
+        {
+          "name": "sources_1",
+          "type": "DesignSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "CPU_Pipeline"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        },
+        {
+          "name": "constrs_1",
+          "type": "Constrs",
+          "options": [
+            {
+              "Name": "ConstrsType",
+              "Val": "XDC"
+            }
+          ]
+        },
+        {
+          "name": "sim_1",
+          "type": "SimulationSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "CPU_Pipeline_tb"
+            },
+            {
+              "Name": "TopLib",
+              "Val": "xil_defaultlib"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            },
+            {
+              "Name": "TransportPathDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "TransportIntDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "SrcSet",
+              "Val": "sources_1"
+            }
+          ]
+        },
+        {
+          "name": "utils_1",
+          "type": "Utils",
+          "options": [
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/ADD.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/ADD.v",
+          "sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/ALU.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/ALU.v",
+          "sha256": "2a93ed2f072560dd6e9515bcc5e6c39c4eebe0f966f02512e3ab3831c8214b92"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/ALU_CONTROLLER.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/ALU_CONTROLLER.v",
+          "sha256": "9a45411b580e4aaf4dfd18afe469cc3074e377df4ffb16a406bbc1f1e984af93"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/CONTROLLER.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/CONTROLLER.v",
+          "sha256": "0c044e04d744b9cca668d953fa58e3c9b5924002f51a18a4e94edb6f4199ee92"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/DATAMEMORY.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/DATAMEMORY.v",
+          "sha256": "0dec94b9cad229802481d674f10314220f9a8a26e4027c2097ac8755e5c8d9a0"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/EX_MEM.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/EX_MEM.v",
+          "sha256": "44c80fbb291badf367e02067e6b6b544acfa923ad65630df910c19997d813bd7"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/ID_EX.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/ID_EX.v",
+          "sha256": "ea77648f0e7e012da6ffa1e8396526b540ed90dc9104bddc32106670c8a7cac2"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/IF_ID.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/IF_ID.v",
+          "sha256": "530df6dae74b8fdb35cfe8f48d3b431137b91eec2489b1827b1e3993288424d4"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/INSTROCTIONMEMORY.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/INSTROCTIONMEMORY.v",
+          "sha256": "1c862aeebe8eb7a6a5c74e5e855cb2ad32f60600e6e756c0f592d095d9bf1944"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/MEM_WB.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/MEM_WB.v",
+          "sha256": "5621b5794e748e5e0b17bf32265fd7c7f33fe3ff420c1b069860e936006e4260"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/MUX_32BITS.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/MUX_32BITS.v",
+          "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/MUX_5BITS.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/MUX_5BITS.v",
+          "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/PC.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/PC.v",
+          "sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/REGISTER_FILE.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/REGISTER_FILE.v",
+          "sha256": "d9615bfbbeccc3941177551cdf580fdf062aabc8cfa927c391d6e0be7c913c72"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+          "sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/SIGN_EXTEND.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/SIGN_EXTEND.v",
+          "sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/CPU_PIPELINE.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/CPU_PIPELINE.v",
+          "sha256": "3be550e0ec732312415820c893204f40964b545dd28291ebfd7236c89fb4e30c"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+          "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+        },
+        {
+          "fileset": "sim_1",
+          "type": "SimulationSrcs",
+          "path": "projects/project_02/pipeline/tb/CPU_Pipeline_tb.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/tb/CPU_Pipeline_tb.v",
+          "sha256": "76fd519d03113819b6f67a110e8aca97338cf302a0f4487c9a52748d338484f3"
+        }
+      ],
+      "supplementary_files": [],
+      "allowed_edits": [
+        {
+          "field": "Project/@Path",
+          "change": "absolute original workstation path replaced with anonymous project basename"
+        },
+        {
+          "field": "FileSets/sources_1/File[ADD.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ALU.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ALU_CONTROLLER.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[CONTROLLER.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[DATAMEMORY.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[EX_MEM.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ID_EX.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[IF_ID.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[INSTROCTIONMEMORY.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[MEM_WB.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[MUX_32BITS.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[MUX_5BITS.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[PC.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[REGISTER_FILE.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[SHIFT_LEFT_2_32BITSTO32BITS.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[SIGN_EXTEND.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[CPU_PIPELINE.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[SHIFT_LEFT_2_26BITSTO28BITS.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sim_1/File[CPU_Pipeline_tb.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        }
+      ],
+      "source_selection": "corresponding previously archived original RTL"
+    },
+    {
+      "group": "project_02",
+      "variant": "single_cycle",
+      "path": "projects/project_02/original_project/single_cycle/project_02_single_cycle.xpr",
+      "source_xpr_sha256": "25f9387bdb0a3dfa78de7be53a6a884f89f957083ba253dc7394822fb656207d",
+      "portable_xpr_sha256": "cf23d9314313fcdc0f1b2b596fc93907ee16140d082dacabddaea8cad68b2f02",
+      "preserved_metadata_sha256": "3b2e24247ca9a19d503b116a50aa36494ff65addece7b68c4ee7de0847dd4223",
+      "original_xpr_byte_exact": false,
+      "vivado_version": "2018.3",
+      "part": "xc7a35tcsg324-1",
+      "xml_root_version": {
+        "Version": "7",
+        "Minor": "39"
+      },
+      "filesets": [
+        {
+          "name": "sources_1",
+          "type": "DesignSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "CPU_SingleCycle"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        },
+        {
+          "name": "constrs_1",
+          "type": "Constrs",
+          "options": [
+            {
+              "Name": "ConstrsType",
+              "Val": "XDC"
+            }
+          ]
+        },
+        {
+          "name": "sim_1",
+          "type": "SimulationSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "CPU_SingleCycle_tb"
+            },
+            {
+              "Name": "TopLib",
+              "Val": "xil_defaultlib"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            },
+            {
+              "Name": "TransportPathDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "TransportIntDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "SrcSet",
+              "Val": "sources_1"
+            }
+          ]
+        },
+        {
+          "name": "utils_1",
+          "type": "Utils",
+          "options": [
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/ALU.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/ALU.v",
+          "sha256": "2a93ed2f072560dd6e9515bcc5e6c39c4eebe0f966f02512e3ab3831c8214b92"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/ALU_Controller.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/ALU_Controller.v",
+          "sha256": "9a45411b580e4aaf4dfd18afe469cc3074e377df4ffb16a406bbc1f1e984af93"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/Add.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Add.v",
+          "sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/Controller.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Controller.v",
+          "sha256": "7521596bc462260b2472db920a3b1d806975212f7182c05412b5bb48215ac052"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/DataMemory.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/DataMemory.v",
+          "sha256": "0dec94b9cad229802481d674f10314220f9a8a26e4027c2097ac8755e5c8d9a0"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/InstructionMemory.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/InstructionMemory.v",
+          "sha256": "f50c755c54ce3e53cdca90bd99a4a1a401bad9bd2e8b236e5167b6b55e0a95b7"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/Mux_5Bits.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Mux_5Bits.v",
+          "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/PC.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/PC.v",
+          "sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/Register_File.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Register_File.v",
+          "sha256": "aa99777c1598f5227208a11b70a09963be05b005b52d2aef8a2555d332503fa7"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+          "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+          "sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/Sign_Extend.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Sign_Extend.v",
+          "sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/Mux_32Bits.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Mux_32Bits.v",
+          "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_02/single_cycle/rtl/CPU_SingleCycle.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/CPU_SingleCycle.v",
+          "sha256": "df0d5fe5dff8452278808919e790b67eff38672c7b3593013e9d165c9e60c159"
+        },
+        {
+          "fileset": "sim_1",
+          "type": "SimulationSrcs",
+          "path": "projects/project_02/single_cycle/tb/SINGLE_CYCLE_TB.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/tb/SINGLE_CYCLE_TB.v",
+          "sha256": "8c89f783cd68381361c84bf2d50d009fa4e891dbdbff449579c643952f5361b1"
+        }
+      ],
+      "supplementary_files": [],
+      "allowed_edits": [
+        {
+          "field": "Project/@Path",
+          "change": "absolute original workstation path replaced with anonymous project basename"
+        },
+        {
+          "field": "FileSets/sources_1/File[ALU.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ALU_Controller.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Add.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Controller.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[DataMemory.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[InstructionMemory.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Mux_5Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[PC.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Register_File.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Shift_Left_2_26BitsTo28Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Shift_Left_2_32BitsTo32Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Sign_Extend.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Mux_32Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[CPU_SingleCycle.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sim_1/File[SINGLE_CYCLE_TB.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        }
+      ],
+      "source_selection": "corresponding previously archived original RTL"
+    },
+    {
+      "group": "project_03_zip_variant",
+      "variant": "pipeline",
+      "path": "projects/project_03_zip_variant/original_project/pipeline/project_03_zip_variant_pipeline.xpr",
+      "source_xpr_sha256": "12aaa2c6d830b5423e5fdfd03a26bd1dea5aa8dbdb38a39bb6f1154bca2aab38",
+      "portable_xpr_sha256": "295c62a29b10da769b93610aee5115e7663f753ce000d4d0b330ed9fa5b6d705",
+      "preserved_metadata_sha256": "c5c4ef200e08ab8de75f8db1896f06e3bd1a68a0765fb62112409cac591c3c61",
+      "original_xpr_byte_exact": false,
+      "vivado_version": "2018.3",
+      "part": "xc7a35tcsg324-1",
+      "xml_root_version": {
+        "Version": "7",
+        "Minor": "39"
+      },
+      "filesets": [
+        {
+          "name": "sources_1",
+          "type": "DesignSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "CPU_Pipeline"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        },
+        {
+          "name": "constrs_1",
+          "type": "Constrs",
+          "options": [
+            {
+              "Name": "ConstrsType",
+              "Val": "XDC"
+            }
+          ]
+        },
+        {
+          "name": "sim_1",
+          "type": "SimulationSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "CPU_Pipeline_tb"
+            },
+            {
+              "Name": "TopLib",
+              "Val": "xil_defaultlib"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            },
+            {
+              "Name": "TransportPathDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "TransportIntDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "SrcSet",
+              "Val": "sources_1"
+            }
+          ]
+        },
+        {
+          "name": "utils_1",
+          "type": "Utils",
+          "options": [
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/ADD.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/ADD.v",
+          "sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/ALU.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/ALU.v",
+          "sha256": "97d1ea2b414d7d791b3923d6d0915c32c5b189ed9cdd8abae003f34c9b35a790"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/ALU_CONTROLLER.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/ALU_CONTROLLER.v",
+          "sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/CONTROLLER.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/CONTROLLER.v",
+          "sha256": "1aff8c91e01411dc4971f648ea5e9588b13b532316188b029bf30e48198962b6"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/DATAMEMORY.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/DATAMEMORY.v",
+          "sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/EX_MEM.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/EX_MEM.v",
+          "sha256": "f09ffe37e29203a02e1fd7540c34dbe54b0d6e0522e81883cfc6ff56ba202490"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/ID_EX.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/ID_EX.v",
+          "sha256": "1b7ca36543ad182afb78df9e1aa60a64f16510df9ddd69c76919a51f3ac251ec"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/IF_ID.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/IF_ID.v",
+          "sha256": "530df6dae74b8fdb35cfe8f48d3b431137b91eec2489b1827b1e3993288424d4"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/INSTROCTIONMEMORY.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/INSTROCTIONMEMORY.v",
+          "sha256": "91ae7b89302e9863d208d6fa39494c08c30c7c794d99371b3a1ed283f04c86f2"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/MEM_WB.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/MEM_WB.v",
+          "sha256": "5621b5794e748e5e0b17bf32265fd7c7f33fe3ff420c1b069860e936006e4260"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/MUX_32BITS.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/MUX_32BITS.v",
+          "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/MUX_5BITS.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/MUX_5BITS.v",
+          "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/PC.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/PC.v",
+          "sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/REGISTER_FILE.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/REGISTER_FILE.v",
+          "sha256": "d9615bfbbeccc3941177551cdf580fdf062aabc8cfa927c391d6e0be7c913c72"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+          "sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/SIGN_EXTEND.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/SIGN_EXTEND.v",
+          "sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/CPU_PIPELINE.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/CPU_PIPELINE.v",
+          "sha256": "4dc8b4c5fcb49d87576ba438876c1dc74196f6448da9f345a0a4eecaa1489661"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+          "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+        },
+        {
+          "fileset": "sim_1",
+          "type": "SimulationSrcs",
+          "path": "projects/project_03_zip_variant/pipeline/tb/CPU_Pipeline_tb.v",
+          "xpr_reference": "$PPRDIR/../../pipeline/tb/CPU_Pipeline_tb.v",
+          "sha256": "93fc4038d585b0e9cb7447e2ff69e3c2eea13831609c558aa693d5f1ff45ddea"
+        }
+      ],
+      "supplementary_files": [],
+      "allowed_edits": [
+        {
+          "field": "Project/@Path",
+          "change": "absolute original workstation path replaced with anonymous project basename"
+        },
+        {
+          "field": "FileSets/sources_1/File[ADD.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ALU.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ALU_CONTROLLER.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[CONTROLLER.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[DATAMEMORY.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[EX_MEM.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ID_EX.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[IF_ID.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[INSTROCTIONMEMORY.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[MEM_WB.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[MUX_32BITS.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[MUX_5BITS.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[PC.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[REGISTER_FILE.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[SHIFT_LEFT_2_32BITSTO32BITS.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[SIGN_EXTEND.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[CPU_PIPELINE.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[SHIFT_LEFT_2_26BITSTO28BITS.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sim_1/File[CPU_Pipeline_tb.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        }
+      ],
+      "source_selection": "ZIP counterpart for missing expanded .srcs; RAR variant not used"
+    },
+    {
+      "group": "project_03_zip_variant",
+      "variant": "single_cycle",
+      "path": "projects/project_03_zip_variant/original_project/single_cycle/project_03_zip_variant_single_cycle.xpr",
+      "source_xpr_sha256": "04fa439a42523ef70b2da6a3a91e49530a4d7a786be5e0d3b9d55988a5efecf8",
+      "portable_xpr_sha256": "87fbe8cf3e641131a6a2219395479c0fdd32df483533dc650d2d169a3887c2e7",
+      "preserved_metadata_sha256": "d4fce80cdf34ecaefaf3fdf94225ccedb760c56b74dcc53464d92bbbe250f483",
+      "original_xpr_byte_exact": false,
+      "vivado_version": "2018.3",
+      "part": "xc7a35tcsg324-1",
+      "xml_root_version": {
+        "Version": "7",
+        "Minor": "39"
+      },
+      "filesets": [
+        {
+          "name": "sources_1",
+          "type": "DesignSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "CPU_SingleCycle"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        },
+        {
+          "name": "constrs_1",
+          "type": "Constrs",
+          "options": [
+            {
+              "Name": "ConstrsType",
+              "Val": "XDC"
+            }
+          ]
+        },
+        {
+          "name": "sim_1",
+          "type": "SimulationSrcs",
+          "options": [
+            {
+              "Name": "DesignMode",
+              "Val": "RTL"
+            },
+            {
+              "Name": "TopModule",
+              "Val": "CPU_SingleCycle_tb"
+            },
+            {
+              "Name": "TopLib",
+              "Val": "xil_defaultlib"
+            },
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            },
+            {
+              "Name": "TransportPathDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "TransportIntDelay",
+              "Val": "0"
+            },
+            {
+              "Name": "SrcSet",
+              "Val": "sources_1"
+            }
+          ]
+        },
+        {
+          "name": "utils_1",
+          "type": "Utils",
+          "options": [
+            {
+              "Name": "TopAutoSet",
+              "Val": "TRUE"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/ALU.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/ALU.v",
+          "sha256": "40ad80dab1f5571fae22886a85375790fabcb29867ab806ce5eb41d11525e267"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/ALU_Controller.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/ALU_Controller.v",
+          "sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/Add.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Add.v",
+          "sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/Controller.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Controller.v",
+          "sha256": "18b80d88728b9cf2ed9420c3dbb5bf4cb70a82710d1c4311fc244f98771952d4"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/DataMemory.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/DataMemory.v",
+          "sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/InstructionMemory.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/InstructionMemory.v",
+          "sha256": "951e3a024b3eb947ff6676a4fd9c11c56ab2c9044e79f319872baed27fa8bf64"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/Mux_5Bits.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Mux_5Bits.v",
+          "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/PC.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/PC.v",
+          "sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/Register_File.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Register_File.v",
+          "sha256": "aa99777c1598f5227208a11b70a09963be05b005b52d2aef8a2555d332503fa7"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+          "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+          "sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/Sign_Extend.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Sign_Extend.v",
+          "sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/Mux_32Bits.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/Mux_32Bits.v",
+          "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+        },
+        {
+          "fileset": "sources_1",
+          "type": "DesignSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/rtl/CPU_SingleCycle.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/rtl/CPU_SingleCycle.v",
+          "sha256": "39993b5c20aa01cda7c4bd9803baa75490e2dd2c09a3fa5c0d69d2ec547b21c1"
+        },
+        {
+          "fileset": "sim_1",
+          "type": "SimulationSrcs",
+          "path": "projects/project_03_zip_variant/single_cycle/tb/SINGLE_CYCLE_TB.v",
+          "xpr_reference": "$PPRDIR/../../single_cycle/tb/SINGLE_CYCLE_TB.v",
+          "sha256": "c24e8c98201cb8092d65a4839519c9682bcf36c335112c46b38c256911cfb570"
+        }
+      ],
+      "supplementary_files": [],
+      "allowed_edits": [
+        {
+          "field": "Project/@Path",
+          "change": "absolute original workstation path replaced with anonymous project basename"
+        },
+        {
+          "field": "FileSets/sources_1/File[ALU.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[ALU_Controller.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Add.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Controller.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[DataMemory.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[InstructionMemory.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Mux_5Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[PC.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Register_File.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Shift_Left_2_26BitsTo28Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Shift_Left_2_32BitsTo32Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Sign_Extend.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[Mux_32Bits.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sources_1/File[CPU_SingleCycle.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        },
+        {
+          "field": "FileSets/sim_1/File[SINGLE_CYCLE_TB.v]/@Path",
+          "change": "reference relocated to committed relative source"
+        }
+      ],
+      "source_selection": "ZIP counterpart for missing expanded .srcs; RAR variant not used"
+    }
+  ]
+}

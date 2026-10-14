@@ -3,3 +3,6 @@
 
 # Keep upstream repaired bytes and existing CRLF/whitespace for source hash checks.
 repaired/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+*.pptx binary
+projects/project_03_zip_variant/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+projects/**/original_project/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol

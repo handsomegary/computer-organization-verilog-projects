@@ -1,0 +1,48 @@
+{
+  "scope": "Official assignment specification supplied locally; student reports and textbooks are not assignment input attachments.",
+  "documents": [
+    {
+      "path": "originals/計算機組織FinalProject.pptx",
+      "source_filename": "計算機組織FinalProject.pptx",
+      "sha256": "951ffe5f2fa6158e10464390536acbdf031eccd9d0e6521fe9101901c5ecb352",
+      "byte_exact": true,
+      "slides": 9,
+      "embedded_media_files": 5,
+      "external_relationships": []
+    }
+  ],
+  "references": [
+    {
+      "document": "originals/計算機組織FinalProject.pptx",
+      "slides": [
+        2,
+        3,
+        4,
+        8
+      ],
+      "kind": "instruction/program requirements",
+      "status": "included_in_document",
+      "note": "The MIPS programs and A/B/C requirements are in the deck, including embedded figures; no separately named downloadable ROM/data attachment is specified."
+    },
+    {
+      "document": "originals/計算機組織FinalProject.pptx",
+      "slides": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "kind": "datapath/program figures",
+      "status": "embedded_in_original_document"
+    },
+    {
+      "document": "originals/計算機組織FinalProject.pptx",
+      "slides": [
+        9
+      ],
+      "kind": "student submission deliverables",
+      "status": "not_a_provided_starter_attachment",
+      "note": "The report, RTL and top-module testbench are files students must create for submission, not external inputs required to open the assignment."
+    }
+  ]
+}
