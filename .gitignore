@@ -27,3 +27,11 @@ vivado-sim*/
 *.hw/
 *.ip_user_files/
 .Xil/
+
+# Original learning materials are validated by the exact archive manifest.
+!originals/archive/**/*.pdf
+!originals/archive/**/*.zip
+!originals/archive/**/*.png
+!originals/archive/**/*.PNG
+!originals/archive/**/*.jpg
+!originals/archive/**/*.jpeg

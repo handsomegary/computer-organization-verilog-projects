@@ -26,10 +26,14 @@ def main():
     forbidden={'.pdf','.pptx','.zip','.rar','.exe','.vvp','.vcd','.fst','.wdb','.png','.jpg','.jpeg','.log'}
     public=[path for path in ROOT.rglob('*') if path.is_file() and '.git' not in path.parts and '__pycache__' not in path.parts]
     allowed_pptx=ROOT/'originals/計算機組織FinalProject.pptx'
-    assert not [path.relative_to(ROOT).as_posix() for path in public if path.suffix.lower() in forbidden and path!=allowed_pptx]
+    materials=json.loads((ROOT/'originals/archive/materials.json').read_text(encoding='utf-8'))
+    allowed_materials={ROOT/record['path'] for record in materials['files']}
+    assert not [path.relative_to(ROOT).as_posix() for path in public if path.suffix.lower() in forbidden and path!=allowed_pptx and path not in allowed_materials]
     from check_vivado_materials import main as check_vivado_materials
     check_vivado_materials()
-    print('INVENTORY VERIFIED: original 115 HDL files plus separate 34-file ZIP variant; hashes match; official PPTX explicitly permitted; no simulation artifacts.')
+    from check_original_materials import main as check_original_materials
+    check_original_materials()
+    print('INVENTORY VERIFIED: original 115 HDL files plus separate 34-file ZIP variant; hashes match; official PPTX and exact manifest-declared original materials permitted; no simulation artifacts.')
 
 
 if __name__=='__main__':main()

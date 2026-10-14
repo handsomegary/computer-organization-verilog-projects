@@ -58,7 +58,30 @@ python checks/check_project_04.py
 
 `projects/` 保留原有 115 個匿名 HDL、另外 34 個 ZIP 原始 HDL，以及六份可攜式原 Vivado XPR 和一份被 XPR 引用的 waveform 設定。XPR 只調整私人主機路徑及指向已收錄檔案的相對路徑，保留 filesets、top、generics、FPGA part、Vivado version 與其他設定；它們是經路徑處理的副本，並非原 XPR 位元組。[vivado-materials.json](vivado-materials.json) 記錄原來源／公開檔 SHA-256、允許的路徑變更及所有 98 個檔案引用。第三組本機 XPR 缺少的 `.srcs` 由其 ZIP 對應來源補齊，沒有使用 ROM 不同的 RAR 變體替代。
 
-`repaired/` 的 146 個來源套件檔案與 provenance 保持不變。Vivado 的 cache、runs、生成的 simulation、工具執行檔與學生繳交報告未複製；FPGA 綜合、timing closure 及實體板驗證尚未執行。
+`repaired/` 的 146 個來源套件檔案與 provenance 保持不變。Vivado 的 cache、runs、生成的 simulation 與工具執行檔不歸檔；學生原報告另保存於下述附件區。FPGA 綜合、timing closure 及實體板驗證尚未執行。
+
+## 原報告、課程文件與壓縮檔附件
+
+[originals/archive/](originals/archive/materials.json) 新增 **66 件原有非編譯材料**，包括 53 份 PDF（1,810 頁）、3 份 DOCX、2 份 XLSX、接線圖、手寫筆記、歷史 ISE 設定、參考網址與原出版者 ZIP。清單記錄每件來源 SHA-256、公開檔 SHA-256、是否逐位元組相同、匿名處理及檢查範圍；其中 33 件保留原始位元組。學生姓名使用隨機別名，學號及私人作者／編輯中繼資料移除；報告內的原模擬結果、架構圖、程式與助教批改痕跡保留。這些是原有學生文件，內容正確性以本 repo 的獨立程式查核為準。
+
+| 原專案 | 附件 |
+|---|---|
+| [project_01](originals/archive/project_01) | 2 份試算表、原 ISE 設定、損壞 Final.xise、空 EX.ucf |
+| [project_02](originals/archive/project_02) | 原報告及 hazard 接線圖 |
+| [project_03](originals/archive/project_03) | 原報告、References.docx、2 份外部參考報告 |
+| [project_04](originals/archive/project_04) | 兩份不同來源的原學生 PDF／DOCX 報告 |
+
+[course_materials/](originals/archive/course_materials) 保留各章講義、2018／2023 不同年度作業題目與答案、教材及出版者補充資料。**同年度、同題目、同文件類型的說明只保留最新版本**；不同章節、年度和學生作品各自保留。第五版課本的兩個副本經 793 頁文字及內容串流比對一致，僅保留較新的 2017 中繼資料副本；舊副本只記錄來源雜湊。抵免／免修測驗不收錄。
+
+完整來源覆蓋包含 **684 個本機檔案及 7 個唯一 ZIP／RAR 容器（含巢狀 ZIP）**，每個成員分類為已保留、重複、被取代的舊版本或編譯／生成產物，沒有未處理的非編譯輸入。含學生身分的原 ZIP／RAR 以匿名取出的成員和容器 SHA 保存；原出版者 [C_O_D_5th-master.zip](originals/archive/course_materials/publisher_supplements/C_O_D_5th-master.zip) 可安全保留完整原始位元組。
+
+`legacy-ise.xise` 已將七個 HDL 引用改為 repo 相對路徑，僅核對 XML 與引用檔案，未實跑 ISE。原 `Final.xise` 在本機及 ZIP 都是 37,203 個零位元組，`EX.ucf` 為空；這些如實保存為歷史損壞／空檔，不能作為可用 FPGA 工程。外部 `reference-processor-report-01.pdf` 原檔只有 19 頁，目錄列出的第 20 頁起附錄並未包含在來源，清單已註記此原始限制。
+
+```sh
+python checks/check_original_materials.py
+```
+
+此檢查核對所有附件雜湊、完整來源分類、ZIP CRC、OOXML 結構、相對 HDL 引用及既有來源套件的完整性。`check_inventory.py` 和 CI 同時執行；只允許清單逐一宣告的附件，不放行任意 PDF／壓縮檔。匿名修改的五份專案 PDF 全 79 頁與手寫答案風險頁已渲染目視核對；三份 DOCX 已用 Word 唯讀匯出核對六頁。大型未修改教材以原位元組雜湊及文字／中繼資料檢查確認。
 
 ## 官方題面與完整附件
 
