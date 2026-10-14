@@ -1,0 +1,75 @@
+修正與驗證報告
+日期：2026-10-13
+
+處理結果
+
+1. 保留並修正五個既有版本：來源 02 的 A／B／C，來源 03 的 A／B。
+   單週期保留結構式 datapath；pipeline 保留 IF/ID、ID/EX、EX/MEM、MEM/WB
+   四組 pipeline registers 與原有 top 介面，沒有把整份舊架構偷偷換成新 core。
+
+2. 移除來源 01、來源 04、來源 03 的 hazard。這三份有跨 IF／ID／EX／MEM／WB
+   的控制或資料路徑缺陷，需要大幅重整。依使用者指示從目前檔案樹刪除，
+   以 reference/ 內重新撰寫的實作替代。舊檔保存在初始 commit 21d436e。
+   source-manifest.json 會記錄目前檔案，而非繼續宣稱 115 個舊檔保持不變。
+
+修正內容
+
+addi：清除錯誤的 MemWrite，加入對齊位址的 sentinel 回歸，避免不對齊存取
+被拒絕後把原錯誤掩蓋。byte address 20 對應 memory[5]。
+
+記憶體：lw/sw 依 base+signext(imm) 計算 byte address，再除以 4 索引 word。
+完整初始化到最後一格，檢查位址範圍與對齊，支援簡報的 address 400 迴圈。
+保留 A 版：64 instruction words、256 data words；保留 B/C：各 1024 words。
+新 reference：instruction/data 各 1024 words。
+
+ALU 與暫存器：signed slt 回傳 0 或 1，addi 正確符號延伸，保護 register 0。
+不將資料值等於某個數字當作 forwarding 相依條件。
+
+控制流程：j 與 beq 有正確位址路徑，taken branch／jump 清除較年輕指令，
+錯誤路徑不能寫暫存器或 memory；較舊的 taken branch 優先於較年輕 jump。
+保留 pipeline 在 MEM 解決 branch、ID 解決 jump；新 reference 在 EX 解決
+branch／jump，清除兩個較年輕階段。皆採無 delay slot 語意。
+
+Hazard：依來源與目的暫存器編號 forwarding，每個運算元分開選擇，較新 EX/MEM
+優先於 MEM/WB。load 的 EX/MEM address 不可當成 load data。store data 也有
+forwarding，ALUSrc immediate 在正確位置選擇，不會被 forwarding 覆蓋。
+load-use 會 hold PC／IF-ID 並插入 bubble，並排除 $zero 與沒有使用的來源欄位。
+
+Level B 仍是沒有一般 data-hazard 自動處理的基本五階段管線，需使用 NOP 排程。
+保留 B 範例使用 3 個 NOP；新 reference 的測試使用 4 個 NOP。Level C 則以
+未插入相依 NOP 的指令串驗證，沒有把排程後的成功當作自動 hazard 合格。
+
+新 reference 使用同步 active-high reset，清 PC／registers／pipeline valid，
+保留資料 RAM；舊版維持原 active-high 非同步 reset，清除其資料 RAM。
+新版本 initial 區塊提供確定的內建程式與 RAM 初值，不依靠未初始化的 X。
+
+驗證
+
+最終統一命令：python verification/check_all.py
+結果：173／173 PASS，所有編譯程序正常退出，沒有 timeout 或工具 crash。
+    regression：38／38
+    reference：97／97
+    pipeline：22／22
+    stress：16／16
+
+新 reference 以獨立 Python 模型解譯機器碼，逐案例比較全部 registers 與 1024
+data words。保留 pipeline 另有不同的逐指令模型與 180-instruction 隨機程式。
+驗證包含十種指令、負立即數、signed 邊界、taken／untaken branch、backward loop、
+jump、錯路 store、簡報第 8 頁原始 hazard 程式、load-use 各來源、load→store
+data/base、load→beq、兩來源不同階段 forwarding、最新結果優先、執行中 reset。
+簡報 address 400 的 101 次迴圈產生預期累加 5050。
+
+所有 tb 都使用實際 DUT，沒有把 forwarding 實作複製到測試裡假裝驗證。
+現有 testbench 已加入結果 assertion 及結束條件。完整 raw compiler／simulation
+return code 與輸出保存在 reports/，SHA-256 保存在 source-manifest.json。
+Icarus 對 single-cycle 組合 memory read 的完整 sensitivity 提示屬正常診斷；
+保留單週期部分原 helper 有繼承 timescale 提示。沒有以隱藏警告表示通過。
+
+範圍
+
+依指定「計算機組織FinalProject.pptx」第 2–8 頁的十種指令與 A/B/C 類型實作。
+該簡報截止日是 2019/1/15；只能確認這份題目，不能證明每年完全相同。
+第 4 頁有非標準 register aliases 和 +40/+400 不一致，本次採標準 MIPS 編碼、
+固定 $zero，並實際測試 400-byte 版本。沒有實作完整 MIPS32 exceptions、
+乘除、byte load/store 或未列入的 ISA。未做實體板、綜合或 timing closure。
+本次仍依最初「只擷取 Verilog」範圍交付程式及說明，沒有編造學生分工或製作 PDF。

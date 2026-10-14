@@ -1,0 +1,44 @@
+{
+  "passed": 173,
+  "total": 173,
+  "all_passed": true,
+  "suites": [
+    {
+      "suite": "regression",
+      "returncode": 0,
+      "passed": 38,
+      "total": 38,
+      "ok": true,
+      "results": "BUILD_ROOT/regression\\results.json",
+      "log": "BUILD_ROOT/regression\\runner.log"
+    },
+    {
+      "suite": "reference",
+      "returncode": 0,
+      "passed": 97,
+      "total": 97,
+      "ok": true,
+      "results": "BUILD_ROOT/reference\\results.json",
+      "log": "BUILD_ROOT/reference\\runner.log"
+    },
+    {
+      "suite": "pipeline",
+      "returncode": 0,
+      "passed": 22,
+      "total": 22,
+      "ok": true,
+      "results": "BUILD_ROOT/pipeline\\results.json",
+      "log": "BUILD_ROOT/pipeline\\runner.log"
+    },
+    {
+      "suite": "stress",
+      "returncode": 0,
+      "passed": 16,
+      "total": 16,
+      "ok": true,
+      "results": "BUILD_ROOT/stress\\results.json",
+      "log": "BUILD_ROOT/stress\\runner.log"
+    }
+  ],
+  "manifest_sha256": "df90c30094c2e121afa93a98e8ba40b9a25cb0291d40de51cef287dfe97235f3"
+}

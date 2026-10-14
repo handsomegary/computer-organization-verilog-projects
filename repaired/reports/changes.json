@@ -1,0 +1,50 @@
+{
+  "baseline_commit": "21d436e766d03602ddbe95cd27326013c8a9b637",
+  "repaired_implementations": [
+    "sources/02-final-pj/single-cycle",
+    "sources/02-final-pj/pipeline",
+    "sources/02-final-pj/hazard",
+    "sources/03-final-project-rar/single-cycle",
+    "sources/03-final-project-rar/pipeline"
+  ],
+  "removed_implementations": [
+    {
+      "path": "sources/01-computer-program-final",
+      "reason": "Duplicate module stubs, inconsistent ALU/MEM direction, uninitialized state and hardcoded instruction-as-PC control require replacing most of the CPU path."
+    },
+    {
+      "path": "sources/03-final-project-rar/hazard",
+      "reason": "Port-width conflicts, incorrect writeback/SLT, incomplete memory event model and interdependent forwarding/control defects require substantial cross-stage reconstruction."
+    },
+    {
+      "path": "sources/04-final-project",
+      "reason": "Top port errors plus value-based forwarding and hardcoded branch/jump control require redesigning the core control and stage interactions."
+    }
+  ],
+  "authored_replacement": {
+    "single": "reference/rtl/mips_single_cycle.v",
+    "pipeline": "reference/rtl/mips_pipeline.v",
+    "modes": {
+      "A": "mips_single_cycle",
+      "B": "mips_pipeline HAZARD_ENABLE=0 (scheduled RAW dependencies)",
+      "C": "mips_pipeline HAZARD_ENABLE=1 (forwarding + load-use stall)"
+    }
+  },
+  "fixes": [
+    "addi never writes data memory",
+    "standard byte-addressed aligned lw/sw",
+    "signed SLT outputs 0 or 1",
+    "protected register zero",
+    "complete memory initialization/bounds",
+    "jump redirect and control-path squash",
+    "older branch priority",
+    "store-data forwarding",
+    "load-use stall and source-use-aware hazard detection",
+    "self-checking terminating top testbenches"
+  ],
+  "validation": {
+    "passed": 173,
+    "total": 173,
+    "fpga_synthesis_or_board_test": false
+  }
+}

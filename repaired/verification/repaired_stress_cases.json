@@ -1,0 +1,250 @@
+[
+  {
+    "id": "stress-reset-02-final-pj-pipeline",
+    "top": "repaired_stress_reset_inflight_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/pipeline/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_reset_inflight_tb.v"
+    ],
+    "run": true,
+    "defines": [
+      "STRESS_PIPELINE"
+    ],
+    "description": "Asynchronous reset cancels simultaneous pending register write/store, clears final RAM word and restarts with empty stages.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-control-stores-02-final-pj-pipeline",
+    "top": "repaired_stress_control_stores_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/pipeline/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_control_stores_tb.v"
+    ],
+    "run": true,
+    "defines": [
+      "STRESS_PIPELINE"
+    ],
+    "description": "Untaken branch and jump/taken targets commit stores; all younger stores of taken branch/jump are squashed.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-reset-03-final-project-rar-pipeline",
+    "top": "repaired_stress_reset_inflight_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/03-final-project-rar/pipeline/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_reset_inflight_tb.v"
+    ],
+    "run": true,
+    "defines": [
+      "STRESS_PIPELINE"
+    ],
+    "description": "Asynchronous reset cancels simultaneous pending register write/store, clears final RAM word and restarts with empty stages.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-control-stores-03-final-project-rar-pipeline",
+    "top": "repaired_stress_control_stores_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/03-final-project-rar/pipeline/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_control_stores_tb.v"
+    ],
+    "run": true,
+    "defines": [
+      "STRESS_PIPELINE"
+    ],
+    "description": "Untaken branch and jump/taken targets commit stores; all younger stores of taken branch/jump are squashed.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-reset-02-final-pj-hazard",
+    "top": "repaired_stress_reset_inflight_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/hazard/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_reset_inflight_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Asynchronous reset cancels simultaneous pending register write/store, clears final RAM word and restarts with empty stages.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-control-stores-02-final-pj-hazard",
+    "top": "repaired_stress_control_stores_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/hazard/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_control_stores_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Untaken branch and jump/taken targets commit stores; all younger stores of taken branch/jump are squashed.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-hazard-dual_forwarding",
+    "top": "repaired_stress_dual_forwarding_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/hazard/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_dual_forwarding_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Unscheduled integration test, checks actual registers/memory plus forwarding or exact necessary stall coverage.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-hazard-store_dependencies",
+    "top": "repaired_stress_store_dependencies_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/hazard/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_store_dependencies_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Unscheduled integration test, checks actual registers/memory plus forwarding or exact necessary stall coverage.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-hazard-zero_hazards",
+    "top": "repaired_stress_zero_hazards_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/hazard/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_zero_hazards_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Unscheduled integration test, checks actual registers/memory plus forwarding or exact necessary stall coverage.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-hazard-load_branch",
+    "top": "repaired_stress_load_branch_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/hazard/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_load_branch_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Unscheduled integration test, checks actual registers/memory plus forwarding or exact necessary stall coverage.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-memory-02-final-pj-single-cycle",
+    "top": "repaired_stress_single_memory_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/single-cycle/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_single_memory_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Single-cycle extra: byte addressing/reset bounds, assignment address400 backward loop, or unknown opcode/$zero/fetch limits.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-memory-03-final-project-rar-single-cycle",
+    "top": "repaired_stress_single_memory_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/03-final-project-rar/single-cycle/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_single_memory_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Single-cycle extra: byte addressing/reset bounds, assignment address400 backward loop, or unknown opcode/$zero/fetch limits.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-deck-02-final-pj-single-cycle",
+    "top": "repaired_stress_single_deck_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/single-cycle/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_single_deck_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Single-cycle extra: byte addressing/reset bounds, assignment address400 backward loop, or unknown opcode/$zero/fetch limits.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-deck-03-final-project-rar-single-cycle",
+    "top": "repaired_stress_single_deck_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/03-final-project-rar/single-cycle/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_single_deck_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Single-cycle extra: byte addressing/reset bounds, assignment address400 backward loop, or unknown opcode/$zero/fetch limits.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-defaults-02-final-pj-single-cycle",
+    "top": "repaired_stress_single_defaults_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/02-final-pj/single-cycle/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_single_defaults_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Single-cycle extra: byte addressing/reset bounds, assignment address400 backward loop, or unknown opcode/$zero/fetch limits.",
+    "expected_for_conforming_design": "pass"
+  },
+  {
+    "id": "stress-defaults-03-final-project-rar-single-cycle",
+    "top": "repaired_stress_single_defaults_tb",
+    "kind": "directed",
+    "globs": [
+      "sources/03-final-project-rar/single-cycle/rtl/*.v"
+    ],
+    "files": [
+      "verification/repaired_stress_single_defaults_tb.v"
+    ],
+    "run": true,
+    "defines": [],
+    "description": "Single-cycle extra: byte addressing/reset bounds, assignment address400 backward loop, or unknown opcode/$zero/fetch limits.",
+    "expected_for_conforming_design": "pass"
+  }
+]

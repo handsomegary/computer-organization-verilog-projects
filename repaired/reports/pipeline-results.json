@@ -1,0 +1,840 @@
+[
+  {
+    "case": "02-final-pj_pipeline_demo",
+    "project": "02-final-pj/pipeline",
+    "top": "CPU_Pipeline_tb",
+    "source_files": [
+      "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "sources/02-final-pj/pipeline/rtl/ALU.v",
+      "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/EX_MEM.v",
+      "sources/02-final-pj/pipeline/rtl/ID_EX.v",
+      "sources/02-final-pj/pipeline/rtl/IF_ID.v",
+      "sources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/MEM_WB.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "sources/02-final-pj/pipeline/rtl/PC.v",
+      "sources/02-final-pj/pipeline/rtl/REGISTER_FILE.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "PACKAGE_ROOT/sources\\02-final-pj\\pipeline\\tb\\CPU_Pipeline_tb.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj/pipeline all ten instructions and demo state\r\nPACKAGE_ROOT/sources\\02-final-pj\\pipeline\\tb\\CPU_Pipeline_tb.v:25: $finish called at 1810000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_pipeline_slide8",
+    "project": "02-final-pj/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "sources/02-final-pj/pipeline/rtl/ALU.v",
+      "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/EX_MEM.v",
+      "sources/02-final-pj/pipeline/rtl/ID_EX.v",
+      "sources/02-final-pj/pipeline/rtl/IF_ID.v",
+      "sources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/MEM_WB.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "sources/02-final-pj/pipeline/rtl/PC.v",
+      "sources/02-final-pj/pipeline/rtl/REGISTER_FILE.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_pipeline_slide8.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_pipeline_slide8: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_pipeline_slide8.v:2145: $finish called at 1011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_pipeline_dense_control",
+    "project": "02-final-pj/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "sources/02-final-pj/pipeline/rtl/ALU.v",
+      "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/EX_MEM.v",
+      "sources/02-final-pj/pipeline/rtl/ID_EX.v",
+      "sources/02-final-pj/pipeline/rtl/IF_ID.v",
+      "sources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/MEM_WB.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "sources/02-final-pj/pipeline/rtl/PC.v",
+      "sources/02-final-pj/pipeline/rtl/REGISTER_FILE.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_pipeline_dense_control.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_pipeline_dense_control: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_pipeline_dense_control.v:2139: $finish called at 1011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_pipeline_deck400",
+    "project": "02-final-pj/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "sources/02-final-pj/pipeline/rtl/ALU.v",
+      "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/EX_MEM.v",
+      "sources/02-final-pj/pipeline/rtl/ID_EX.v",
+      "sources/02-final-pj/pipeline/rtl/IF_ID.v",
+      "sources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/MEM_WB.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "sources/02-final-pj/pipeline/rtl/PC.v",
+      "sources/02-final-pj/pipeline/rtl/REGISTER_FILE.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_pipeline_deck400.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_pipeline_deck400: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_pipeline_deck400.v:2173: $finish called at 40011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_pipeline_random431",
+    "project": "02-final-pj/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "sources/02-final-pj/pipeline/rtl/ALU.v",
+      "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/EX_MEM.v",
+      "sources/02-final-pj/pipeline/rtl/ID_EX.v",
+      "sources/02-final-pj/pipeline/rtl/IF_ID.v",
+      "sources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/MEM_WB.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "sources/02-final-pj/pipeline/rtl/PC.v",
+      "sources/02-final-pj/pipeline/rtl/REGISTER_FILE.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_pipeline_random431.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_pipeline_random431: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_pipeline_random431.v:2845: $finish called at 13011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_pipeline_random902",
+    "project": "02-final-pj/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "sources/02-final-pj/pipeline/rtl/ALU.v",
+      "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/EX_MEM.v",
+      "sources/02-final-pj/pipeline/rtl/ID_EX.v",
+      "sources/02-final-pj/pipeline/rtl/IF_ID.v",
+      "sources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/MEM_WB.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "sources/02-final-pj/pipeline/rtl/PC.v",
+      "sources/02-final-pj/pipeline/rtl/REGISTER_FILE.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_pipeline_random902.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_pipeline_random902: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_pipeline_random902.v:2845: $finish called at 13011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_pipeline_random1874",
+    "project": "02-final-pj/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "sources/02-final-pj/pipeline/rtl/ALU.v",
+      "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
+      "sources/02-final-pj/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/EX_MEM.v",
+      "sources/02-final-pj/pipeline/rtl/ID_EX.v",
+      "sources/02-final-pj/pipeline/rtl/IF_ID.v",
+      "sources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/02-final-pj/pipeline/rtl/MEM_WB.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "sources/02-final-pj/pipeline/rtl/PC.v",
+      "sources/02-final-pj/pipeline/rtl/REGISTER_FILE.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_pipeline_random1874.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_pipeline_random1874: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_pipeline_random1874.v:2845: $finish called at 13011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_hazard_demo",
+    "project": "02-final-pj/hazard",
+    "top": "CPU_NoHazard_tb",
+    "source_files": [
+      "sources/02-final-pj/hazard/rtl/Add.v",
+      "sources/02-final-pj/hazard/rtl/ALU.v",
+      "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "sources/02-final-pj/hazard/rtl/Controller.v",
+      "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "sources/02-final-pj/hazard/rtl/PC.v",
+      "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Sign_Extend.v"
+    ],
+    "testbench": "PACKAGE_ROOT/sources\\02-final-pj\\hazard\\tb\\CPU_NoHazard_tb.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj/hazard all ten instructions and demo state\r\nPACKAGE_ROOT/sources\\02-final-pj\\hazard\\tb\\CPU_NoHazard_tb.v:25: $finish called at 1810000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_hazard_slide8",
+    "project": "02-final-pj/hazard",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/hazard/rtl/Add.v",
+      "sources/02-final-pj/hazard/rtl/ALU.v",
+      "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "sources/02-final-pj/hazard/rtl/Controller.v",
+      "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "sources/02-final-pj/hazard/rtl/PC.v",
+      "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Sign_Extend.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_hazard_slide8.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_hazard_slide8: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_hazard_slide8.v:2130: $finish called at 1011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_hazard_dense_control",
+    "project": "02-final-pj/hazard",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/hazard/rtl/Add.v",
+      "sources/02-final-pj/hazard/rtl/ALU.v",
+      "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "sources/02-final-pj/hazard/rtl/Controller.v",
+      "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "sources/02-final-pj/hazard/rtl/PC.v",
+      "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Sign_Extend.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_hazard_dense_control.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_hazard_dense_control: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_hazard_dense_control.v:2139: $finish called at 1011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_hazard_deck400",
+    "project": "02-final-pj/hazard",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/hazard/rtl/Add.v",
+      "sources/02-final-pj/hazard/rtl/ALU.v",
+      "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "sources/02-final-pj/hazard/rtl/Controller.v",
+      "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "sources/02-final-pj/hazard/rtl/PC.v",
+      "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Sign_Extend.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_hazard_deck400.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_hazard_deck400: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_hazard_deck400.v:2137: $finish called at 40011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_hazard_random431",
+    "project": "02-final-pj/hazard",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/hazard/rtl/Add.v",
+      "sources/02-final-pj/hazard/rtl/ALU.v",
+      "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "sources/02-final-pj/hazard/rtl/Controller.v",
+      "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "sources/02-final-pj/hazard/rtl/PC.v",
+      "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Sign_Extend.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_hazard_random431.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_hazard_random431: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_hazard_random431.v:2305: $finish called at 13011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_hazard_random902",
+    "project": "02-final-pj/hazard",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/hazard/rtl/Add.v",
+      "sources/02-final-pj/hazard/rtl/ALU.v",
+      "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "sources/02-final-pj/hazard/rtl/Controller.v",
+      "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "sources/02-final-pj/hazard/rtl/PC.v",
+      "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Sign_Extend.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_hazard_random902.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_hazard_random902: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_hazard_random902.v:2305: $finish called at 13011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "02-final-pj_hazard_random1874",
+    "project": "02-final-pj/hazard",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/hazard/rtl/Add.v",
+      "sources/02-final-pj/hazard/rtl/ALU.v",
+      "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "sources/02-final-pj/hazard/rtl/Controller.v",
+      "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "sources/02-final-pj/hazard/rtl/PC.v",
+      "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Sign_Extend.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\02-final-pj_hazard_random1874.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 02-final-pj_hazard_random1874: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\02-final-pj_hazard_random1874.v:2305: $finish called at 13011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "03-final-project-rar_pipeline_demo",
+    "project": "03-final-project-rar/pipeline",
+    "top": "CPU_Pipeline_tb",
+    "source_files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "PACKAGE_ROOT/sources\\03-final-project-rar\\pipeline\\tb\\CPU_Pipeline_tb.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 03-final-project-rar/pipeline all ten instructions and demo state\r\nPACKAGE_ROOT/sources\\03-final-project-rar\\pipeline\\tb\\CPU_Pipeline_tb.v:25: $finish called at 1810000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "03-final-project-rar_pipeline_slide8",
+    "project": "03-final-project-rar/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\03-final-project-rar_pipeline_slide8.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 03-final-project-rar_pipeline_slide8: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\03-final-project-rar_pipeline_slide8.v:2145: $finish called at 1011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "03-final-project-rar_pipeline_dense_control",
+    "project": "03-final-project-rar/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\03-final-project-rar_pipeline_dense_control.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 03-final-project-rar_pipeline_dense_control: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\03-final-project-rar_pipeline_dense_control.v:2139: $finish called at 1011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "03-final-project-rar_pipeline_deck400",
+    "project": "03-final-project-rar/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\03-final-project-rar_pipeline_deck400.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 03-final-project-rar_pipeline_deck400: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\03-final-project-rar_pipeline_deck400.v:2173: $finish called at 40011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "03-final-project-rar_pipeline_random431",
+    "project": "03-final-project-rar/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\03-final-project-rar_pipeline_random431.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 03-final-project-rar_pipeline_random431: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\03-final-project-rar_pipeline_random431.v:2845: $finish called at 13011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "03-final-project-rar_pipeline_random902",
+    "project": "03-final-project-rar/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\03-final-project-rar_pipeline_random902.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 03-final-project-rar_pipeline_random902: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\03-final-project-rar_pipeline_random902.v:2845: $finish called at 13011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "03-final-project-rar_pipeline_random1874",
+    "project": "03-final-project-rar/pipeline",
+    "top": "test",
+    "source_files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\03-final-project-rar_pipeline_random1874.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS 03-final-project-rar_pipeline_random1874: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\03-final-project-rar_pipeline_random1874.v:2845: $finish called at 13011000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  },
+  {
+    "case": "hazard_stall_count",
+    "project": "02-final-pj/hazard",
+    "top": "test",
+    "source_files": [
+      "sources/02-final-pj/hazard/rtl/Add.v",
+      "sources/02-final-pj/hazard/rtl/ALU.v",
+      "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "sources/02-final-pj/hazard/rtl/Controller.v",
+      "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "sources/02-final-pj/hazard/rtl/PC.v",
+      "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/02-final-pj/hazard/rtl/Sign_Extend.v"
+    ],
+    "testbench": "BUILD_ROOT/pipeline\\hazard_stall_count.v",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "simulation": {
+      "returncode": 0,
+      "stdout": "PASS hazard_stall_count: all 32 registers and 1024 memory words match ISA reference\r\nBUILD_ROOT/pipeline\\hazard_stall_count.v:2138: $finish called at 1511000 (1ps)\r\n",
+      "stderr": ""
+    },
+    "passed": true
+  }
+]

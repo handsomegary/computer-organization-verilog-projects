@@ -1,2 +1,5 @@
 * text=auto eol=lf
 *.md whitespace=-blank-at-eol
+
+# Keep upstream repaired bytes and existing CRLF/whitespace for source hash checks.
+repaired/** whitespace=-blank-at-eol,cr-at-eol

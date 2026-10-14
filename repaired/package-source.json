@@ -1,0 +1,1179 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/handsomegary/computer-organization-final-verilog-review",
+  "source_commit": "012b371e2ad6fd768170ad6aa9bc32254aadad04",
+  "source_hash_basis": "SHA-256 of committed Git blob bytes read with git ls-tree and git cat-file; all source working-tree files were verified identical to those committed blobs.",
+  "source_tree": "https://github.com/handsomegary/computer-organization-final-verilog-review/tree/012b371e2ad6fd768170ad6aa9bc32254aadad04",
+  "copied_tracked_files": 146,
+  "scope": "Complete upstream tracked tree. All RTL, testbenches, generators and source manifests copied byte-identically. Historical report paths sanitized explicitly; generated simulation files and repository internals excluded.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "source_sha256": "fb16f90a7c73bd1e2d7fab84f1471654e92dc9a83b1558d68c14720c24ca84b6",
+      "packaged_sha256": "fb16f90a7c73bd1e2d7fab84f1471654e92dc9a83b1558d68c14720c24ca84b6",
+      "source_bytes": 73,
+      "packaged_bytes": 73,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "source_sha256": "3d02880116257233843d9e94810e9cfd89df029a90c8f27638963b0925f8e5f1",
+      "packaged_sha256": "3d02880116257233843d9e94810e9cfd89df029a90c8f27638963b0925f8e5f1",
+      "source_bytes": 469,
+      "packaged_bytes": 469,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": ".gitignore",
+      "source_sha256": "29b60d043ff73d7678c9ea7c61645bf576c38a5ad192ad228a3ddd6943ed9093",
+      "packaged_sha256": "29b60d043ff73d7678c9ea7c61645bf576c38a5ad192ad228a3ddd6943ed9093",
+      "source_bytes": 104,
+      "packaged_bytes": 104,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "AUDIT.zh-TW.txt",
+      "source_sha256": "adb8de552e5c7124700b8b2a5e486e473e564aa7bde8a8604a28cd79862b54c1",
+      "packaged_sha256": "adb8de552e5c7124700b8b2a5e486e473e564aa7bde8a8604a28cd79862b54c1",
+      "source_bytes": 4601,
+      "packaged_bytes": 4601,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "README.txt",
+      "source_sha256": "b98de5f2a6f7ace456774f11bcaebbdf98eb479fdfd1b6e35e2518ef769273cc",
+      "packaged_sha256": "b98de5f2a6f7ace456774f11bcaebbdf98eb479fdfd1b6e35e2518ef769273cc",
+      "source_bytes": 4212,
+      "packaged_bytes": 4212,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "reference/rtl/mips_pipeline.v",
+      "source_sha256": "b86defef9b69836b6674bed198a98ae8761cd5d3a8c8fe0fd03b9787a6e83959",
+      "packaged_sha256": "b86defef9b69836b6674bed198a98ae8761cd5d3a8c8fe0fd03b9787a6e83959",
+      "source_bytes": 8163,
+      "packaged_bytes": 8163,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "reference/rtl/mips_single_cycle.v",
+      "source_sha256": "4aeb970f0b6cd3b72e48de952bf5d65460922d5c663e7685937d1631d39560b7",
+      "packaged_sha256": "4aeb970f0b6cd3b72e48de952bf5d65460922d5c663e7685937d1631d39560b7",
+      "source_bytes": 3465,
+      "packaged_bytes": 3465,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "reports/changes.json",
+      "source_sha256": "624d4ac67cf5f9b1d13ea9da68efa9ff395d4bdb2a9e960d27b132be2d41bbfb",
+      "packaged_sha256": "624d4ac67cf5f9b1d13ea9da68efa9ff395d4bdb2a9e960d27b132be2d41bbfb",
+      "source_bytes": 1952,
+      "packaged_bytes": 1952,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "reports/pipeline-notes.txt",
+      "source_sha256": "23326cf2d9f1ada7df567bf249972faa3ba119e422a4d63e9084e55edb02cf10",
+      "packaged_sha256": "23326cf2d9f1ada7df567bf249972faa3ba119e422a4d63e9084e55edb02cf10",
+      "source_bytes": 2863,
+      "packaged_bytes": 2863,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "reports/pipeline-results.json",
+      "source_sha256": "43e0b040f1394005f0ac72119ba2ca46733f4f7b02eb6f5af40450b621309109",
+      "packaged_sha256": "585d7a8cecbccc136eb35d396f12584df6d6d5b980b6df140741acba96081e48",
+      "source_bytes": 43308,
+      "packaged_bytes": 38598,
+      "operation": "historical-report absolute host paths replaced by PACKAGE_ROOT/BUILD_ROOT/AUDIT_HOST_ROOT; functional results unchanged"
+    },
+    {
+      "path": "reports/reference-integrity.json",
+      "source_sha256": "44b51980c127ac76244880d7dd9f3d4dd156b75c7415d9509b51df986ceda761",
+      "packaged_sha256": "2986a5023eeaf25c9d80d094a398b837b72597f62031eb704d5d394679933410",
+      "source_bytes": 79281,
+      "packaged_bytes": 66380,
+      "operation": "historical-report absolute host paths replaced by PACKAGE_ROOT/BUILD_ROOT/AUDIT_HOST_ROOT; functional results unchanged"
+    },
+    {
+      "path": "reports/reference-results.json",
+      "source_sha256": "8c91b53439b5ba85f5771eb10dafc2724925788a5d9568790e9d2037bca46df1",
+      "packaged_sha256": "9d3bbd592fbecdba764e64dc2e922b4388de521352f2011d29b0fa6e547962a4",
+      "source_bytes": 218648,
+      "packaged_bytes": 140676,
+      "operation": "historical-report absolute host paths replaced by PACKAGE_ROOT/BUILD_ROOT/AUDIT_HOST_ROOT; functional results unchanged"
+    },
+    {
+      "path": "reports/stress-results.json",
+      "source_sha256": "a5a18fea93c24fb058198f1ab905b0f3eadafdf36e3818534df77fa6211aa986",
+      "packaged_sha256": "a0436c121a50eea4c240db73cbcd34a908ffe65ecd0ec7c64c6595b7e7370bf1",
+      "source_bytes": 40813,
+      "packaged_bytes": 36701,
+      "operation": "historical-report absolute host paths replaced by PACKAGE_ROOT/BUILD_ROOT/AUDIT_HOST_ROOT; functional results unchanged"
+    },
+    {
+      "path": "reports/summary.json",
+      "source_sha256": "9fba3b82031e4883e6126fe20ecbe9e3088e4c028767a7c87395e808e80bbf96",
+      "packaged_sha256": "e89dbe6f2d3cdbc8c627b3e3a4225288ca53979698f153649614dd6f9a486547",
+      "source_bytes": 1920,
+      "packaged_bytes": 1096,
+      "operation": "historical-report absolute host paths replaced by PACKAGE_ROOT/BUILD_ROOT/AUDIT_HOST_ROOT; functional results unchanged"
+    },
+    {
+      "path": "reports/verification-results.json",
+      "source_sha256": "a0a11f3d2ab512d16e266504d3ec598a3ba2835aa793b2c56c8119ba57ff23fe",
+      "packaged_sha256": "be36f21b79119ef76beee2f3f48a55f540645df4d3fd83a8dee7577cb3e738b6",
+      "source_bytes": 119829,
+      "packaged_bytes": 112989,
+      "operation": "historical-report absolute host paths replaced by PACKAGE_ROOT/BUILD_ROOT/AUDIT_HOST_ROOT; functional results unchanged"
+    },
+    {
+      "path": "source-manifest.json",
+      "source_sha256": "df90c30094c2e121afa93a98e8ba40b9a25cb0291d40de51cef287dfe97235f3",
+      "packaged_sha256": "df90c30094c2e121afa93a98e8ba40b9a25cb0291d40de51cef287dfe97235f3",
+      "source_bytes": 53888,
+      "packaged_bytes": 53888,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/ALU.v",
+      "source_sha256": "2068cc61afc008a8a309c273ea21d74c1dcc5ae0a257274864260d1636dc76e0",
+      "packaged_sha256": "2068cc61afc008a8a309c273ea21d74c1dcc5ae0a257274864260d1636dc76e0",
+      "source_bytes": 555,
+      "packaged_bytes": 555,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "source_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+      "packaged_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+      "source_bytes": 913,
+      "packaged_bytes": 913,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Add.v",
+      "source_sha256": "3beb4abf02e62900eaf2332ff53e82cf6a1bdd42f87b6389e16988c32de80683",
+      "packaged_sha256": "3beb4abf02e62900eaf2332ff53e82cf6a1bdd42f87b6389e16988c32de80683",
+      "source_bytes": 134,
+      "packaged_bytes": 134,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "source_sha256": "d20e5c56ae522405bae87d84998cde96a1b04f48e7428f53fa060aebd6eafaeb",
+      "packaged_sha256": "d20e5c56ae522405bae87d84998cde96a1b04f48e7428f53fa060aebd6eafaeb",
+      "source_bytes": 7396,
+      "packaged_bytes": 7396,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Controller.v",
+      "source_sha256": "f7d79e9d6975d2600ffa960ad7eef3eed771ed9511d55c06a5274f2755a1cc59",
+      "packaged_sha256": "f7d79e9d6975d2600ffa960ad7eef3eed771ed9511d55c06a5274f2755a1cc59",
+      "source_bytes": 1676,
+      "packaged_bytes": 1676,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "source_sha256": "debc8b5c4b7c780004e423533c73e18b99fae76d3e4b15e14ee2ce8faacfd066",
+      "packaged_sha256": "debc8b5c4b7c780004e423533c73e18b99fae76d3e4b15e14ee2ce8faacfd066",
+      "source_bytes": 709,
+      "packaged_bytes": 709,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "source_sha256": "3c4cf0592104ce469adc78e106f7eb3e9a02fc5c608d08b55e9b07d217ea5cf5",
+      "packaged_sha256": "3c4cf0592104ce469adc78e106f7eb3e9a02fc5c608d08b55e9b07d217ea5cf5",
+      "source_bytes": 1296,
+      "packaged_bytes": 1296,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "source_sha256": "9ad3d6489257804bf37864ad0b44e198cc07e09583b8397ef5977d6a63b0963b",
+      "packaged_sha256": "9ad3d6489257804bf37864ad0b44e198cc07e09583b8397ef5977d6a63b0963b",
+      "source_bytes": 838,
+      "packaged_bytes": 838,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "source_sha256": "31d39b65abe6f5f07e40e710baf38d6a5d1e227f21f9c50a70ce561b83031c4f",
+      "packaged_sha256": "31d39b65abe6f5f07e40e710baf38d6a5d1e227f21f9c50a70ce561b83031c4f",
+      "source_bytes": 519,
+      "packaged_bytes": 519,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "source_sha256": "4e30ecdd3d5de0f63ba3db9662ceb3c024d052c9c4e3639ae8243036e297a310",
+      "packaged_sha256": "4e30ecdd3d5de0f63ba3db9662ceb3c024d052c9c4e3639ae8243036e297a310",
+      "source_bytes": 1591,
+      "packaged_bytes": 1591,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "source_sha256": "bd1ddd996648bffe74d90ea7cd95eaf18f297a900778fc10409eb37a1998568a",
+      "packaged_sha256": "bd1ddd996648bffe74d90ea7cd95eaf18f297a900778fc10409eb37a1998568a",
+      "source_bytes": 454,
+      "packaged_bytes": 454,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "source_sha256": "70b4016c7ab939a158cd40c67d3f8a2d58356cb51e9fd63da56fc860b2346d2b",
+      "packaged_sha256": "70b4016c7ab939a158cd40c67d3f8a2d58356cb51e9fd63da56fc860b2346d2b",
+      "source_bytes": 1577,
+      "packaged_bytes": 1577,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "source_sha256": "dc7fa3369ac5808e85acf787930715554fa24c4517d367716d1a2a42ef90fedb",
+      "packaged_sha256": "dc7fa3369ac5808e85acf787930715554fa24c4517d367716d1a2a42ef90fedb",
+      "source_bytes": 825,
+      "packaged_bytes": 825,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "source_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "packaged_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "source_bytes": 166,
+      "packaged_bytes": 166,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "source_sha256": "20baa04d7a46900f217a6256209b997ddeae7a97d4832b0b9a6a139d3df6c02e",
+      "packaged_sha256": "20baa04d7a46900f217a6256209b997ddeae7a97d4832b0b9a6a139d3df6c02e",
+      "source_bytes": 322,
+      "packaged_bytes": 322,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "source_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "packaged_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "source_bytes": 163,
+      "packaged_bytes": 163,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/PC.v",
+      "source_sha256": "528b21e4a8746c38f8a461556b642ee49b1cdd12b077d5732e2c9102be3f2d3f",
+      "packaged_sha256": "528b21e4a8746c38f8a461556b642ee49b1cdd12b077d5732e2c9102be3f2d3f",
+      "source_bytes": 314,
+      "packaged_bytes": 314,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "source_sha256": "8e54e2d5801cc68cab31aa8c9834f58148b0fa984e0a4e9afdbc47aeee94509e",
+      "packaged_sha256": "8e54e2d5801cc68cab31aa8c9834f58148b0fa984e0a4e9afdbc47aeee94509e",
+      "source_bytes": 1061,
+      "packaged_bytes": 1061,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "source_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "packaged_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "source_bytes": 158,
+      "packaged_bytes": 158,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "source_sha256": "85f49046a6143070bc6dcaf4bfaf2bba17f50237d16aa58f57fd7a2b6ede863e",
+      "packaged_sha256": "85f49046a6143070bc6dcaf4bfaf2bba17f50237d16aa58f57fd7a2b6ede863e",
+      "source_bytes": 158,
+      "packaged_bytes": 158,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Sign_Extend.v",
+      "source_sha256": "a72bc759678836da3dd158124cdc7586057cd2589d080add6c802faedc8689fd",
+      "packaged_sha256": "a72bc759678836da3dd158124cdc7586057cd2589d080add6c802faedc8689fd",
+      "source_bytes": 297,
+      "packaged_bytes": 297,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/hazard/tb/CPU_NoHazard_tb.v",
+      "source_sha256": "ff2036be28a0112401757a015d3f5b612af58a7110c9e8f7ed093e74220af206",
+      "packaged_sha256": "ff2036be28a0112401757a015d3f5b612af58a7110c9e8f7ed093e74220af206",
+      "source_bytes": 1024,
+      "packaged_bytes": 1024,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "source_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+      "packaged_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+      "source_bytes": 133,
+      "packaged_bytes": 133,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/ALU.v",
+      "source_sha256": "97d1ea2b414d7d791b3923d6d0915c32c5b189ed9cdd8abae003f34c9b35a790",
+      "packaged_sha256": "97d1ea2b414d7d791b3923d6d0915c32c5b189ed9cdd8abae003f34c9b35a790",
+      "source_bytes": 579,
+      "packaged_bytes": 579,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "source_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+      "packaged_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+      "source_bytes": 913,
+      "packaged_bytes": 913,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
+      "source_sha256": "7c753613eb64fc21bb9a45943ad1053132a91525e3b6b34107381841a014ef05",
+      "packaged_sha256": "7c753613eb64fc21bb9a45943ad1053132a91525e3b6b34107381841a014ef05",
+      "source_bytes": 1613,
+      "packaged_bytes": 1613,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/CPU_PIPELINE.v",
+      "source_sha256": "f7ceea7598a03fbce2cad61f7b82d470f7637c4f9e2450bdd0bbf5693b114fcc",
+      "packaged_sha256": "f7ceea7598a03fbce2cad61f7b82d470f7637c4f9e2450bdd0bbf5693b114fcc",
+      "source_bytes": 5865,
+      "packaged_bytes": 5865,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "source_sha256": "debc8b5c4b7c780004e423533c73e18b99fae76d3e4b15e14ee2ce8faacfd066",
+      "packaged_sha256": "debc8b5c4b7c780004e423533c73e18b99fae76d3e4b15e14ee2ce8faacfd066",
+      "source_bytes": 709,
+      "packaged_bytes": 709,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/EX_MEM.v",
+      "source_sha256": "c19901a9a05517da0dda9a318c86f24e5458460af5933a849cfea48af629a188",
+      "packaged_sha256": "c19901a9a05517da0dda9a318c86f24e5458460af5933a849cfea48af629a188",
+      "source_bytes": 1295,
+      "packaged_bytes": 1295,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/ID_EX.v",
+      "source_sha256": "4365063c20340747abb506ccab8b21ed39fd8be9022160c089e0f2fb2b1f1cec",
+      "packaged_sha256": "4365063c20340747abb506ccab8b21ed39fd8be9022160c089e0f2fb2b1f1cec",
+      "source_bytes": 1528,
+      "packaged_bytes": 1528,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/IF_ID.v",
+      "source_sha256": "9dc675860753638aca2be35921582f3399cc353c65336ee1fb369d808c686d50",
+      "packaged_sha256": "9dc675860753638aca2be35921582f3399cc353c65336ee1fb369d808c686d50",
+      "source_bytes": 319,
+      "packaged_bytes": 319,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "source_sha256": "3915e483bf300000e3baabd7a4444298381134dbf1b30f7c6eb6107d2c0ffb8f",
+      "packaged_sha256": "3915e483bf300000e3baabd7a4444298381134dbf1b30f7c6eb6107d2c0ffb8f",
+      "source_bytes": 4502,
+      "packaged_bytes": 4502,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/MEM_WB.v",
+      "source_sha256": "b004c7ef1f8d096f9bd707867548a20ce9e86e6f1f89a524f1d767a99964d747",
+      "packaged_sha256": "b004c7ef1f8d096f9bd707867548a20ce9e86e6f1f89a524f1d767a99964d747",
+      "source_bytes": 824,
+      "packaged_bytes": 824,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "source_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "packaged_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "source_bytes": 166,
+      "packaged_bytes": 166,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "source_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "packaged_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "source_bytes": 163,
+      "packaged_bytes": 163,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/PC.v",
+      "source_sha256": "2b0926bbd00088f14b3185bb9b667c84fdd07262d266e394cc3d7088561cb596",
+      "packaged_sha256": "2b0926bbd00088f14b3185bb9b667c84fdd07262d266e394cc3d7088561cb596",
+      "source_bytes": 244,
+      "packaged_bytes": 244,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/REGISTER_FILE.v",
+      "source_sha256": "0aeff7ad28d779be4cbe2ed4f3bf840435cd6e60fcf52e97f320edd453dab17c",
+      "packaged_sha256": "0aeff7ad28d779be4cbe2ed4f3bf840435cd6e60fcf52e97f320edd453dab17c",
+      "source_bytes": 736,
+      "packaged_bytes": 736,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "source_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "packaged_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "source_bytes": 158,
+      "packaged_bytes": 158,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "source_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+      "packaged_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+      "source_bytes": 157,
+      "packaged_bytes": 157,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v",
+      "source_sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d",
+      "packaged_sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d",
+      "source_bytes": 296,
+      "packaged_bytes": 296,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/tb/CPU_Pipeline_tb.v",
+      "source_sha256": "3f3526f17a3ff7aec08584b5943b3741f7dcf5d9505a5ab4444ad1ea9ed6a05a",
+      "packaged_sha256": "3f3526f17a3ff7aec08584b5943b3741f7dcf5d9505a5ab4444ad1ea9ed6a05a",
+      "source_bytes": 1026,
+      "packaged_bytes": 1026,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/ALU.v",
+      "source_sha256": "c2c6e8099900c89e7b1476d0cc2ebceb02aeb99f0c629e2674e307ea4f0301be",
+      "packaged_sha256": "c2c6e8099900c89e7b1476d0cc2ebceb02aeb99f0c629e2674e307ea4f0301be",
+      "source_bytes": 533,
+      "packaged_bytes": 533,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/ALU_Controller.v",
+      "source_sha256": "6b915c218ba1bb9728067de0a5a73b064de73048e85e01ee96f1543d5703b4ec",
+      "packaged_sha256": "6b915c218ba1bb9728067de0a5a73b064de73048e85e01ee96f1543d5703b4ec",
+      "source_bytes": 878,
+      "packaged_bytes": 878,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Add.v",
+      "source_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+      "packaged_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+      "source_bytes": 133,
+      "packaged_bytes": 133,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/CPU_SingleCycle.v",
+      "source_sha256": "97be756e607560f772b07f4c141b793cb7d1b94f958d26fc997a4e9d20e198e8",
+      "packaged_sha256": "97be756e607560f772b07f4c141b793cb7d1b94f958d26fc997a4e9d20e198e8",
+      "source_bytes": 2762,
+      "packaged_bytes": 2762,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Controller.v",
+      "source_sha256": "85f953e785e01794461c38c8d4d842f72ff28cdd4c97fb0e8a79d5f69cef9ee8",
+      "packaged_sha256": "85f953e785e01794461c38c8d4d842f72ff28cdd4c97fb0e8a79d5f69cef9ee8",
+      "source_bytes": 1983,
+      "packaged_bytes": 1983,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/DataMemory.v",
+      "source_sha256": "85d0c99936e36211582bb09fd26dcdfc93214653e0f1c4a364b8febec6504751",
+      "packaged_sha256": "85d0c99936e36211582bb09fd26dcdfc93214653e0f1c4a364b8febec6504751",
+      "source_bytes": 922,
+      "packaged_bytes": 922,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/InstructionMemory.v",
+      "source_sha256": "c2aac93eef881528fca3eb4a3a581fd4777345ddfa3af76c0e0a1e34bc3b2421",
+      "packaged_sha256": "c2aac93eef881528fca3eb4a3a581fd4777345ddfa3af76c0e0a1e34bc3b2421",
+      "source_bytes": 1780,
+      "packaged_bytes": 1780,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Mux_32Bits.v",
+      "source_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "packaged_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "source_bytes": 166,
+      "packaged_bytes": 166,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Mux_5Bits.v",
+      "source_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "packaged_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "source_bytes": 163,
+      "packaged_bytes": 163,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/PC.v",
+      "source_sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48",
+      "packaged_sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48",
+      "source_bytes": 223,
+      "packaged_bytes": 223,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Register_File.v",
+      "source_sha256": "db559fb654c78ec677ee75f00969563cbebc75ca01e646439866ca18e1001441",
+      "packaged_sha256": "db559fb654c78ec677ee75f00969563cbebc75ca01e646439866ca18e1001441",
+      "source_bytes": 692,
+      "packaged_bytes": 692,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "source_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "packaged_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "source_bytes": 158,
+      "packaged_bytes": 158,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "source_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+      "packaged_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+      "source_bytes": 157,
+      "packaged_bytes": 157,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Sign_Extend.v",
+      "source_sha256": "16f7dfe8f1bb37635aec5917580450fdf8098ae5918a66395237f21dac5ba8a4",
+      "packaged_sha256": "16f7dfe8f1bb37635aec5917580450fdf8098ae5918a66395237f21dac5ba8a4",
+      "source_bytes": 184,
+      "packaged_bytes": 184,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/tb/SINGLE_CYCLE_TB.v",
+      "source_sha256": "bc3248271c8ba8f8e37481c156c789311d6bff53dace14ee27375aeea340134b",
+      "packaged_sha256": "bc3248271c8ba8f8e37481c156c789311d6bff53dace14ee27375aeea340134b",
+      "source_bytes": 1100,
+      "packaged_bytes": 1100,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "source_sha256": "d8c04dc7d44fd04708b77e3f72ab7de33754bdbb8da27efdee29cd9241c3cb72",
+      "packaged_sha256": "d8c04dc7d44fd04708b77e3f72ab7de33754bdbb8da27efdee29cd9241c3cb72",
+      "source_bytes": 134,
+      "packaged_bytes": 134,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "source_sha256": "b5a4a863d5b4b3a43b1d3cf08de3b88bd38b84932c7a5a28572c3a93d090ae60",
+      "packaged_sha256": "b5a4a863d5b4b3a43b1d3cf08de3b88bd38b84932c7a5a28572c3a93d090ae60",
+      "source_bytes": 580,
+      "packaged_bytes": 580,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "source_sha256": "7f69efb72332814448079b096c356a75ccbb0a2c3a230ea2b14242a44ca0802f",
+      "packaged_sha256": "7f69efb72332814448079b096c356a75ccbb0a2c3a230ea2b14242a44ca0802f",
+      "source_bytes": 914,
+      "packaged_bytes": 914,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "source_sha256": "3a9dfcd54b11da4cf130809f188d6234835a4640b771218449149b120933f327",
+      "packaged_sha256": "3a9dfcd54b11da4cf130809f188d6234835a4640b771218449149b120933f327",
+      "source_bytes": 1605,
+      "packaged_bytes": 1605,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "source_sha256": "15801bce3c2f6e455e88c853b844ed1ed4e07ccc4926b9b16038fbe91fc48528",
+      "packaged_sha256": "15801bce3c2f6e455e88c853b844ed1ed4e07ccc4926b9b16038fbe91fc48528",
+      "source_bytes": 5866,
+      "packaged_bytes": 5866,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "source_sha256": "debc8b5c4b7c780004e423533c73e18b99fae76d3e4b15e14ee2ce8faacfd066",
+      "packaged_sha256": "debc8b5c4b7c780004e423533c73e18b99fae76d3e4b15e14ee2ce8faacfd066",
+      "source_bytes": 709,
+      "packaged_bytes": 709,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "source_sha256": "b2b46285d39e6e409ce786e1234ea938c7e31f12f765335e7639c522bf076cee",
+      "packaged_sha256": "b2b46285d39e6e409ce786e1234ea938c7e31f12f765335e7639c522bf076cee",
+      "source_bytes": 1296,
+      "packaged_bytes": 1296,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "source_sha256": "094be9296e53403f4a1b3df9a78c0ecdd8967dd89e62bc18840f0337899bb835",
+      "packaged_sha256": "094be9296e53403f4a1b3df9a78c0ecdd8967dd89e62bc18840f0337899bb835",
+      "source_bytes": 1529,
+      "packaged_bytes": 1529,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "source_sha256": "15e87b30fe0b04920fd12176bb9b57383cbdde4b6ede0109cb0b5b15404238a7",
+      "packaged_sha256": "15e87b30fe0b04920fd12176bb9b57383cbdde4b6ede0109cb0b5b15404238a7",
+      "source_bytes": 320,
+      "packaged_bytes": 320,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "source_sha256": "3915e483bf300000e3baabd7a4444298381134dbf1b30f7c6eb6107d2c0ffb8f",
+      "packaged_sha256": "3915e483bf300000e3baabd7a4444298381134dbf1b30f7c6eb6107d2c0ffb8f",
+      "source_bytes": 4502,
+      "packaged_bytes": 4502,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "source_sha256": "f0945deef84e992a47100a6ba55b3711d50edfa750930c7e679c12eb47a9adbd",
+      "packaged_sha256": "f0945deef84e992a47100a6ba55b3711d50edfa750930c7e679c12eb47a9adbd",
+      "source_bytes": 825,
+      "packaged_bytes": 825,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "source_sha256": "57c588a8fbc94b2f0c6151ad0ed5639e5c8f9819ac294b562e52a12887cc733e",
+      "packaged_sha256": "57c588a8fbc94b2f0c6151ad0ed5639e5c8f9819ac294b562e52a12887cc733e",
+      "source_bytes": 167,
+      "packaged_bytes": 167,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "source_sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d",
+      "packaged_sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d",
+      "source_bytes": 164,
+      "packaged_bytes": 164,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "source_sha256": "41e17728bd7ce2510b6eeb07b6cfa4644adf29b3f6e7d08b46b5d4fde78428ec",
+      "packaged_sha256": "41e17728bd7ce2510b6eeb07b6cfa4644adf29b3f6e7d08b46b5d4fde78428ec",
+      "source_bytes": 245,
+      "packaged_bytes": 245,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "source_sha256": "1f573b917bc0e40632a5f3636eac0ef14723a3e6410c61c4d496a3c00879bbb8",
+      "packaged_sha256": "1f573b917bc0e40632a5f3636eac0ef14723a3e6410c61c4d496a3c00879bbb8",
+      "source_bytes": 737,
+      "packaged_bytes": 737,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "source_sha256": "8ceaa65aa9ddcb855b8b0e769617185d474ccfd53e39ba9b4f87f65fdc6f6ed4",
+      "packaged_sha256": "8ceaa65aa9ddcb855b8b0e769617185d474ccfd53e39ba9b4f87f65fdc6f6ed4",
+      "source_bytes": 159,
+      "packaged_bytes": 159,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "source_sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe",
+      "packaged_sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe",
+      "source_bytes": 158,
+      "packaged_bytes": 158,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+      "source_sha256": "b4cb5b6fe16c061c708c5862822aa6b60f13b07612b759b0c6930d89be85b59e",
+      "packaged_sha256": "b4cb5b6fe16c061c708c5862822aa6b60f13b07612b759b0c6930d89be85b59e",
+      "source_bytes": 297,
+      "packaged_bytes": 297,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/tb/CPU_Pipeline_tb.v",
+      "source_sha256": "832635ad6f6c536392c7e3caebc5222b086297a7cc708801ca0b0039a8373163",
+      "packaged_sha256": "832635ad6f6c536392c7e3caebc5222b086297a7cc708801ca0b0039a8373163",
+      "source_bytes": 1035,
+      "packaged_bytes": 1035,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+      "source_sha256": "c2c6e8099900c89e7b1476d0cc2ebceb02aeb99f0c629e2674e307ea4f0301be",
+      "packaged_sha256": "c2c6e8099900c89e7b1476d0cc2ebceb02aeb99f0c629e2674e307ea4f0301be",
+      "source_bytes": 533,
+      "packaged_bytes": 533,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+      "source_sha256": "700bdb95828d474ccad9a25eb798453ab052c7065afe6687230e75433d08a5c0",
+      "packaged_sha256": "700bdb95828d474ccad9a25eb798453ab052c7065afe6687230e75433d08a5c0",
+      "source_bytes": 883,
+      "packaged_bytes": 883,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+      "source_sha256": "61084657dfb7d7cf3a5fa7b219d5037cb1b8756242d44697c69939b6f125a7db",
+      "packaged_sha256": "61084657dfb7d7cf3a5fa7b219d5037cb1b8756242d44697c69939b6f125a7db",
+      "source_bytes": 134,
+      "packaged_bytes": 134,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+      "source_sha256": "b8eee32bca960de4c58bb50feca1af7bda03535513348488f6fa38b0191bbdf4",
+      "packaged_sha256": "b8eee32bca960de4c58bb50feca1af7bda03535513348488f6fa38b0191bbdf4",
+      "source_bytes": 2763,
+      "packaged_bytes": 2763,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+      "source_sha256": "48472cd76a532f0cf8f93f15b91de4100e52bf29c920e21e0812bc18a7f72f5a",
+      "packaged_sha256": "48472cd76a532f0cf8f93f15b91de4100e52bf29c920e21e0812bc18a7f72f5a",
+      "source_bytes": 1972,
+      "packaged_bytes": 1972,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+      "source_sha256": "85d0c99936e36211582bb09fd26dcdfc93214653e0f1c4a364b8febec6504751",
+      "packaged_sha256": "85d0c99936e36211582bb09fd26dcdfc93214653e0f1c4a364b8febec6504751",
+      "source_bytes": 922,
+      "packaged_bytes": 922,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+      "source_sha256": "062fef4ab9b965e5a6f72639a04c879d7fdaeae85e2e715378ad921cf7dcc442",
+      "packaged_sha256": "062fef4ab9b965e5a6f72639a04c879d7fdaeae85e2e715378ad921cf7dcc442",
+      "source_bytes": 1508,
+      "packaged_bytes": 1508,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+      "source_sha256": "5946244149be5ac2160eedb71b303d51db000a26e69e879ddd233071f2e8b0c6",
+      "packaged_sha256": "5946244149be5ac2160eedb71b303d51db000a26e69e879ddd233071f2e8b0c6",
+      "source_bytes": 167,
+      "packaged_bytes": 167,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+      "source_sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d",
+      "packaged_sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d",
+      "source_bytes": 164,
+      "packaged_bytes": 164,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+      "source_sha256": "361601a30f2145d4d20cc8634b32dbb47b0eba2479520248377e8ac0c37cb292",
+      "packaged_sha256": "361601a30f2145d4d20cc8634b32dbb47b0eba2479520248377e8ac0c37cb292",
+      "source_bytes": 224,
+      "packaged_bytes": 224,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+      "source_sha256": "db559fb654c78ec677ee75f00969563cbebc75ca01e646439866ca18e1001441",
+      "packaged_sha256": "db559fb654c78ec677ee75f00969563cbebc75ca01e646439866ca18e1001441",
+      "source_bytes": 692,
+      "packaged_bytes": 692,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "source_sha256": "508370e9cc012819d063135857173b74327810802d825361fc35d893c3c0a4a8",
+      "packaged_sha256": "508370e9cc012819d063135857173b74327810802d825361fc35d893c3c0a4a8",
+      "source_bytes": 159,
+      "packaged_bytes": 159,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "source_sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe",
+      "packaged_sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe",
+      "source_bytes": 158,
+      "packaged_bytes": 158,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+      "source_sha256": "16f7dfe8f1bb37635aec5917580450fdf8098ae5918a66395237f21dac5ba8a4",
+      "packaged_sha256": "16f7dfe8f1bb37635aec5917580450fdf8098ae5918a66395237f21dac5ba8a4",
+      "source_bytes": 184,
+      "packaged_bytes": 184,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/tb/SINGLE_CYCLE_TB.v",
+      "source_sha256": "41351a8be9211e828e40f9bef9db00fffecc4c3146b8c164866ef3f77948056a",
+      "packaged_sha256": "41351a8be9211e828e40f9bef9db00fffecc4c3146b8c164866ef3f77948056a",
+      "source_bytes": 1098,
+      "packaged_bytes": 1098,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/cases.json",
+      "source_sha256": "125ba70eb4abbe19bf1dc5b3afd9036fdd21fc6f151cf7fbd15b1c0202319d5e",
+      "packaged_sha256": "125ba70eb4abbe19bf1dc5b3afd9036fdd21fc6f151cf7fbd15b1c0202319d5e",
+      "source_bytes": 38461,
+      "packaged_bytes": 38461,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/check_all.py",
+      "source_sha256": "d46c228be9e818209de66346cdccd2e3b7c52c36b893ece2fbb37d20488507bb",
+      "packaged_sha256": "d46c228be9e818209de66346cdccd2e3b7c52c36b893ece2fbb37d20488507bb",
+      "source_bytes": 3238,
+      "packaged_bytes": 3238,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/check_package.py",
+      "source_sha256": "319f1117e1a60634ff45ab175c3b5f15966a0c207152a1290361fa074cbfe0f4",
+      "packaged_sha256": "319f1117e1a60634ff45ab175c3b5f15966a0c207152a1290361fa074cbfe0f4",
+      "source_bytes": 1100,
+      "packaged_bytes": 1100,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_hazard_addi_side_effect_tb.v",
+      "source_sha256": "f1702c3e9528ffb84c787577d4e502de958a33bbe3040d9ff333dd51571b65ab",
+      "packaged_sha256": "f1702c3e9528ffb84c787577d4e502de958a33bbe3040d9ff333dd51571b65ab",
+      "source_bytes": 1105,
+      "packaged_bytes": 1105,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_hazard_alu_tb.v",
+      "source_sha256": "fb1da82603c33396fd2296b0374defffe6054879d3b5772b3018ccea8882597e",
+      "packaged_sha256": "fb1da82603c33396fd2296b0374defffe6054879d3b5772b3018ccea8882597e",
+      "source_bytes": 1223,
+      "packaged_bytes": 1223,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_hazard_decode_tb.v",
+      "source_sha256": "7a85e33f2a9a211b4070cca9ef3d6aa383d5735d0eb001c37cf1364bab6a73bc",
+      "packaged_sha256": "7a85e33f2a9a211b4070cca9ef3d6aa383d5735d0eb001c37cf1364bab6a73bc",
+      "source_bytes": 2411,
+      "packaged_bytes": 2411,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_hazard_dependent_store_tb.v",
+      "source_sha256": "a590e2c5cfefb9c635f8bc6a3592e9a0f1751add14a11755b9646a6783447bc2",
+      "packaged_sha256": "a590e2c5cfefb9c635f8bc6a3592e9a0f1751add14a11755b9646a6783447bc2",
+      "source_bytes": 1172,
+      "packaged_bytes": 1172,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_hazard_isa_data_tb.v",
+      "source_sha256": "0a3d3699d5707d6f48986bc5fa58fb61106516e1714985d8fa21ac798c9ff431",
+      "packaged_sha256": "0a3d3699d5707d6f48986bc5fa58fb61106516e1714985d8fa21ac798c9ff431",
+      "source_bytes": 1687,
+      "packaged_bytes": 1687,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_hazard_jump_tb.v",
+      "source_sha256": "dd5fd23255faf263fbc2601149a1e987ea83d46c2ad3e05a9a33055237d67a38",
+      "packaged_sha256": "dd5fd23255faf263fbc2601149a1e987ea83d46c2ad3e05a9a33055237d67a38",
+      "source_bytes": 1377,
+      "packaged_bytes": 1377,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_hazard_load_use_tb.v",
+      "source_sha256": "11facb36ecc71a239e0832d4900ae2e860e77c24843091d7e5f9b3cc4d71eec5",
+      "packaged_sha256": "11facb36ecc71a239e0832d4900ae2e860e77c24843091d7e5f9b3cc4d71eec5",
+      "source_bytes": 1201,
+      "packaged_bytes": 1201,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_hazard_taken_branch_tb.v",
+      "source_sha256": "25cae7af63f70d53c2f34a9724e8f8a2d8c13f0ba4738de82bd48b4fe1c04d40",
+      "packaged_sha256": "25cae7af63f70d53c2f34a9724e8f8a2d8c13f0ba4738de82bd48b4fe1c04d40",
+      "source_bytes": 1422,
+      "packaged_bytes": 1422,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_hazard_units_tb.v",
+      "source_sha256": "108d04eacb01e86ecdd93cf321a8836b6b06b966a6768a653631218979ecedb9",
+      "packaged_sha256": "108d04eacb01e86ecdd93cf321a8836b6b06b966a6768a653631218979ecedb9",
+      "source_bytes": 1834,
+      "packaged_bytes": 1834,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_pipeline_addi_side_effect_tb.v",
+      "source_sha256": "8bca4c7e07adaa21966c0348cbb1981705d86fcb3ed9cf52eccf149ea730ac5a",
+      "packaged_sha256": "8bca4c7e07adaa21966c0348cbb1981705d86fcb3ed9cf52eccf149ea730ac5a",
+      "source_bytes": 1107,
+      "packaged_bytes": 1107,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_pipeline_alu_tb.v",
+      "source_sha256": "e0d337950b0084341ad503e83934f4f97e91f126b92ccad61e61b2af7fca98e6",
+      "packaged_sha256": "e0d337950b0084341ad503e83934f4f97e91f126b92ccad61e61b2af7fca98e6",
+      "source_bytes": 1225,
+      "packaged_bytes": 1225,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_pipeline_decode_tb.v",
+      "source_sha256": "b29d85fa14aeee1ce990ef0763cbe99befa2e63bdc051f8485b58eec4168b5bd",
+      "packaged_sha256": "b29d85fa14aeee1ce990ef0763cbe99befa2e63bdc051f8485b58eec4168b5bd",
+      "source_bytes": 2401,
+      "packaged_bytes": 2401,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_pipeline_isa_data_tb.v",
+      "source_sha256": "84f1e6c1003ce660908fd30b5f7c9450dad361c30d61e684d1ac2e89f22dc6ef",
+      "packaged_sha256": "84f1e6c1003ce660908fd30b5f7c9450dad361c30d61e684d1ac2e89f22dc6ef",
+      "source_bytes": 1689,
+      "packaged_bytes": 1689,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_pipeline_jump_tb.v",
+      "source_sha256": "3e544c0c4b97f899b2325c2d12110a288ee3c4a5edc853336fccbed7c148a268",
+      "packaged_sha256": "3e544c0c4b97f899b2325c2d12110a288ee3c4a5edc853336fccbed7c148a268",
+      "source_bytes": 1379,
+      "packaged_bytes": 1379,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_pipeline_taken_branch_tb.v",
+      "source_sha256": "1b4d1015e1c87cb7d96f2360fec17843301e2f9e01648a249ae6e89fad443401",
+      "packaged_sha256": "1b4d1015e1c87cb7d96f2360fec17843301e2f9e01648a249ae6e89fad443401",
+      "source_bytes": 1424,
+      "packaged_bytes": 1424,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_single_addi_side_effect_tb.v",
+      "source_sha256": "3e196678242e7e428e6a66946f8ad6da8891149e7be2316431c6b08d21a8fddd",
+      "packaged_sha256": "3e196678242e7e428e6a66946f8ad6da8891149e7be2316431c6b08d21a8fddd",
+      "source_bytes": 1108,
+      "packaged_bytes": 1108,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_single_alu_tb.v",
+      "source_sha256": "bb45b532424b65bd419d87e724cf08986dbaf88e110f9a35dadec657ff5eda93",
+      "packaged_sha256": "bb45b532424b65bd419d87e724cf08986dbaf88e110f9a35dadec657ff5eda93",
+      "source_bytes": 1223,
+      "packaged_bytes": 1223,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_single_decode_tb.v",
+      "source_sha256": "6d733e79163f6dab09b6c184eac1e861de0e987c8ac30392ac0d9df5e4cb6591",
+      "packaged_sha256": "6d733e79163f6dab09b6c184eac1e861de0e987c8ac30392ac0d9df5e4cb6591",
+      "source_bytes": 2373,
+      "packaged_bytes": 2373,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_single_isa_data_tb.v",
+      "source_sha256": "d72b7c0417d342cd788918aaa89ff734f0f622590be31a667f3bef1915fb2394",
+      "packaged_sha256": "d72b7c0417d342cd788918aaa89ff734f0f622590be31a667f3bef1915fb2394",
+      "source_bytes": 1690,
+      "packaged_bytes": 1690,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_single_jump_tb.v",
+      "source_sha256": "ce18d7da03f6c7dec57dfb086bb613568178a7987349d8e7e81336a11f8bd6e8",
+      "packaged_sha256": "ce18d7da03f6c7dec57dfb086bb613568178a7987349d8e7e81336a11f8bd6e8",
+      "source_bytes": 1380,
+      "packaged_bytes": 1380,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/finalpj_single_taken_branch_tb.v",
+      "source_sha256": "e4656df63e56b8bb8946a676f05e0aad8d7c7887c49984dd13f6da0e824a8481",
+      "packaged_sha256": "e4656df63e56b8bb8946a676f05e0aad8d7c7887c49984dd13f6da0e824a8481",
+      "source_bytes": 1425,
+      "packaged_bytes": 1425,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/reference_check.py",
+      "source_sha256": "5baa6af2177e9a74a01d4f6de92320e2e5d609ac9873172559e35c7f48315a4c",
+      "packaged_sha256": "5baa6af2177e9a74a01d4f6de92320e2e5d609ac9873172559e35c7f48315a4c",
+      "source_bytes": 19077,
+      "packaged_bytes": 19077,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/reference_demo_tb.v",
+      "source_sha256": "78f058f43d26bcd165795a3fb37940cf37751abb29b6f3b27ea9e00a3e96f46a",
+      "packaged_sha256": "78f058f43d26bcd165795a3fb37940cf37751abb29b6f3b27ea9e00a3e96f46a",
+      "source_bytes": 2957,
+      "packaged_bytes": 2957,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/reference_tb.v",
+      "source_sha256": "483ebda3ed233113aa1cc1910c9745eb05e4f5296779f57c0aa19d04bbebc812",
+      "packaged_sha256": "483ebda3ed233113aa1cc1910c9745eb05e4f5296779f57c0aa19d04bbebc812",
+      "source_bytes": 3708,
+      "packaged_bytes": 3708,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_pipeline.py",
+      "source_sha256": "30be3b582cbbcb07135e71f6c1e851bb831b9413e2f2d95eb920113373227272",
+      "packaged_sha256": "30be3b582cbbcb07135e71f6c1e851bb831b9413e2f2d95eb920113373227272",
+      "source_bytes": 9101,
+      "packaged_bytes": 9101,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_cases.json",
+      "source_sha256": "4e3c220cc651f95d46112ce55f9f5f5bf7150bee7c679c62886af5871557f068",
+      "packaged_sha256": "4e3c220cc651f95d46112ce55f9f5f5bf7150bee7c679c62886af5871557f068",
+      "source_bytes": 8165,
+      "packaged_bytes": 8165,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_control_stores_tb.v",
+      "source_sha256": "dc632e47e73a66d27bcc3a5f9d6c07520e9586bb92bdc367ac33110a0d44abc0",
+      "packaged_sha256": "dc632e47e73a66d27bcc3a5f9d6c07520e9586bb92bdc367ac33110a0d44abc0",
+      "source_bytes": 2314,
+      "packaged_bytes": 2314,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_dual_forwarding_tb.v",
+      "source_sha256": "35fcc3309623315b854e35a70033cebffb79f1d23923308015cc81857e226b52",
+      "packaged_sha256": "35fcc3309623315b854e35a70033cebffb79f1d23923308015cc81857e226b52",
+      "source_bytes": 2686,
+      "packaged_bytes": 2686,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_load_branch_tb.v",
+      "source_sha256": "e8d1ed6e65b8be3632025d3dfeb2cd258862c83da0bd9b8f0f7928b7f0664291",
+      "packaged_sha256": "e8d1ed6e65b8be3632025d3dfeb2cd258862c83da0bd9b8f0f7928b7f0664291",
+      "source_bytes": 2449,
+      "packaged_bytes": 2449,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_reset_inflight_tb.v",
+      "source_sha256": "62359b7cd438fef659cfc02a28fdfa585123d511072347136068c1b3f2458b92",
+      "packaged_sha256": "62359b7cd438fef659cfc02a28fdfa585123d511072347136068c1b3f2458b92",
+      "source_bytes": 2091,
+      "packaged_bytes": 2091,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_run.py",
+      "source_sha256": "1bf2305f33cbe5134ca0b1b03ccb1e07b8e91d90f47538822fc674eed09a5f17",
+      "packaged_sha256": "1bf2305f33cbe5134ca0b1b03ccb1e07b8e91d90f47538822fc674eed09a5f17",
+      "source_bytes": 3351,
+      "packaged_bytes": 3351,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_single_deck_tb.v",
+      "source_sha256": "9a04cb429cf508cebd55406e7b2cbc788f5cc3ac77cabd6d5b2044604b19b53c",
+      "packaged_sha256": "9a04cb429cf508cebd55406e7b2cbc788f5cc3ac77cabd6d5b2044604b19b53c",
+      "source_bytes": 1492,
+      "packaged_bytes": 1492,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_single_defaults_tb.v",
+      "source_sha256": "e7f993406eb70c75e7c09afa91ae77a44673e000c1805e4d1e546d2d6cdd9706",
+      "packaged_sha256": "e7f993406eb70c75e7c09afa91ae77a44673e000c1805e4d1e546d2d6cdd9706",
+      "source_bytes": 1142,
+      "packaged_bytes": 1142,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_single_memory_tb.v",
+      "source_sha256": "5aef814cd848bc31b7ab11cc0ed107bb803bc04706888d731d9dbe06297cc55b",
+      "packaged_sha256": "5aef814cd848bc31b7ab11cc0ed107bb803bc04706888d731d9dbe06297cc55b",
+      "source_bytes": 1397,
+      "packaged_bytes": 1397,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_store_dependencies_tb.v",
+      "source_sha256": "72ea3d9934c04c12005f638c9144fef6140cd44a9f34f8c386ad2f38d8f041f8",
+      "packaged_sha256": "72ea3d9934c04c12005f638c9144fef6140cd44a9f34f8c386ad2f38d8f041f8",
+      "source_bytes": 2528,
+      "packaged_bytes": 2528,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/repaired_stress_zero_hazards_tb.v",
+      "source_sha256": "224b765bddeae36756067a31b2e7a59d29a87913f8a74c1db703f346be0d6657",
+      "packaged_sha256": "224b765bddeae36756067a31b2e7a59d29a87913f8a74c1db703f346be0d6657",
+      "source_bytes": 2154,
+      "packaged_bytes": 2154,
+      "operation": "byte-identical copy"
+    },
+    {
+      "path": "verification/run_checks.py",
+      "source_sha256": "7bc6b6b87a539c939c209c45a2dc378333febb96beb555e0ae3d6261d280ade4",
+      "packaged_sha256": "7bc6b6b87a539c939c209c45a2dc378333febb96beb555e0ae3d6261d280ade4",
+      "source_bytes": 5554,
+      "packaged_bytes": 5554,
+      "operation": "byte-identical copy"
+    }
+  ]
+}

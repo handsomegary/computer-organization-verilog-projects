@@ -1,0 +1,9 @@
+.verification-build/
+.reference-build/
+.verification-stress/
+__pycache__/
+*.vvp
+*.vcd
+*.wdb
+*.exe
+*.log

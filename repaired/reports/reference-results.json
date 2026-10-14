@@ -1,0 +1,3774 @@
+{
+  "checker": "independent_encoded_MIPS_oracle",
+  "random_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "compilation": {
+    "single": {
+      "command": [
+        "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\iverilog.exe",
+        "-B",
+        "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "reference_tb",
+        "-o",
+        "BUILD_ROOT/reference\\reference_single.vvp",
+        "-DREFERENCE_SINGLE",
+        "PACKAGE_ROOT/verification\\reference_tb.v",
+        "PACKAGE_ROOT/reference\\rtl\\mips_single_cycle.v"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "stdout": "",
+      "stderr": "PACKAGE_ROOT/reference\\rtl\\mips_single_cycle.v:59: warning: @* is sensitive to all 1024 words in array 'dmem'.\r\n"
+    },
+    "pipeline": {
+      "command": [
+        "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\iverilog.exe",
+        "-B",
+        "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "reference_tb",
+        "-o",
+        "BUILD_ROOT/reference\\reference_pipeline.vvp",
+        "-DREFERENCE_NO_HAZARDS",
+        "PACKAGE_ROOT/verification\\reference_tb.v",
+        "PACKAGE_ROOT/reference\\rtl\\mips_pipeline.v"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "stdout": "",
+      "stderr": ""
+    },
+    "hazard": {
+      "command": [
+        "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\iverilog.exe",
+        "-B",
+        "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "reference_tb",
+        "-o",
+        "BUILD_ROOT/reference\\reference_hazard.vvp",
+        "PACKAGE_ROOT/verification\\reference_tb.v",
+        "PACKAGE_ROOT/reference\\rtl\\mips_pipeline.v"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "stdout": "",
+      "stderr": ""
+    },
+    "default_rom": {
+      "command": [
+        "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\iverilog.exe",
+        "-B",
+        "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "reference_demo_tb",
+        "-o",
+        "BUILD_ROOT/reference\\reference_default_rom.vvp",
+        "PACKAGE_ROOT/verification\\reference_demo_tb.v",
+        "PACKAGE_ROOT/reference\\rtl\\mips_single_cycle.v",
+        "PACKAGE_ROOT/reference\\rtl\\mips_pipeline.v"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "stdout": "",
+      "stderr": "PACKAGE_ROOT/reference\\rtl\\mips_single_cycle.v:59: warning: @* is sensitive to all 1024 words in array 'dmem'.\r\n"
+    }
+  },
+  "cases": [
+    {
+      "mode": "single",
+      "case": "isa_and_signed_boundaries",
+      "passed": true,
+      "tags": [
+        "all_data_ISA",
+        "signed_slt",
+        "negative_immediate",
+        "zero",
+        "byte_addressing"
+      ],
+      "oracle_steps": 25,
+      "cycles": 144,
+      "program_words": 26,
+      "program_sha256": "ddfe6b1c4fd5d11fd9902f6dd797b25a2f2e7011bba54e3b046853b3d0c02a86",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/isa_and_signed_boundaries/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/isa_and_signed_boundaries/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/isa_and_signed_boundaries/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/isa_and_signed_boundaries/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/isa_and_signed_boundaries/expected_data.hex",
+          "+CYCLES=144",
+          "+FINISH_PC=100",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=144 stalls=0 finish_pc=100\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1460000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "forward_backward_branches_and_jump",
+      "passed": true,
+      "tags": [
+        "taken_branch",
+        "untaken_branch",
+        "backward_branch",
+        "jump",
+        "flush",
+        "branch_dual_forward"
+      ],
+      "oracle_steps": 24,
+      "cycles": 220,
+      "program_words": 45,
+      "program_sha256": "d323960732c4575f43b36fa08f33c444c913b61f7a6a6d798ee9244a188d47c7",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/forward_backward_branches_and_jump/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/forward_backward_branches_and_jump/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/forward_backward_branches_and_jump/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/forward_backward_branches_and_jump/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/forward_backward_branches_and_jump/expected_data.hex",
+          "+CYCLES=220",
+          "+FINISH_PC=176",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=220 stalls=0 finish_pc=176\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 2220000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "slide8_exact_hazard_program",
+      "passed": true,
+      "tags": [
+        "exact_slide8",
+        "RAW_rs",
+        "RAW_rt",
+        "RAW_both",
+        "store_base"
+      ],
+      "oracle_steps": 6,
+      "cycles": 80,
+      "program_words": 7,
+      "program_sha256": "a7fb6c9147c596c5ccd8da44803ba0414daacac5ad01bacc24d2c0e802a34dbb",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/slide8_exact_hazard_program/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/slide8_exact_hazard_program/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/slide8_exact_hazard_program/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/slide8_exact_hazard_program/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/slide8_exact_hazard_program/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=24",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=0 finish_pc=24\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "load_use_rs",
+      "passed": true,
+      "tags": [
+        "load_use_rs"
+      ],
+      "oracle_steps": 3,
+      "cycles": 80,
+      "program_words": 4,
+      "program_sha256": "f100953e7bd145500130e7f675ef5de2879ac7101b4932fef40350848c4c0cb8",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/load_use_rs/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/load_use_rs/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/load_use_rs/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/load_use_rs/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/load_use_rs/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=12",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=0 finish_pc=12\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "load_use_rt",
+      "passed": true,
+      "tags": [
+        "load_use_rt"
+      ],
+      "oracle_steps": 3,
+      "cycles": 80,
+      "program_words": 4,
+      "program_sha256": "409e8c2b509a33734408c38cf0399c12e73282bc87da8836fb5be9a2aa97bc90",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/load_use_rt/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/load_use_rt/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/load_use_rt/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/load_use_rt/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/load_use_rt/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=12",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=0 finish_pc=12\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "load_use_both",
+      "passed": true,
+      "tags": [
+        "load_use_both"
+      ],
+      "oracle_steps": 3,
+      "cycles": 80,
+      "program_words": 4,
+      "program_sha256": "1d575f4475e6b89ce3b3c82fa7fb9cdd7311327e229bd95d23fbff77f3003b00",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/load_use_both/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/load_use_both/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/load_use_both/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/load_use_both/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/load_use_both/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=12",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=0 finish_pc=12\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "load_to_store_data",
+      "passed": true,
+      "tags": [
+        "load_store_data"
+      ],
+      "oracle_steps": 3,
+      "cycles": 80,
+      "program_words": 4,
+      "program_sha256": "1db764ebb04b08aee871b55bb8aafe0251d8cb5fb679c9e9227a545f32ee0dce",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/load_to_store_data/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/load_to_store_data/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/load_to_store_data/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/load_to_store_data/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/load_to_store_data/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=12",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=0 finish_pc=12\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "load_to_store_base",
+      "passed": true,
+      "tags": [
+        "load_store_base",
+        "negative_store_offset"
+      ],
+      "oracle_steps": 3,
+      "cycles": 80,
+      "program_words": 4,
+      "program_sha256": "4d70eda27da28b4604b1ca23308c941e547c5f90cfe6940ea72211ac2707db7c",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/load_to_store_base/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/load_to_store_base/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/load_to_store_base/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/load_to_store_base/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/load_to_store_base/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=12",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=0 finish_pc=12\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "load_to_branch",
+      "passed": true,
+      "tags": [
+        "load_branch",
+        "flush"
+      ],
+      "oracle_steps": 4,
+      "cycles": 80,
+      "program_words": 7,
+      "program_sha256": "a21b06b3581403812b1254c13c9e8f84fcd87014289a3c81d571da2c5f6456bf",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/load_to_branch/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/load_to_branch/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/load_to_branch/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/load_to_branch/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/load_to_branch/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=24",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=0 finish_pc=24\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "newest_producer_priority",
+      "passed": true,
+      "tags": [
+        "EX_MEM_priority",
+        "MEM_WB",
+        "load_priority",
+        "store_data_forward"
+      ],
+      "oracle_steps": 11,
+      "cycles": 88,
+      "program_words": 12,
+      "program_sha256": "211c82f7f6742f0c36473e00ea27400f70e884641c4da7ed5ae91778826dcaa2",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/newest_producer_priority/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/newest_producer_priority/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/newest_producer_priority/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/newest_producer_priority/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/newest_producer_priority/expected_data.hex",
+          "+CYCLES=88",
+          "+FINISH_PC=44",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=88 stalls=0 finish_pc=44\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 900000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "no_false_stalls_or_zero_forwarding",
+      "passed": true,
+      "tags": [
+        "decoded_sources",
+        "zero_hazard_exclusion"
+      ],
+      "oracle_steps": 9,
+      "cycles": 80,
+      "program_words": 10,
+      "program_sha256": "38b5158f1a2b1e7c6bb8851f1ba50e18d896d2486b65481ed204278c5bff7350",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/no_false_stalls_or_zero_forwarding/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/no_false_stalls_or_zero_forwarding/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/no_false_stalls_or_zero_forwarding/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/no_false_stalls_or_zero_forwarding/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/no_false_stalls_or_zero_forwarding/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=36",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=0 finish_pc=36\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "writeback_decode_and_dual_forward",
+      "passed": true,
+      "tags": [
+        "WB_ID_visibility",
+        "dual_forward",
+        "store_both_operands"
+      ],
+      "oracle_steps": 14,
+      "cycles": 100,
+      "program_words": 15,
+      "program_sha256": "cd2218cc382d29e2cad190e42e2c7c4f02d05e3712ed968723c66eec73ab85d2",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/writeback_decode_and_dual_forward/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/writeback_decode_and_dual_forward/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/writeback_decode_and_dual_forward/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/writeback_decode_and_dual_forward/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/writeback_decode_and_dual_forward/expected_data.hex",
+          "+CYCLES=100",
+          "+FINISH_PC=56",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=100 stalls=0 finish_pc=56\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1020000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0000",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 93,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "1e598760034802abaa6fe5c0cf40d2e6f1e8306df1db3ce61d422ffdfc14c976",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0000/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0000/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0000/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0000/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0000/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0001",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 80,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "611f95fb3472f4b2567ad928ddeb1b12b27f3b5e4000cb9fb28b671a0df301fc",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0001/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0001/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0001/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0001/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0001/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0002",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 77,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "908eae095b9a1b8b2d9c61f6c29919e40c70cf46c4ce654139756aa6a44a34c3",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0002/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0002/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0002/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0002/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0002/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0003",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 85,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "6bb2e6aacd5450d3f27d787bad529c077986fa3c725c5ab6961021f07a2a0430",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0003/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0003/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0003/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0003/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0003/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0004",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 89,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "93e34871bdbdf863f783dd1c058bd6e6bf9a65b031e6370e32597b41e3fffe21",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0004/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0004/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0004/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0004/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0004/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0005",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 84,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "c7d544b05e329e7d7274c196a207a8aafae6aa5edde5c11c60e33a9a089cc9fc",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0005/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0005/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0005/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0005/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0005/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0006",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 86,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "2c3f00b18e2296e394a4829f97cfa32f5f3b2b8a9cf8c8f78eca047bdf42e79d",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0006/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0006/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0006/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0006/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0006/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0007",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 85,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "cba00e946186fc7d25991b49eaf773d1ab384320eaf35bf1071269cd6804d41a",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0007/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0007/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0007/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0007/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0007/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0008",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 83,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "e6f8e99fa229e36cb1f6b1920a83c275ebfc936d969bd13221e0a8bb2d070024",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0008/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0008/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0008/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0008/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0008/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0009",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 87,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "8b3b402353975e78478001bf13e8ff40c676cd0c58c1d54e230cf79faa0fbe1e",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0009/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0009/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0009/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0009/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0009/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0010",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 88,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "3adb80c1ebcf2354609b2446424d94a8034da1aad62675dd2dbbe367980d72a9",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0010/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0010/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0010/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0010/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0010/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0011",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 85,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "b8d8f75a360dabe093511a75d8c504f3ba06d92bb0279f3b10600f773dc060d8",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0011/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0011/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0011/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0011/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0011/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0012",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 85,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "eb199f3dbb3a7e7193d6ad1e1c356abbb7a5a347232294506e2ad8eb49af379b",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0012/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0012/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0012/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0012/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0012/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0013",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 85,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "132f0f85da7479b630e731b30ddce6fea0a29c34813b556d16e8e1e391b37918",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0013/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0013/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0013/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0013/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0013/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0014",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 96,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "295eb8229863281b12eb2e2e7fa12daa4d7b305bd55821d3429fbff70c3e3753",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0014/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0014/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0014/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0014/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0014/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0015",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 94,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "a8dfad43ccc81b288336ba03fc0e40f38501f75f778f0eff08d5d7bebff74f59",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0015/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0015/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0015/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0015/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0015/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0016",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 82,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "8a6643e162f9d4794f583457ee8eed7d75dd615ca142b4efd696233fd74a2d87",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0016/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0016/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0016/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0016/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0016/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0017",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 89,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "04ddcfb90d1890fa79c5c8aac5d1b13d4b41066081cadb44a69b1e09be1ee2da",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0017/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0017/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0017/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0017/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0017/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0018",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 84,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "e5ae7cde9baeccffdc98e5bc688e9d1b695f8fe729084fc79132ee359cafa8a1",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0018/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0018/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0018/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0018/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0018/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "single",
+      "case": "random_0019",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 84,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "8c5c481043532fac574f84a1e06eaafc88b60be2a180d6fbd06345b5ba421bf1",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_single.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/single/random_0019/program.hex",
+          "+REGS=BUILD_ROOT/reference/single/random_0019/regs.hex",
+          "+DATA=BUILD_ROOT/reference/single/random_0019/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/single/random_0019/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/single/random_0019/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=0 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "isa_and_signed_boundaries",
+      "passed": true,
+      "tags": [
+        "all_data_ISA",
+        "signed_slt",
+        "negative_immediate",
+        "zero",
+        "byte_addressing"
+      ],
+      "oracle_steps": 125,
+      "cycles": 560,
+      "program_words": 130,
+      "program_sha256": "e3d016405b33b246eb8fd008d3dca27b298bd33bd2ec853c5999245ee503e66c",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/isa_and_signed_boundaries/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/isa_and_signed_boundaries/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/isa_and_signed_boundaries/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/isa_and_signed_boundaries/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/isa_and_signed_boundaries/expected_data.hex",
+          "+CYCLES=560",
+          "+FINISH_PC=500",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=560 stalls=0 finish_pc=500\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 5620000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "forward_backward_branches_and_jump",
+      "passed": true,
+      "tags": [
+        "taken_branch",
+        "untaken_branch",
+        "backward_branch",
+        "jump",
+        "flush",
+        "branch_dual_forward"
+      ],
+      "oracle_steps": 96,
+      "cycles": 940,
+      "program_words": 225,
+      "program_sha256": "8d5ffecb57139002d5b766b7c749f4097f9d573f8001caf68fdc1f99c3033306",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/forward_backward_branches_and_jump/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/forward_backward_branches_and_jump/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/forward_backward_branches_and_jump/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/forward_backward_branches_and_jump/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/forward_backward_branches_and_jump/expected_data.hex",
+          "+CYCLES=940",
+          "+FINISH_PC=880",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=940 stalls=0 finish_pc=880\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 9420000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "slide8_exact_hazard_program",
+      "passed": true,
+      "tags": [
+        "exact_slide8",
+        "RAW_rs",
+        "RAW_rt",
+        "RAW_both",
+        "store_base"
+      ],
+      "oracle_steps": 30,
+      "cycles": 180,
+      "program_words": 35,
+      "program_sha256": "0f25f1a275a466fa73918b8dae8fcf121aff486ffa329d0b7bfc205aea37f39e",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/slide8_exact_hazard_program/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/slide8_exact_hazard_program/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/slide8_exact_hazard_program/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/slide8_exact_hazard_program/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/slide8_exact_hazard_program/expected_data.hex",
+          "+CYCLES=180",
+          "+FINISH_PC=120",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=180 stalls=0 finish_pc=120\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "load_use_rs",
+      "passed": true,
+      "tags": [
+        "load_use_rs"
+      ],
+      "oracle_steps": 15,
+      "cycles": 120,
+      "program_words": 20,
+      "program_sha256": "fd956d889decd1d2f9ecbe088d507d288b0bef4253582af89b6e7304e13dde46",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/load_use_rs/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/load_use_rs/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/load_use_rs/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/load_use_rs/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/load_use_rs/expected_data.hex",
+          "+CYCLES=120",
+          "+FINISH_PC=60",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=120 stalls=0 finish_pc=60\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1220000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "load_use_rt",
+      "passed": true,
+      "tags": [
+        "load_use_rt"
+      ],
+      "oracle_steps": 15,
+      "cycles": 120,
+      "program_words": 20,
+      "program_sha256": "57099f29fedda140d050370856a4e3109b3bc9d27a361d6529fe277c3efdce19",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/load_use_rt/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/load_use_rt/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/load_use_rt/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/load_use_rt/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/load_use_rt/expected_data.hex",
+          "+CYCLES=120",
+          "+FINISH_PC=60",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=120 stalls=0 finish_pc=60\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1220000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "load_use_both",
+      "passed": true,
+      "tags": [
+        "load_use_both"
+      ],
+      "oracle_steps": 15,
+      "cycles": 120,
+      "program_words": 20,
+      "program_sha256": "d6601c934ccc754c964c59848462bec83689872c6b399a1650438634c960e31f",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/load_use_both/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/load_use_both/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/load_use_both/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/load_use_both/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/load_use_both/expected_data.hex",
+          "+CYCLES=120",
+          "+FINISH_PC=60",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=120 stalls=0 finish_pc=60\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1220000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "load_to_store_data",
+      "passed": true,
+      "tags": [
+        "load_store_data"
+      ],
+      "oracle_steps": 15,
+      "cycles": 120,
+      "program_words": 20,
+      "program_sha256": "e51f2f82409bc2af06cfdb65b74e2d18137e8d79cae96b97ce011266c3208118",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/load_to_store_data/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/load_to_store_data/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/load_to_store_data/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/load_to_store_data/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/load_to_store_data/expected_data.hex",
+          "+CYCLES=120",
+          "+FINISH_PC=60",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=120 stalls=0 finish_pc=60\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1220000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "load_to_store_base",
+      "passed": true,
+      "tags": [
+        "load_store_base",
+        "negative_store_offset"
+      ],
+      "oracle_steps": 15,
+      "cycles": 120,
+      "program_words": 20,
+      "program_sha256": "32da14f6ad2b6fb980ff03fb8edb3c584bbd4ff98f47cbd455dbf78b28216d71",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/load_to_store_base/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/load_to_store_base/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/load_to_store_base/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/load_to_store_base/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/load_to_store_base/expected_data.hex",
+          "+CYCLES=120",
+          "+FINISH_PC=60",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=120 stalls=0 finish_pc=60\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1220000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "load_to_branch",
+      "passed": true,
+      "tags": [
+        "load_branch",
+        "flush"
+      ],
+      "oracle_steps": 16,
+      "cycles": 180,
+      "program_words": 35,
+      "program_sha256": "2ac52911d9a52301ba8639f1c417cc33065ba37f5dde55518df5148f6d3796a8",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/load_to_branch/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/load_to_branch/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/load_to_branch/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/load_to_branch/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/load_to_branch/expected_data.hex",
+          "+CYCLES=180",
+          "+FINISH_PC=120",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=180 stalls=0 finish_pc=120\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "newest_producer_priority",
+      "passed": true,
+      "tags": [
+        "EX_MEM_priority",
+        "MEM_WB",
+        "load_priority",
+        "store_data_forward"
+      ],
+      "oracle_steps": 55,
+      "cycles": 280,
+      "program_words": 60,
+      "program_sha256": "e540fda2de92eb784c25bb0f8e98e183f9fa0ede63e07196ce434fe02d2a35e7",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/newest_producer_priority/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/newest_producer_priority/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/newest_producer_priority/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/newest_producer_priority/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/newest_producer_priority/expected_data.hex",
+          "+CYCLES=280",
+          "+FINISH_PC=220",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=280 stalls=0 finish_pc=220\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 2820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "no_false_stalls_or_zero_forwarding",
+      "passed": true,
+      "tags": [
+        "decoded_sources",
+        "zero_hazard_exclusion"
+      ],
+      "oracle_steps": 45,
+      "cycles": 240,
+      "program_words": 50,
+      "program_sha256": "ffd4d516197c227fff3b28b15914856f26b2aa22afadce520f0fc248090c5f98",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/no_false_stalls_or_zero_forwarding/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/no_false_stalls_or_zero_forwarding/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/no_false_stalls_or_zero_forwarding/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/no_false_stalls_or_zero_forwarding/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/no_false_stalls_or_zero_forwarding/expected_data.hex",
+          "+CYCLES=240",
+          "+FINISH_PC=180",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=240 stalls=0 finish_pc=180\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 2420000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "writeback_decode_and_dual_forward",
+      "passed": true,
+      "tags": [
+        "WB_ID_visibility",
+        "dual_forward",
+        "store_both_operands"
+      ],
+      "oracle_steps": 70,
+      "cycles": 340,
+      "program_words": 75,
+      "program_sha256": "3ece61a4bb92ee2c16e0dfe0854aa0afc8ffe4ceb6f4ba45788e5aa6cf65d3c3",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/writeback_decode_and_dual_forward/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/writeback_decode_and_dual_forward/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/writeback_decode_and_dual_forward/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/writeback_decode_and_dual_forward/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/writeback_decode_and_dual_forward/expected_data.hex",
+          "+CYCLES=340",
+          "+FINISH_PC=280",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=340 stalls=0 finish_pc=280\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 3420000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0000",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 441,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "da43faf3b22e6535ad3e0f719d9e2eb759a97c1e0ea8e13d2e75dbb6c623459b",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0000/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0000/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0000/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0000/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0000/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0001",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 356,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "8c5eb6ebe298cbb92e926d49f01ad546c1a71ac2726a4ad822e3f1be00b80bd4",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0001/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0001/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0001/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0001/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0001/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0002",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 321,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "a753e8d4efaea3460880a206ede8f2abe09daa891d33957e3aca7a3b342bb7e6",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0002/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0002/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0002/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0002/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0002/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0003",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 377,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "6700a13b2af0c40e1fdc33c2890e4484002915f57e6166e7de39aa88cf060611",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0003/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0003/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0003/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0003/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0003/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0004",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 409,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "7c3282b37b81847bdd37a7cdf843a02f49faebefe5dd095994d1f905fe62008b",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0004/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0004/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0004/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0004/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0004/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0005",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 368,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "6647e7dd6f49f1bfaef29439e13adb6c4d9909bf34e39a8c688a6dcb6b2ca14f",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0005/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0005/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0005/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0005/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0005/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0006",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 378,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "8432169438a73513a7d3343ef202f7df380dbb8f32aa072c6578b30dafb1fc05",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0006/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0006/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0006/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0006/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0006/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0007",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 385,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "974a74e3473bdba75ccf4a6eca4e3e3672cac73ca75af35c3e6e6462998fff55",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0007/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0007/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0007/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0007/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0007/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0008",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 363,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "4743b4c6fa8dd8512fb495b06343434acc513d7c0bb656658a56ec1792954319",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0008/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0008/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0008/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0008/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0008/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0009",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 399,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "436182a95615495fadfde41245123e9c9eb8ded862b411b4a209cba2a6cca826",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0009/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0009/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0009/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0009/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0009/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0010",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 412,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "934bc3dc37e96849ce3aba6aebb456d0a420a920d8256b10a91d2f802e76ff83",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0010/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0010/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0010/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0010/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0010/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0011",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 381,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "f46e24d18e57a086e964273d12c494d816af6943a152d534c73c7ff65a2fe7f2",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0011/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0011/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0011/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0011/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0011/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0012",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 373,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "adc807e95cc6178de582269276546f01e5fec0ccf8f3b1afcd561c5559ffbe23",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0012/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0012/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0012/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0012/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0012/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0013",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 385,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "95e9fdc946198a32595cf71af8415a2ed22b4e7fa538836a32666379b559de6a",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0013/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0013/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0013/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0013/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0013/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0014",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 456,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "d4eeee7974d0c59fb9463c83b0e9b21540ff69f5b0960b11ae1a206f508d2d6d",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0014/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0014/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0014/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0014/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0014/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0015",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 442,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "07a03a4d0b103ee4be0d954da1f5b7d904c2fa2f311e4b83661eb6fe4691409e",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0015/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0015/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0015/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0015/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0015/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0016",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 370,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "a69edb89b48ba928e6eb4b604b4c2512545f9c84296fb28e08f37a2835a636fe",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0016/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0016/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0016/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0016/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0016/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0017",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 413,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "83b767fc9600566610727092228a17dc2d1e3a8a0980cdebfdffd366ba6dcbe1",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0017/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0017/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0017/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0017/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0017/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0018",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 388,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "944cbb1b96b2a97d8f41b58b0348b780c5ed0c8acaa6d4858dca118028ef72ab",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0018/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0018/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0018/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0018/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0018/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "pipeline",
+      "case": "random_0019",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 388,
+      "cycles": 2080,
+      "program_words": 510,
+      "program_sha256": "aa3d11d8783c5b06ce3b8b0338185b92e526151e02c170171981f8387fb44736",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_pipeline.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/pipeline/random_0019/program.hex",
+          "+REGS=BUILD_ROOT/reference/pipeline/random_0019/regs.hex",
+          "+DATA=BUILD_ROOT/reference/pipeline/random_0019/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/pipeline/random_0019/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/pipeline/random_0019/expected_data.hex",
+          "+CYCLES=2080",
+          "+FINISH_PC=2020",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=2080 stalls=0 finish_pc=2020\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 20820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "isa_and_signed_boundaries",
+      "passed": true,
+      "tags": [
+        "all_data_ISA",
+        "signed_slt",
+        "negative_immediate",
+        "zero",
+        "byte_addressing"
+      ],
+      "oracle_steps": 25,
+      "cycles": 144,
+      "program_words": 26,
+      "program_sha256": "ddfe6b1c4fd5d11fd9902f6dd797b25a2f2e7011bba54e3b046853b3d0c02a86",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/isa_and_signed_boundaries/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/isa_and_signed_boundaries/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/isa_and_signed_boundaries/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/isa_and_signed_boundaries/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/isa_and_signed_boundaries/expected_data.hex",
+          "+CYCLES=144",
+          "+FINISH_PC=100",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=144 stalls=0 finish_pc=100\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1460000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "forward_backward_branches_and_jump",
+      "passed": true,
+      "tags": [
+        "taken_branch",
+        "untaken_branch",
+        "backward_branch",
+        "jump",
+        "flush",
+        "branch_dual_forward"
+      ],
+      "oracle_steps": 24,
+      "cycles": 220,
+      "program_words": 45,
+      "program_sha256": "d323960732c4575f43b36fa08f33c444c913b61f7a6a6d798ee9244a188d47c7",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/forward_backward_branches_and_jump/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/forward_backward_branches_and_jump/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/forward_backward_branches_and_jump/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/forward_backward_branches_and_jump/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/forward_backward_branches_and_jump/expected_data.hex",
+          "+CYCLES=220",
+          "+FINISH_PC=176",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=220 stalls=0 finish_pc=176\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 2220000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "slide8_exact_hazard_program",
+      "passed": true,
+      "tags": [
+        "exact_slide8",
+        "RAW_rs",
+        "RAW_rt",
+        "RAW_both",
+        "store_base"
+      ],
+      "oracle_steps": 6,
+      "cycles": 80,
+      "program_words": 7,
+      "program_sha256": "a7fb6c9147c596c5ccd8da44803ba0414daacac5ad01bacc24d2c0e802a34dbb",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/slide8_exact_hazard_program/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/slide8_exact_hazard_program/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/slide8_exact_hazard_program/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/slide8_exact_hazard_program/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/slide8_exact_hazard_program/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=24",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=0 finish_pc=24\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "load_use_rs",
+      "passed": true,
+      "tags": [
+        "load_use_rs"
+      ],
+      "oracle_steps": 3,
+      "cycles": 80,
+      "program_words": 4,
+      "program_sha256": "f100953e7bd145500130e7f675ef5de2879ac7101b4932fef40350848c4c0cb8",
+      "stall_count": 1,
+      "expected_stall_range": [
+        1,
+        1
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/load_use_rs/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/load_use_rs/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/load_use_rs/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/load_use_rs/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/load_use_rs/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=12",
+          "+MIN_STALLS=1",
+          "+MAX_STALLS=1"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=1 finish_pc=12\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "load_use_rt",
+      "passed": true,
+      "tags": [
+        "load_use_rt"
+      ],
+      "oracle_steps": 3,
+      "cycles": 80,
+      "program_words": 4,
+      "program_sha256": "409e8c2b509a33734408c38cf0399c12e73282bc87da8836fb5be9a2aa97bc90",
+      "stall_count": 1,
+      "expected_stall_range": [
+        1,
+        1
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/load_use_rt/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/load_use_rt/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/load_use_rt/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/load_use_rt/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/load_use_rt/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=12",
+          "+MIN_STALLS=1",
+          "+MAX_STALLS=1"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=1 finish_pc=12\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "load_use_both",
+      "passed": true,
+      "tags": [
+        "load_use_both"
+      ],
+      "oracle_steps": 3,
+      "cycles": 80,
+      "program_words": 4,
+      "program_sha256": "1d575f4475e6b89ce3b3c82fa7fb9cdd7311327e229bd95d23fbff77f3003b00",
+      "stall_count": 1,
+      "expected_stall_range": [
+        1,
+        1
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/load_use_both/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/load_use_both/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/load_use_both/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/load_use_both/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/load_use_both/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=12",
+          "+MIN_STALLS=1",
+          "+MAX_STALLS=1"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=1 finish_pc=12\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "load_to_store_data",
+      "passed": true,
+      "tags": [
+        "load_store_data"
+      ],
+      "oracle_steps": 3,
+      "cycles": 80,
+      "program_words": 4,
+      "program_sha256": "1db764ebb04b08aee871b55bb8aafe0251d8cb5fb679c9e9227a545f32ee0dce",
+      "stall_count": 1,
+      "expected_stall_range": [
+        1,
+        1
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/load_to_store_data/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/load_to_store_data/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/load_to_store_data/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/load_to_store_data/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/load_to_store_data/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=12",
+          "+MIN_STALLS=1",
+          "+MAX_STALLS=1"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=1 finish_pc=12\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "load_to_store_base",
+      "passed": true,
+      "tags": [
+        "load_store_base",
+        "negative_store_offset"
+      ],
+      "oracle_steps": 3,
+      "cycles": 80,
+      "program_words": 4,
+      "program_sha256": "4d70eda27da28b4604b1ca23308c941e547c5f90cfe6940ea72211ac2707db7c",
+      "stall_count": 1,
+      "expected_stall_range": [
+        1,
+        1
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/load_to_store_base/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/load_to_store_base/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/load_to_store_base/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/load_to_store_base/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/load_to_store_base/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=12",
+          "+MIN_STALLS=1",
+          "+MAX_STALLS=1"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=1 finish_pc=12\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "load_to_branch",
+      "passed": true,
+      "tags": [
+        "load_branch",
+        "flush"
+      ],
+      "oracle_steps": 4,
+      "cycles": 80,
+      "program_words": 7,
+      "program_sha256": "a21b06b3581403812b1254c13c9e8f84fcd87014289a3c81d571da2c5f6456bf",
+      "stall_count": 1,
+      "expected_stall_range": [
+        1,
+        1
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/load_to_branch/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/load_to_branch/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/load_to_branch/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/load_to_branch/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/load_to_branch/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=24",
+          "+MIN_STALLS=1",
+          "+MAX_STALLS=1"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=1 finish_pc=24\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "newest_producer_priority",
+      "passed": true,
+      "tags": [
+        "EX_MEM_priority",
+        "MEM_WB",
+        "load_priority",
+        "store_data_forward"
+      ],
+      "oracle_steps": 11,
+      "cycles": 88,
+      "program_words": 12,
+      "program_sha256": "211c82f7f6742f0c36473e00ea27400f70e884641c4da7ed5ae91778826dcaa2",
+      "stall_count": 1,
+      "expected_stall_range": [
+        1,
+        1
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/newest_producer_priority/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/newest_producer_priority/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/newest_producer_priority/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/newest_producer_priority/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/newest_producer_priority/expected_data.hex",
+          "+CYCLES=88",
+          "+FINISH_PC=44",
+          "+MIN_STALLS=1",
+          "+MAX_STALLS=1"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=88 stalls=1 finish_pc=44\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 900000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "no_false_stalls_or_zero_forwarding",
+      "passed": true,
+      "tags": [
+        "decoded_sources",
+        "zero_hazard_exclusion"
+      ],
+      "oracle_steps": 9,
+      "cycles": 80,
+      "program_words": 10,
+      "program_sha256": "38b5158f1a2b1e7c6bb8851f1ba50e18d896d2486b65481ed204278c5bff7350",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        0
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/no_false_stalls_or_zero_forwarding/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/no_false_stalls_or_zero_forwarding/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/no_false_stalls_or_zero_forwarding/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/no_false_stalls_or_zero_forwarding/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/no_false_stalls_or_zero_forwarding/expected_data.hex",
+          "+CYCLES=80",
+          "+FINISH_PC=36",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=0"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=80 stalls=0 finish_pc=36\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 820000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "writeback_decode_and_dual_forward",
+      "passed": true,
+      "tags": [
+        "WB_ID_visibility",
+        "dual_forward",
+        "store_both_operands"
+      ],
+      "oracle_steps": 14,
+      "cycles": 100,
+      "program_words": 15,
+      "program_sha256": "cd2218cc382d29e2cad190e42e2c7c4f02d05e3712ed968723c66eec73ab85d2",
+      "stall_count": 0,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/writeback_decode_and_dual_forward/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/writeback_decode_and_dual_forward/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/writeback_decode_and_dual_forward/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/writeback_decode_and_dual_forward/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/writeback_decode_and_dual_forward/expected_data.hex",
+          "+CYCLES=100",
+          "+FINISH_PC=56",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=100 stalls=0 finish_pc=56\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 1020000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0000",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 93,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "1e598760034802abaa6fe5c0cf40d2e6f1e8306df1db3ce61d422ffdfc14c976",
+      "stall_count": 10,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0000/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0000/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0000/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0000/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0000/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=10 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0001",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 80,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "611f95fb3472f4b2567ad928ddeb1b12b27f3b5e4000cb9fb28b671a0df301fc",
+      "stall_count": 4,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0001/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0001/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0001/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0001/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0001/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=4 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0002",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 77,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "908eae095b9a1b8b2d9c61f6c29919e40c70cf46c4ce654139756aa6a44a34c3",
+      "stall_count": 6,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0002/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0002/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0002/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0002/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0002/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=6 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0003",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 85,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "6bb2e6aacd5450d3f27d787bad529c077986fa3c725c5ab6961021f07a2a0430",
+      "stall_count": 3,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0003/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0003/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0003/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0003/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0003/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=3 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0004",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 89,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "93e34871bdbdf863f783dd1c058bd6e6bf9a65b031e6370e32597b41e3fffe21",
+      "stall_count": 8,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0004/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0004/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0004/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0004/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0004/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=8 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0005",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 84,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "c7d544b05e329e7d7274c196a207a8aafae6aa5edde5c11c60e33a9a089cc9fc",
+      "stall_count": 10,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0005/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0005/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0005/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0005/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0005/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=10 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0006",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 86,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "2c3f00b18e2296e394a4829f97cfa32f5f3b2b8a9cf8c8f78eca047bdf42e79d",
+      "stall_count": 6,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0006/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0006/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0006/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0006/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0006/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=6 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0007",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 85,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "cba00e946186fc7d25991b49eaf773d1ab384320eaf35bf1071269cd6804d41a",
+      "stall_count": 7,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0007/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0007/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0007/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0007/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0007/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=7 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0008",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 83,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "e6f8e99fa229e36cb1f6b1920a83c275ebfc936d969bd13221e0a8bb2d070024",
+      "stall_count": 8,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0008/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0008/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0008/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0008/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0008/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=8 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0009",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 87,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "8b3b402353975e78478001bf13e8ff40c676cd0c58c1d54e230cf79faa0fbe1e",
+      "stall_count": 9,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0009/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0009/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0009/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0009/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0009/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=9 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0010",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 88,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "3adb80c1ebcf2354609b2446424d94a8034da1aad62675dd2dbbe367980d72a9",
+      "stall_count": 9,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0010/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0010/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0010/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0010/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0010/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=9 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0011",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 85,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "b8d8f75a360dabe093511a75d8c504f3ba06d92bb0279f3b10600f773dc060d8",
+      "stall_count": 6,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0011/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0011/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0011/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0011/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0011/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=6 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0012",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 85,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "eb199f3dbb3a7e7193d6ad1e1c356abbb7a5a347232294506e2ad8eb49af379b",
+      "stall_count": 8,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0012/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0012/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0012/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0012/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0012/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=8 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0013",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 85,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "132f0f85da7479b630e731b30ddce6fea0a29c34813b556d16e8e1e391b37918",
+      "stall_count": 6,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0013/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0013/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0013/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0013/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0013/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=6 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0014",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 96,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "295eb8229863281b12eb2e2e7fa12daa4d7b305bd55821d3429fbff70c3e3753",
+      "stall_count": 14,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0014/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0014/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0014/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0014/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0014/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=14 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0015",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 94,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "a8dfad43ccc81b288336ba03fc0e40f38501f75f778f0eff08d5d7bebff74f59",
+      "stall_count": 6,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0015/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0015/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0015/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0015/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0015/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=6 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0016",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 82,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "8a6643e162f9d4794f583457ee8eed7d75dd615ca142b4efd696233fd74a2d87",
+      "stall_count": 4,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0016/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0016/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0016/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0016/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0016/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=4 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0017",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 89,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "04ddcfb90d1890fa79c5c8aac5d1b13d4b41066081cadb44a69b1e09be1ee2da",
+      "stall_count": 9,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0017/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0017/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0017/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0017/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0017/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=9 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0018",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 84,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "e5ae7cde9baeccffdc98e5bc688e9d1b695f8fe729084fc79132ee359cafa8a1",
+      "stall_count": 6,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0018/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0018/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0018/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0018/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0018/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=6 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "hazard",
+      "case": "random_0019",
+      "passed": true,
+      "tags": [
+        "seeded_random",
+        "dependencies",
+        "mixed_control"
+      ],
+      "oracle_steps": 84,
+      "cycles": 448,
+      "program_words": 102,
+      "program_sha256": "8c5c481043532fac574f84a1e06eaafc88b60be2a180d6fbd06345b5ba421bf1",
+      "stall_count": 7,
+      "expected_stall_range": [
+        0,
+        2147483647
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_hazard.vvp",
+          "+PROGRAM=BUILD_ROOT/reference/hazard/random_0019/program.hex",
+          "+REGS=BUILD_ROOT/reference/hazard/random_0019/regs.hex",
+          "+DATA=BUILD_ROOT/reference/hazard/random_0019/data.hex",
+          "+EXPECTED_REGS=BUILD_ROOT/reference/hazard/random_0019/expected_regs.hex",
+          "+EXPECTED_DATA=BUILD_ROOT/reference/hazard/random_0019/expected_data.hex",
+          "+CYCLES=448",
+          "+FINISH_PC=404",
+          "+MIN_STALLS=0",
+          "+MAX_STALLS=2147483647"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE PASS cycles=448 stalls=7 finish_pc=404\r\nPACKAGE_ROOT/verification\\reference_tb.v:89: $finish called at 4500000 (1ps)\r\n",
+        "stderr": ""
+      }
+    },
+    {
+      "mode": "all_three",
+      "case": "default_rom_and_reset",
+      "passed": true,
+      "tags": [
+        "built_in_ROM",
+        "all_data_ISA",
+        "branch_jump",
+        "reset",
+        "memory_preservation"
+      ],
+      "simulation": {
+        "command": [
+          "AUDIT_HOST_ROOT/work\\iverilog12_portable\\extracted\\app\\bin\\vvp.exe",
+          "BUILD_ROOT/reference\\reference_default_rom.vvp"
+        ],
+        "returncode": 0,
+        "timeout": false,
+        "stdout": "REFERENCE DEFAULT ROM PASS all_three_modes memory[400]=24 registers_and_reset_checked\r\nPACKAGE_ROOT/verification\\reference_demo_tb.v:63: $finish called at 1040000 (1ps)\r\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "summary": {
+    "passed": 97,
+    "total": 97,
+    "compilation_failures": 0
+  }
+}

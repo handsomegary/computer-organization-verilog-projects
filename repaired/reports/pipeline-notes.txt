@@ -1,0 +1,48 @@
+REPAIRED LEGACY PIPELINE TESTS
+
+Scope: sources/02-final-pj/pipeline, sources/02-final-pj/hazard,
+       sources/03-final-project-rar/pipeline.
+
+Implementation: preserve the existing five stages, four stage-register modules,
+top interfaces, module names and instance hierarchy. Correct addi MemWrite,
+byte-addressed memories (1024 words/4 KiB), register-zero reads, jump redirect,
+branch flushing (all three younger stages), and older-branch priority over jump.
+Hazard version additionally forwards store data, excludes loaded addresses from
+EX/MEM forwarding, ignores zero/unused decode operands in load-use detection,
+and preserves stalls/bubbles. Memory reads return 0 and writes have no effect
+for invalid/misaligned addresses; architectural exceptions are outside scope.
+
+Level B versions deliberately retain software-scheduled RAW dependencies:
+three NOPs between dependent instructions, no claim of Level C hazard support.
+The Level C version requires no dependency NOPs. None uses a branch delay slot.
+Register-file writes remain at the original negative clock edge.
+
+Each project now has a deterministic instruction-memory program covering all
+ten required instructions and a self-checking top testbench that terminates.
+Top PASS marker: "PASS <project> all ten instructions and demo state".
+
+Reproduction (Python 3 + Icarus Verilog):
+  python verification/repaired_pipeline.py
+Optional: --iverilog PATH --vvp PATH --iverilog-base PATH --output-dir PATH
+No source files are modified. Benches and results are generated under output-dir.
+
+22 cases passed using Icarus Verilog 12, with no compilation diagnostics:
+  - For each of the three projects (7 cases each): embedded all-ten demo,
+    exact slide-8 program (B scheduled, C dense), dense wrong-path stores and
+    branch/jump priority, slide-3/4 loop from byte address 400 down to 0,
+    and three deterministic random 180-instruction ISA programs.
+  - One additional C case checks real load-use stalls for ALU, store data,
+    branch and excludes false dependencies ($zero and immediate destination).
+    Exactly three stalls are required and observed.
+
+All injected programs compare every architectural register (32) and every
+data-memory word (1024) against an independent Python sequential ISA model.
+The +400 deck program completes 101 loop iterations and sums 100..0 to 5050.
+Dense control tests intentionally omit NOPs because they have no RAW dependencies.
+They exercise stores in younger stages, taken/untaken branch, jump squash and
+an ID jump losing to an older taken MEM branch.
+
+Results are recorded in pipeline-results.json. These are simulation
+checks for the specified educational MIPS subset, not a hardware-board or
+timing-closure validation. Each legacy project must compile independently,
+because their original module names overlap.

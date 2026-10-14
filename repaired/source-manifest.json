@@ -1,0 +1,1116 @@
+{
+  "schema_version": 2,
+  "baseline_commit": "21d436e766d03602ddbe95cd27326013c8a9b637",
+  "scope": "Current corrected code; original immutable archive is available in baseline Git history.",
+  "removed_implementations": [
+    "sources/01-computer-program-final",
+    "sources/03-final-project-rar/hazard",
+    "sources/04-final-project"
+  ],
+  "files": [
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Add.v",
+      "bytes": 134,
+      "sha256": "3beb4abf02e62900eaf2332ff53e82cf6a1bdd42f87b6389e16988c32de80683",
+      "role": "repaired_existing",
+      "original_sha256": "3beb4abf02e62900eaf2332ff53e82cf6a1bdd42f87b6389e16988c32de80683",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Add.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/ALU.v",
+      "bytes": 555,
+      "sha256": "2068cc61afc008a8a309c273ea21d74c1dcc5ae0a257274864260d1636dc76e0",
+      "role": "repaired_existing",
+      "original_sha256": "2068cc61afc008a8a309c273ea21d74c1dcc5ae0a257274864260d1636dc76e0",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/ALU.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "bytes": 913,
+      "sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+      "role": "repaired_existing",
+      "original_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/ALU_Controller.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Controller.v",
+      "bytes": 1676,
+      "sha256": "f7d79e9d6975d2600ffa960ad7eef3eed771ed9511d55c06a5274f2755a1cc59",
+      "role": "repaired_existing",
+      "original_sha256": "b76945267032215810e6999cc03ab62303ac669d6feaa96ede415eebc2f22918",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Controller.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "bytes": 7396,
+      "sha256": "d20e5c56ae522405bae87d84998cde96a1b04f48e7428f53fa060aebd6eafaeb",
+      "role": "repaired_existing",
+      "original_sha256": "9eb24588ffb023d5b6e7b3b7837705b2b0c516d2258c3dd7ca725a70b66e1d6c",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/CPU_NoHazard.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "bytes": 709,
+      "sha256": "debc8b5c4b7c780004e423533c73e18b99fae76d3e4b15e14ee2ce8faacfd066",
+      "role": "repaired_existing",
+      "original_sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/DataMemory.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "bytes": 1296,
+      "sha256": "3c4cf0592104ce469adc78e106f7eb3e9a02fc5c608d08b55e9b07d217ea5cf5",
+      "role": "repaired_existing",
+      "original_sha256": "4b9d7d65fbc551585052673bff7f9b1fce7998debe8cf16a808ffadb29fc69fc",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/EX_MEM.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "bytes": 838,
+      "sha256": "9ad3d6489257804bf37864ad0b44e198cc07e09583b8397ef5977d6a63b0963b",
+      "role": "repaired_existing",
+      "original_sha256": "9ad3d6489257804bf37864ad0b44e198cc07e09583b8397ef5977d6a63b0963b",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/ForwardingUnit.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "bytes": 519,
+      "sha256": "31d39b65abe6f5f07e40e710baf38d6a5d1e227f21f9c50a70ce561b83031c4f",
+      "role": "repaired_existing",
+      "original_sha256": "bd918593b331a74e0661508207dbe9fb7ec2d4f30fdc8eb46690f2502ad0e76f",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Hazard_detection_unit.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "bytes": 1591,
+      "sha256": "4e30ecdd3d5de0f63ba3db9662ceb3c024d052c9c4e3639ae8243036e297a310",
+      "role": "repaired_existing",
+      "original_sha256": "b4ab03710a64d08d38458b087eee3bda67fb3bb50a53692fae182a890f97f550",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/ID_EX.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "bytes": 454,
+      "sha256": "bd1ddd996648bffe74d90ea7cd95eaf18f297a900778fc10409eb37a1998568a",
+      "role": "repaired_existing",
+      "original_sha256": "eb6cac8f0f2be08abe4d350cb1a2bfed127784cf28f6ba120aee2d11d7462aa7",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/IF_ID.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "bytes": 1577,
+      "sha256": "70b4016c7ab939a158cd40c67d3f8a2d58356cb51e9fd63da56fc860b2346d2b",
+      "role": "repaired_existing",
+      "original_sha256": "fc7cc6d360cd2e4e5e4c994ef4b7b48117739e5eda16df7aa508f70310b423bc",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/InstructionMemory.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "bytes": 825,
+      "sha256": "dc7fa3369ac5808e85acf787930715554fa24c4517d367716d1a2a42ef90fedb",
+      "role": "repaired_existing",
+      "original_sha256": "83c5c2603480bc7d7347e66d2e79771f30270e762304423dd77d29f7f378de0f",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/MEM_WB.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "bytes": 166,
+      "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "role": "repaired_existing",
+      "original_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Mux_32Bits.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "bytes": 322,
+      "sha256": "20baa04d7a46900f217a6256209b997ddeae7a97d4832b0b9a6a139d3df6c02e",
+      "role": "repaired_existing",
+      "original_sha256": "20baa04d7a46900f217a6256209b997ddeae7a97d4832b0b9a6a139d3df6c02e",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Mux_32Bits_3input.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "bytes": 163,
+      "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "role": "repaired_existing",
+      "original_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Mux_5Bits.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/PC.v",
+      "bytes": 314,
+      "sha256": "528b21e4a8746c38f8a461556b642ee49b1cdd12b077d5732e2c9102be3f2d3f",
+      "role": "repaired_existing",
+      "original_sha256": "42a2c22a6fe300ed5982c01b0177691851c45665d218b605f262ffc0ebd535a5",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/PC.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "bytes": 1061,
+      "sha256": "8e54e2d5801cc68cab31aa8c9834f58148b0fa984e0a4e9afdbc47aeee94509e",
+      "role": "repaired_existing",
+      "original_sha256": "5239eae1b006789a5954155a14857bf3eda46d9defccb4a471eaaf4a14a329f8",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Register_file.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "bytes": 158,
+      "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "role": "repaired_existing",
+      "original_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Shift_Left_2_26BitsTo28Bits.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "bytes": 158,
+      "sha256": "85f49046a6143070bc6dcaf4bfaf2bba17f50237d16aa58f57fd7a2b6ede863e",
+      "role": "repaired_existing",
+      "original_sha256": "85f49046a6143070bc6dcaf4bfaf2bba17f50237d16aa58f57fd7a2b6ede863e",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Shift_Left_2_32BitsTo32Bits.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/hazard/rtl/Sign_Extend.v",
+      "bytes": 297,
+      "sha256": "a72bc759678836da3dd158124cdc7586057cd2589d080add6c802faedc8689fd",
+      "role": "repaired_existing",
+      "original_sha256": "a72bc759678836da3dd158124cdc7586057cd2589d080add6c802faedc8689fd",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Sign_Extend.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/hazard/tb/CPU_NoHazard_tb.v",
+      "bytes": 1024,
+      "sha256": "ff2036be28a0112401757a015d3f5b612af58a7110c9e8f7ed093e74220af206",
+      "role": "repaired_existing",
+      "original_sha256": "06f976fbbf7e6cdf02bb9dbe8dbe66bced725b3d74218ebabfd1b39490c391a1",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sim_1/new/CPU_NoHazard_tb.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "bytes": 133,
+      "sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+      "role": "repaired_existing",
+      "original_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/ADD.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/ALU.v",
+      "bytes": 579,
+      "sha256": "97d1ea2b414d7d791b3923d6d0915c32c5b189ed9cdd8abae003f34c9b35a790",
+      "role": "repaired_existing",
+      "original_sha256": "97d1ea2b414d7d791b3923d6d0915c32c5b189ed9cdd8abae003f34c9b35a790",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/ALU.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "bytes": 913,
+      "sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+      "role": "repaired_existing",
+      "original_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/ALU_CONTROLLER.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
+      "bytes": 1613,
+      "sha256": "7c753613eb64fc21bb9a45943ad1053132a91525e3b6b34107381841a014ef05",
+      "role": "repaired_existing",
+      "original_sha256": "1aff8c91e01411dc4971f648ea5e9588b13b532316188b029bf30e48198962b6",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/CONTROLLER.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/CPU_PIPELINE.v",
+      "bytes": 5865,
+      "sha256": "f7ceea7598a03fbce2cad61f7b82d470f7637c4f9e2450bdd0bbf5693b114fcc",
+      "role": "repaired_existing",
+      "original_sha256": "4dc8b4c5fcb49d87576ba438876c1dc74196f6448da9f345a0a4eecaa1489661",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/CPU_PIPELINE.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "bytes": 709,
+      "sha256": "debc8b5c4b7c780004e423533c73e18b99fae76d3e4b15e14ee2ce8faacfd066",
+      "role": "repaired_existing",
+      "original_sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/DATAMEMORY.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/EX_MEM.v",
+      "bytes": 1295,
+      "sha256": "c19901a9a05517da0dda9a318c86f24e5458460af5933a849cfea48af629a188",
+      "role": "repaired_existing",
+      "original_sha256": "f09ffe37e29203a02e1fd7540c34dbe54b0d6e0522e81883cfc6ff56ba202490",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/EX_MEM.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/ID_EX.v",
+      "bytes": 1528,
+      "sha256": "4365063c20340747abb506ccab8b21ed39fd8be9022160c089e0f2fb2b1f1cec",
+      "role": "repaired_existing",
+      "original_sha256": "1b7ca36543ad182afb78df9e1aa60a64f16510df9ddd69c76919a51f3ac251ec",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/ID_EX.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/IF_ID.v",
+      "bytes": 319,
+      "sha256": "9dc675860753638aca2be35921582f3399cc353c65336ee1fb369d808c686d50",
+      "role": "repaired_existing",
+      "original_sha256": "530df6dae74b8fdb35cfe8f48d3b431137b91eec2489b1827b1e3993288424d4",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/IF_ID.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "bytes": 4502,
+      "sha256": "3915e483bf300000e3baabd7a4444298381134dbf1b30f7c6eb6107d2c0ffb8f",
+      "role": "repaired_existing",
+      "original_sha256": "2f36490001a385403e770604a022c6e4930fdf1b9f71cef4d745f93df773d662",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/INSTROCTIONMEMORY.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/MEM_WB.v",
+      "bytes": 824,
+      "sha256": "b004c7ef1f8d096f9bd707867548a20ce9e86e6f1f89a524f1d767a99964d747",
+      "role": "repaired_existing",
+      "original_sha256": "5621b5794e748e5e0b17bf32265fd7c7f33fe3ff420c1b069860e936006e4260",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/MEM_WB.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "bytes": 166,
+      "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "role": "repaired_existing",
+      "original_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/MUX_32BITS.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "bytes": 163,
+      "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "role": "repaired_existing",
+      "original_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/MUX_5BITS.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/PC.v",
+      "bytes": 244,
+      "sha256": "2b0926bbd00088f14b3185bb9b667c84fdd07262d266e394cc3d7088561cb596",
+      "role": "repaired_existing",
+      "original_sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/PC.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/REGISTER_FILE.v",
+      "bytes": 736,
+      "sha256": "0aeff7ad28d779be4cbe2ed4f3bf840435cd6e60fcf52e97f320edd453dab17c",
+      "role": "repaired_existing",
+      "original_sha256": "d9615bfbbeccc3941177551cdf580fdf062aabc8cfa927c391d6e0be7c913c72",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/REGISTER_FILE.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "bytes": 158,
+      "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "role": "repaired_existing",
+      "original_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "bytes": 157,
+      "sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+      "role": "repaired_existing",
+      "original_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v",
+      "bytes": 296,
+      "sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d",
+      "role": "repaired_existing",
+      "original_sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/SIGN_EXTEND.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/pipeline/tb/CPU_Pipeline_tb.v",
+      "bytes": 1026,
+      "sha256": "3f3526f17a3ff7aec08584b5943b3741f7dcf5d9505a5ab4444ad1ea9ed6a05a",
+      "role": "repaired_existing",
+      "original_sha256": "93fc4038d585b0e9cb7447e2ff69e3c2eea13831609c558aa693d5f1ff45ddea",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sim_1/new/CPU_Pipeline_tb.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Add.v",
+      "bytes": 133,
+      "sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+      "role": "repaired_existing",
+      "original_sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Add.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/ALU.v",
+      "bytes": 533,
+      "sha256": "c2c6e8099900c89e7b1476d0cc2ebceb02aeb99f0c629e2674e307ea4f0301be",
+      "role": "repaired_existing",
+      "original_sha256": "40ad80dab1f5571fae22886a85375790fabcb29867ab806ce5eb41d11525e267",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/ALU.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/ALU_Controller.v",
+      "bytes": 878,
+      "sha256": "6b915c218ba1bb9728067de0a5a73b064de73048e85e01ee96f1543d5703b4ec",
+      "role": "repaired_existing",
+      "original_sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/ALU_Controller.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Controller.v",
+      "bytes": 1983,
+      "sha256": "85f953e785e01794461c38c8d4d842f72ff28cdd4c97fb0e8a79d5f69cef9ee8",
+      "role": "repaired_existing",
+      "original_sha256": "18b80d88728b9cf2ed9420c3dbb5bf4cb70a82710d1c4311fc244f98771952d4",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Controller.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/CPU_SingleCycle.v",
+      "bytes": 2762,
+      "sha256": "97be756e607560f772b07f4c141b793cb7d1b94f958d26fc997a4e9d20e198e8",
+      "role": "repaired_existing",
+      "original_sha256": "39993b5c20aa01cda7c4bd9803baa75490e2dd2c09a3fa5c0d69d2ec547b21c1",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/CPU_SingleCycle.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/DataMemory.v",
+      "bytes": 922,
+      "sha256": "85d0c99936e36211582bb09fd26dcdfc93214653e0f1c4a364b8febec6504751",
+      "role": "repaired_existing",
+      "original_sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/DataMemory.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/InstructionMemory.v",
+      "bytes": 1780,
+      "sha256": "c2aac93eef881528fca3eb4a3a581fd4777345ddfa3af76c0e0a1e34bc3b2421",
+      "role": "repaired_existing",
+      "original_sha256": "e522b9ab9a29c54e1570477d6876d059940326857f3771e8bb45bc039538de46",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/InstructionMemory.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Mux_32Bits.v",
+      "bytes": 166,
+      "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "role": "repaired_existing",
+      "original_sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Mux_32Bits.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Mux_5Bits.v",
+      "bytes": 163,
+      "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "role": "repaired_existing",
+      "original_sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Mux_5Bits.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/PC.v",
+      "bytes": 223,
+      "sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48",
+      "role": "repaired_existing",
+      "original_sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/PC.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Register_File.v",
+      "bytes": 692,
+      "sha256": "db559fb654c78ec677ee75f00969563cbebc75ca01e646439866ca18e1001441",
+      "role": "repaired_existing",
+      "original_sha256": "aa99777c1598f5227208a11b70a09963be05b005b52d2aef8a2555d332503fa7",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Register_File.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "bytes": 158,
+      "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "role": "repaired_existing",
+      "original_sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Shift_Left_2_26BitsTo28Bits.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "bytes": 157,
+      "sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+      "role": "repaired_existing",
+      "original_sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Shift_Left_2_32BitsTo32Bits.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/rtl/Sign_Extend.v",
+      "bytes": 184,
+      "sha256": "16f7dfe8f1bb37635aec5917580450fdf8098ae5918a66395237f21dac5ba8a4",
+      "role": "repaired_existing",
+      "original_sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Sign_Extend.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/02-final-pj/single-cycle/tb/SINGLE_CYCLE_TB.v",
+      "bytes": 1100,
+      "sha256": "bc3248271c8ba8f8e37481c156c789311d6bff53dace14ee27375aeea340134b",
+      "role": "repaired_existing",
+      "original_sha256": "c24e8c98201cb8092d65a4839519c9682bcf36c335112c46b38c256911cfb570",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sim_1/new/SINGLE_CYCLE_TB.v",
+      "original_source": "02-final-pj",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "bytes": 134,
+      "sha256": "d8c04dc7d44fd04708b77e3f72ab7de33754bdbb8da27efdee29cd9241c3cb72",
+      "role": "repaired_existing",
+      "original_sha256": "d8c04dc7d44fd04708b77e3f72ab7de33754bdbb8da27efdee29cd9241c3cb72",
+      "original_path": "02Pipeline/sources_1/new/ADD.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "bytes": 580,
+      "sha256": "b5a4a863d5b4b3a43b1d3cf08de3b88bd38b84932c7a5a28572c3a93d090ae60",
+      "role": "repaired_existing",
+      "original_sha256": "b5a4a863d5b4b3a43b1d3cf08de3b88bd38b84932c7a5a28572c3a93d090ae60",
+      "original_path": "02Pipeline/sources_1/new/ALU.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "bytes": 914,
+      "sha256": "7f69efb72332814448079b096c356a75ccbb0a2c3a230ea2b14242a44ca0802f",
+      "role": "repaired_existing",
+      "original_sha256": "7f69efb72332814448079b096c356a75ccbb0a2c3a230ea2b14242a44ca0802f",
+      "original_path": "02Pipeline/sources_1/new/ALU_CONTROLLER.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "bytes": 1605,
+      "sha256": "3a9dfcd54b11da4cf130809f188d6234835a4640b771218449149b120933f327",
+      "role": "repaired_existing",
+      "original_sha256": "856e26d30dd6f0a0114b8f1c3e87edadfd88722e4afd510564d2c123b526dee0",
+      "original_path": "02Pipeline/sources_1/new/CONTROLLER.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "bytes": 5866,
+      "sha256": "15801bce3c2f6e455e88c853b844ed1ed4e07ccc4926b9b16038fbe91fc48528",
+      "role": "repaired_existing",
+      "original_sha256": "f36a1ed1770ef1391448264627cfa4a9f1572755839c957f3a5b7a0746b4a012",
+      "original_path": "02Pipeline/sources_1/new/CPU_PIPELINE.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "bytes": 709,
+      "sha256": "debc8b5c4b7c780004e423533c73e18b99fae76d3e4b15e14ee2ce8faacfd066",
+      "role": "repaired_existing",
+      "original_sha256": "5a7237ecd6bbae1ff873828c3d8ed2f9f6c08d1df55eab0d6ea9aa4db4dcc38c",
+      "original_path": "02Pipeline/sources_1/new/DATAMEMORY.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "bytes": 1296,
+      "sha256": "b2b46285d39e6e409ce786e1234ea938c7e31f12f765335e7639c522bf076cee",
+      "role": "repaired_existing",
+      "original_sha256": "962b386cf8badbfb95ed4b1ab24171d0a83e85d94f86b46665c90d59ead36d66",
+      "original_path": "02Pipeline/sources_1/new/EX_MEM.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "bytes": 1529,
+      "sha256": "094be9296e53403f4a1b3df9a78c0ecdd8967dd89e62bc18840f0337899bb835",
+      "role": "repaired_existing",
+      "original_sha256": "2b835a0c4d618024143c2e02f8ceb59fa1a8bd0b56f736afe3252a232bcce412",
+      "original_path": "02Pipeline/sources_1/new/ID_EX.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "bytes": 320,
+      "sha256": "15e87b30fe0b04920fd12176bb9b57383cbdde4b6ede0109cb0b5b15404238a7",
+      "role": "repaired_existing",
+      "original_sha256": "cdeee3a0d76bad0fc8814102dd8ae23f34d4596fd4693ba6b3509760e51400df",
+      "original_path": "02Pipeline/sources_1/new/IF_ID.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "bytes": 4502,
+      "sha256": "3915e483bf300000e3baabd7a4444298381134dbf1b30f7c6eb6107d2c0ffb8f",
+      "role": "repaired_existing",
+      "original_sha256": "e605ad9ad9d8e5b70388f58ae8f4694ff56325d5325e723171acaee50e24a066",
+      "original_path": "02Pipeline/sources_1/new/INSTROCTIONMEMORY.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "bytes": 825,
+      "sha256": "f0945deef84e992a47100a6ba55b3711d50edfa750930c7e679c12eb47a9adbd",
+      "role": "repaired_existing",
+      "original_sha256": "32ad7666422878a52e996a7d0135dda34b16bd6347a32634691bb1507a5285b5",
+      "original_path": "02Pipeline/sources_1/new/MEM_WB.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "bytes": 167,
+      "sha256": "57c588a8fbc94b2f0c6151ad0ed5639e5c8f9819ac294b562e52a12887cc733e",
+      "role": "repaired_existing",
+      "original_sha256": "57c588a8fbc94b2f0c6151ad0ed5639e5c8f9819ac294b562e52a12887cc733e",
+      "original_path": "02Pipeline/sources_1/new/MUX_32BITS.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "bytes": 164,
+      "sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d",
+      "role": "repaired_existing",
+      "original_sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d",
+      "original_path": "02Pipeline/sources_1/new/MUX_5BITS.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "bytes": 245,
+      "sha256": "41e17728bd7ce2510b6eeb07b6cfa4644adf29b3f6e7d08b46b5d4fde78428ec",
+      "role": "repaired_existing",
+      "original_sha256": "96ec50a315182d063b77d8f900a212f7fc21864790414b2e141c3f7a42e2b22e",
+      "original_path": "02Pipeline/sources_1/new/PC.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "bytes": 737,
+      "sha256": "1f573b917bc0e40632a5f3636eac0ef14723a3e6410c61c4d496a3c00879bbb8",
+      "role": "repaired_existing",
+      "original_sha256": "ff400458fd222d4092a949f589c81e861928e15e96615e2c050e79391af7de64",
+      "original_path": "02Pipeline/sources_1/new/REGISTER_FILE.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "bytes": 159,
+      "sha256": "8ceaa65aa9ddcb855b8b0e769617185d474ccfd53e39ba9b4f87f65fdc6f6ed4",
+      "role": "repaired_existing",
+      "original_sha256": "8ceaa65aa9ddcb855b8b0e769617185d474ccfd53e39ba9b4f87f65fdc6f6ed4",
+      "original_path": "02Pipeline/sources_1/new/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "bytes": 158,
+      "sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe",
+      "role": "repaired_existing",
+      "original_sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe",
+      "original_path": "02Pipeline/sources_1/new/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+      "bytes": 297,
+      "sha256": "b4cb5b6fe16c061c708c5862822aa6b60f13b07612b759b0c6930d89be85b59e",
+      "role": "repaired_existing",
+      "original_sha256": "b4cb5b6fe16c061c708c5862822aa6b60f13b07612b759b0c6930d89be85b59e",
+      "original_path": "02Pipeline/sources_1/new/SIGN_EXTEND.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/pipeline/tb/CPU_Pipeline_tb.v",
+      "bytes": 1035,
+      "sha256": "832635ad6f6c536392c7e3caebc5222b086297a7cc708801ca0b0039a8373163",
+      "role": "repaired_existing",
+      "original_sha256": "2540ea4c8037e7d263c711e6f3ea7cc82b7e98af5674e2c68c5691af2fb3e13c",
+      "original_path": "02Pipeline/sim_1/new/CPU_Pipeline_tb.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+      "bytes": 134,
+      "sha256": "61084657dfb7d7cf3a5fa7b219d5037cb1b8756242d44697c69939b6f125a7db",
+      "role": "repaired_existing",
+      "original_sha256": "61084657dfb7d7cf3a5fa7b219d5037cb1b8756242d44697c69939b6f125a7db",
+      "original_path": "01SingleCycle/sources_1/new/Add.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+      "bytes": 533,
+      "sha256": "c2c6e8099900c89e7b1476d0cc2ebceb02aeb99f0c629e2674e307ea4f0301be",
+      "role": "repaired_existing",
+      "original_sha256": "f7489e70f417a2c6adc8f50c3b004a35cd4332aaf192578f663100d49a8a80b0",
+      "original_path": "01SingleCycle/sources_1/new/ALU.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+      "bytes": 883,
+      "sha256": "700bdb95828d474ccad9a25eb798453ab052c7065afe6687230e75433d08a5c0",
+      "role": "repaired_existing",
+      "original_sha256": "8dc94fbd4984d07886d7aca4bcb16ea5195fb71af1d0d35cd4ad5f67818a84ed",
+      "original_path": "01SingleCycle/sources_1/new/ALU_Controller.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+      "bytes": 1972,
+      "sha256": "48472cd76a532f0cf8f93f15b91de4100e52bf29c920e21e0812bc18a7f72f5a",
+      "role": "repaired_existing",
+      "original_sha256": "5226b5b0734b8c6dc7e62fb02262cf66730d754aa1b3dea960b7615985b2f9f3",
+      "original_path": "01SingleCycle/sources_1/new/Controller.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+      "bytes": 2763,
+      "sha256": "b8eee32bca960de4c58bb50feca1af7bda03535513348488f6fa38b0191bbdf4",
+      "role": "repaired_existing",
+      "original_sha256": "041076cfe6daedb5edf114b9709ed795c987284df37cf3282a91698c288ee877",
+      "original_path": "01SingleCycle/sources_1/new/CPU_SingleCycle.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+      "bytes": 922,
+      "sha256": "85d0c99936e36211582bb09fd26dcdfc93214653e0f1c4a364b8febec6504751",
+      "role": "repaired_existing",
+      "original_sha256": "9583a862c2d3590167a98ffd591ad596d7880c228a5f33516f224ef1cc05e2e6",
+      "original_path": "01SingleCycle/sources_1/new/DataMemory.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+      "bytes": 1508,
+      "sha256": "062fef4ab9b965e5a6f72639a04c879d7fdaeae85e2e715378ad921cf7dcc442",
+      "role": "repaired_existing",
+      "original_sha256": "5535ebbadc022f59f83da35bfc4d266467f26e6d5a6429ba96916810d303f61d",
+      "original_path": "01SingleCycle/sources_1/new/InstructionMemory.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+      "bytes": 167,
+      "sha256": "5946244149be5ac2160eedb71b303d51db000a26e69e879ddd233071f2e8b0c6",
+      "role": "repaired_existing",
+      "original_sha256": "5946244149be5ac2160eedb71b303d51db000a26e69e879ddd233071f2e8b0c6",
+      "original_path": "01SingleCycle/sources_1/new/Mux_32Bits.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+      "bytes": 164,
+      "sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d",
+      "role": "repaired_existing",
+      "original_sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d",
+      "original_path": "01SingleCycle/sources_1/new/Mux_5Bits.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+      "bytes": 224,
+      "sha256": "361601a30f2145d4d20cc8634b32dbb47b0eba2479520248377e8ac0c37cb292",
+      "role": "repaired_existing",
+      "original_sha256": "361601a30f2145d4d20cc8634b32dbb47b0eba2479520248377e8ac0c37cb292",
+      "original_path": "01SingleCycle/sources_1/new/PC.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+      "bytes": 692,
+      "sha256": "db559fb654c78ec677ee75f00969563cbebc75ca01e646439866ca18e1001441",
+      "role": "repaired_existing",
+      "original_sha256": "413948d82d9e4cfd46c05642ee2577cf1c82afcd6cb38bb2095318c3c853dcb3",
+      "original_path": "01SingleCycle/sources_1/new/Register_File.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "bytes": 159,
+      "sha256": "508370e9cc012819d063135857173b74327810802d825361fc35d893c3c0a4a8",
+      "role": "repaired_existing",
+      "original_sha256": "508370e9cc012819d063135857173b74327810802d825361fc35d893c3c0a4a8",
+      "original_path": "01SingleCycle/sources_1/new/Shift_Left_2_26BitsTo28Bits.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "bytes": 158,
+      "sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe",
+      "role": "repaired_existing",
+      "original_sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe",
+      "original_path": "01SingleCycle/sources_1/new/Shift_Left_2_32BitsTo32Bits.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": false
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+      "bytes": 184,
+      "sha256": "16f7dfe8f1bb37635aec5917580450fdf8098ae5918a66395237f21dac5ba8a4",
+      "role": "repaired_existing",
+      "original_sha256": "97a832d56b07a70175af5713c0258e168ec6bc84b913a10013d414c52d41486e",
+      "original_path": "01SingleCycle/sources_1/new/Sign_Extend.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "sources/03-final-project-rar/single-cycle/tb/SINGLE_CYCLE_TB.v",
+      "bytes": 1098,
+      "sha256": "41351a8be9211e828e40f9bef9db00fffecc4c3146b8c164866ef3f77948056a",
+      "role": "repaired_existing",
+      "original_sha256": "1324291501d78363847238e8e0a42f2dfcd0b5f0f842ab785bbd49eccfa1d874",
+      "original_path": "01SingleCycle/sim_1/new/SINGLE_CYCLE_TB.v",
+      "original_source": "03-final-project-rar",
+      "changed_from_original": true
+    },
+    {
+      "path": "reference/rtl/mips_pipeline.v",
+      "bytes": 8163,
+      "sha256": "b86defef9b69836b6674bed198a98ae8761cd5d3a8c8fe0fd03b9787a6e83959",
+      "role": "authored_replacement"
+    },
+    {
+      "path": "reference/rtl/mips_single_cycle.v",
+      "bytes": 3465,
+      "sha256": "4aeb970f0b6cd3b72e48de952bf5d65460922d5c663e7685937d1631d39560b7",
+      "role": "authored_replacement"
+    },
+    {
+      "path": "verification/finalpj_hazard_addi_side_effect_tb.v",
+      "bytes": 1105,
+      "sha256": "f1702c3e9528ffb84c787577d4e502de958a33bbe3040d9ff333dd51571b65ab",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_hazard_alu_tb.v",
+      "bytes": 1223,
+      "sha256": "fb1da82603c33396fd2296b0374defffe6054879d3b5772b3018ccea8882597e",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_hazard_decode_tb.v",
+      "bytes": 2411,
+      "sha256": "7a85e33f2a9a211b4070cca9ef3d6aa383d5735d0eb001c37cf1364bab6a73bc",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_hazard_dependent_store_tb.v",
+      "bytes": 1172,
+      "sha256": "a590e2c5cfefb9c635f8bc6a3592e9a0f1751add14a11755b9646a6783447bc2",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_hazard_isa_data_tb.v",
+      "bytes": 1687,
+      "sha256": "0a3d3699d5707d6f48986bc5fa58fb61106516e1714985d8fa21ac798c9ff431",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_hazard_jump_tb.v",
+      "bytes": 1377,
+      "sha256": "dd5fd23255faf263fbc2601149a1e987ea83d46c2ad3e05a9a33055237d67a38",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_hazard_load_use_tb.v",
+      "bytes": 1201,
+      "sha256": "11facb36ecc71a239e0832d4900ae2e860e77c24843091d7e5f9b3cc4d71eec5",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_hazard_taken_branch_tb.v",
+      "bytes": 1422,
+      "sha256": "25cae7af63f70d53c2f34a9724e8f8a2d8c13f0ba4738de82bd48b4fe1c04d40",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_hazard_units_tb.v",
+      "bytes": 1834,
+      "sha256": "108d04eacb01e86ecdd93cf321a8836b6b06b966a6768a653631218979ecedb9",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_pipeline_addi_side_effect_tb.v",
+      "bytes": 1107,
+      "sha256": "8bca4c7e07adaa21966c0348cbb1981705d86fcb3ed9cf52eccf149ea730ac5a",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_pipeline_alu_tb.v",
+      "bytes": 1225,
+      "sha256": "e0d337950b0084341ad503e83934f4f97e91f126b92ccad61e61b2af7fca98e6",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_pipeline_decode_tb.v",
+      "bytes": 2401,
+      "sha256": "b29d85fa14aeee1ce990ef0763cbe99befa2e63bdc051f8485b58eec4168b5bd",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_pipeline_isa_data_tb.v",
+      "bytes": 1689,
+      "sha256": "84f1e6c1003ce660908fd30b5f7c9450dad361c30d61e684d1ac2e89f22dc6ef",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_pipeline_jump_tb.v",
+      "bytes": 1379,
+      "sha256": "3e544c0c4b97f899b2325c2d12110a288ee3c4a5edc853336fccbed7c148a268",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_pipeline_taken_branch_tb.v",
+      "bytes": 1424,
+      "sha256": "1b4d1015e1c87cb7d96f2360fec17843301e2f9e01648a249ae6e89fad443401",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_single_addi_side_effect_tb.v",
+      "bytes": 1108,
+      "sha256": "3e196678242e7e428e6a66946f8ad6da8891149e7be2316431c6b08d21a8fddd",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_single_alu_tb.v",
+      "bytes": 1223,
+      "sha256": "bb45b532424b65bd419d87e724cf08986dbaf88e110f9a35dadec657ff5eda93",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_single_decode_tb.v",
+      "bytes": 2373,
+      "sha256": "6d733e79163f6dab09b6c184eac1e861de0e987c8ac30392ac0d9df5e4cb6591",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_single_isa_data_tb.v",
+      "bytes": 1690,
+      "sha256": "d72b7c0417d342cd788918aaa89ff734f0f622590be31a667f3bef1915fb2394",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_single_jump_tb.v",
+      "bytes": 1380,
+      "sha256": "ce18d7da03f6c7dec57dfb086bb613568178a7987349d8e7e81336a11f8bd6e8",
+      "role": "verification"
+    },
+    {
+      "path": "verification/finalpj_single_taken_branch_tb.v",
+      "bytes": 1425,
+      "sha256": "e4656df63e56b8bb8946a676f05e0aad8d7c7887c49984dd13f6da0e824a8481",
+      "role": "verification"
+    },
+    {
+      "path": "verification/reference_demo_tb.v",
+      "bytes": 2957,
+      "sha256": "78f058f43d26bcd165795a3fb37940cf37751abb29b6f3b27ea9e00a3e96f46a",
+      "role": "verification"
+    },
+    {
+      "path": "verification/reference_tb.v",
+      "bytes": 3708,
+      "sha256": "483ebda3ed233113aa1cc1910c9745eb05e4f5296779f57c0aa19d04bbebc812",
+      "role": "verification"
+    },
+    {
+      "path": "verification/repaired_stress_control_stores_tb.v",
+      "bytes": 2314,
+      "sha256": "dc632e47e73a66d27bcc3a5f9d6c07520e9586bb92bdc367ac33110a0d44abc0",
+      "role": "verification"
+    },
+    {
+      "path": "verification/repaired_stress_dual_forwarding_tb.v",
+      "bytes": 2686,
+      "sha256": "35fcc3309623315b854e35a70033cebffb79f1d23923308015cc81857e226b52",
+      "role": "verification"
+    },
+    {
+      "path": "verification/repaired_stress_load_branch_tb.v",
+      "bytes": 2449,
+      "sha256": "e8d1ed6e65b8be3632025d3dfeb2cd258862c83da0bd9b8f0f7928b7f0664291",
+      "role": "verification"
+    },
+    {
+      "path": "verification/repaired_stress_reset_inflight_tb.v",
+      "bytes": 2091,
+      "sha256": "62359b7cd438fef659cfc02a28fdfa585123d511072347136068c1b3f2458b92",
+      "role": "verification"
+    },
+    {
+      "path": "verification/repaired_stress_single_deck_tb.v",
+      "bytes": 1492,
+      "sha256": "9a04cb429cf508cebd55406e7b2cbc788f5cc3ac77cabd6d5b2044604b19b53c",
+      "role": "verification"
+    },
+    {
+      "path": "verification/repaired_stress_single_defaults_tb.v",
+      "bytes": 1142,
+      "sha256": "e7f993406eb70c75e7c09afa91ae77a44673e000c1805e4d1e546d2d6cdd9706",
+      "role": "verification"
+    },
+    {
+      "path": "verification/repaired_stress_single_memory_tb.v",
+      "bytes": 1397,
+      "sha256": "5aef814cd848bc31b7ab11cc0ed107bb803bc04706888d731d9dbe06297cc55b",
+      "role": "verification"
+    },
+    {
+      "path": "verification/repaired_stress_store_dependencies_tb.v",
+      "bytes": 2528,
+      "sha256": "72ea3d9934c04c12005f638c9144fef6140cd44a9f34f8c386ad2f38d8f041f8",
+      "role": "verification"
+    },
+    {
+      "path": "verification/repaired_stress_zero_hazards_tb.v",
+      "bytes": 2154,
+      "sha256": "224b765bddeae36756067a31b2e7a59d29a87913f8a74c1db703f346be0d6657",
+      "role": "verification"
+    }
+  ]
+}
